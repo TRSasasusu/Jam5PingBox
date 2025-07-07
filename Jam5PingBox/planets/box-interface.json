@@ -1,0 +1,44 @@
+{
+  "name": "Diorama Interface",
+  "$schema": "https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "starSystem": "Jam5",
+  "Base": {
+    "groundSize": 30,
+    "surfaceSize": 31,
+    "surfaceGravity": 12,
+    "centerOfSolarSystem": true
+  },
+  "Orbit": {
+    "staticPosition": {
+      "x": 500,
+      "y": 200,
+      "z": 500
+    }
+  },
+  "Atmosphere": {
+    "size": 15,
+    //"fogTint": {
+    //  "r": 200,
+    //  "g": 255,
+    //  "b": 255,
+    //  "a": 255
+    //},
+    //"fogSize": 150,
+    //"fogDensity": 0.2,
+  },
+  "MapMarker": {
+    "enabled": true
+  },
+  "Props": {
+    "warpReceivers": [
+      {
+        "frequency": "DioramaInterface_Start",
+        "position": {
+          "x": 0,
+          "y": 29.65,
+          "z": 0
+        }
+      }
+    ]
+  }
+}
