@@ -21,7 +21,7 @@ namespace Jam5PingBox
         public void Start()
         {
             // Starting here, you'll have access to OWML's mod helper.
-            ModHelper.Console.WriteLine($"My mod {nameof(Jam5PingBox)} is loaded!", MessageType.Success);
+            ModHelper.Console.WriteLine($"Mod {nameof(Jam5PingBox)} is loaded!", MessageType.Success);
 
             // Get the New Horizons API and load configs
             NewHorizons = ModHelper.Interaction.TryGetModApi<INewHorizons>("xen.NewHorizons");
@@ -30,14 +30,12 @@ namespace Jam5PingBox
             new Harmony("orclecle.Jam5PingBox").PatchAll(Assembly.GetExecutingAssembly());
 
             // Example of accessing game code.
-            OnCompleteSceneLoad(OWScene.TitleScreen, OWScene.TitleScreen); // We start on title screen
-            LoadManager.OnCompleteSceneLoad += OnCompleteSceneLoad;
-        }
-
-        public void OnCompleteSceneLoad(OWScene previousScene, OWScene newScene)
-        {
-            if (newScene != OWScene.SolarSystem) return;
-            ModHelper.Console.WriteLine("Loaded into solar system!", MessageType.Success);
+            //OnCompleteSceneLoad(OWScene.TitleScreen, OWScene.TitleScreen); // We start on title screen
+            //LoadManager.OnCompleteSceneLoad += OnCompleteSceneLoad;
+            NewHorizons.GetStarSystemLoadedEvent().AddListener(loadScene => {
+                ModHelper.Console.WriteLine($"Loaded into {loadScene}!", MessageType.Success);
+                var objectModifier = new ObjectModifier();
+            });
         }
     }
 

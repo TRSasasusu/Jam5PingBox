@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3156980756
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: diorama
+      Dependencies: {}
