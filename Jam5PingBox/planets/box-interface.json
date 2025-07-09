@@ -47,6 +47,7 @@
       },
       {
         "rename": "DioramaBoxSocket",
+        "parentPath": "Sector/DioramaMachine",
         "itemSocket": {
           "rename": "diorama_box_socket",
           "itemType": "diorama_box",
@@ -57,11 +58,11 @@
           "y": 2.5355,
           "z": 0
         }
+      },
+      {
+        "assetBundle": "planets/assetbundles/diorama",
+        "path": "Assets/MyAssets/Prefabs/Box1.prefab"
       }
-      //{
-      //  "assetBundle": "planets/assetbundles/diorama",
-      //  "path": "Assets/MyAssets/Prefabs/Box1.prefab"
-      //}
     ]
   }
 }

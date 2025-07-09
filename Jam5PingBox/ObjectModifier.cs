@@ -11,6 +11,7 @@ namespace Jam5PingBox {
         const string ENERGY_CABLE_PATH = "CaveTwin_Body/Sector_CaveTwin/Lighting_CaveTwin/Structure_NOM_TLECable";
         const string DIORAMA_INTERFACE_PATH = "DioramaInterface_Body/Sector/";
         const string DIORAMA_WARP_START_PATH = "DioramaInterface_Body/Sector/Prefab_NOM_WarpReceiver";
+        const string DIORAMA_MACHINE_PATH = "DioramaInterface_Body/Sector/DioramaMachine";
 
         public ObjectModifier() {
             Jam5PingBox.Instance.StartCoroutine(Initialize());
@@ -54,6 +55,15 @@ namespace Jam5PingBox {
                 if (warp) {
                     warp.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                     break;
+                }
+                yield return null;
+            }
+
+            DioramaMachine dioramaMachine = null;
+            while (true) {
+                var dioramaMachineObj = GameObject.Find(DIORAMA_MACHINE_PATH);
+                if (dioramaMachineObj) {
+                    dioramaMachine = dioramaMachineObj.AddComponent<DioramaMachine>();
                 }
                 yield return null;
             }
