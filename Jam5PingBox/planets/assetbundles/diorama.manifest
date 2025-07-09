@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 751847953
+CRC: 2687968179
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8da72f4e2a30f6ac73aba29aa588cdc9
+    Hash: eb77343e7afef83756a54679cfeb903b
   TypeTreeHash:
     serializedVersion: 2
     Hash: c4c73f098c00456d500afd6dc95761d4
@@ -61,5 +61,6 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/MyAssets/Prefabs/Elevator.prefab
 - Assets/MyAssets/Prefabs/Box1.prefab
+- Assets/MyAssets/Prefabs/Box1Item.prefab
 - Assets/MyAssets/Prefabs/DioramaMachine.prefab
 Dependencies: []

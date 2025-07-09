@@ -45,6 +45,19 @@
         "assetBundle": "planets/assetbundles/diorama",
         "path": "Assets/MyAssets/Prefabs/DioramaMachine.prefab"
       },
+      {
+        "rename": "DioramaBoxSocket",
+        "itemSocket": {
+          "rename": "diorama_box_socket",
+          "itemType": "diorama_box",
+          "colliderRadius": 1
+        },
+        "position": {
+          "x": 0,
+          "y": 2.5355,
+          "z": 0
+        }
+      }
       //{
       //  "assetBundle": "planets/assetbundles/diorama",
       //  "path": "Assets/MyAssets/Prefabs/Box1.prefab"
