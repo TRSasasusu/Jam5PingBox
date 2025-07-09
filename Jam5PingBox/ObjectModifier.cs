@@ -39,6 +39,14 @@ namespace Jam5PingBox {
                 if (child.name.Contains("EnergyCable")) {
                     child.gameObject.AddComponent<SetEnergyCableMat>().Initialize(originalEnergyCableMaterial);
                 }
+                if (child.name.Contains("Tractor Beam")) {
+                    if(child.name.Contains("Reverse")) {
+                        child.GetComponent<TractorBeamController>().SetReversed(true);
+                    }
+                    else {
+                        child.GetComponentInChildren<TractorBeamFluid>().OnValidate();
+                    }
+                }
             }
 
             while (true) {
