@@ -10,8 +10,9 @@ namespace Jam5PingBox {
     public class ObjectModifier {
         const string ENERGY_CABLE_PATH = "CaveTwin_Body/Sector_CaveTwin/Lighting_CaveTwin/Structure_NOM_TLECable";
         const string DIORAMA_INTERFACE_PATH = "DioramaInterface_Body/Sector/";
-        const string DIORAMA_WARP_START_PATH = "DioramaInterface_Body/Sector/Prefab_NOM_WarpReceiver";
+        const string DIORAMA_WARP_START_PATH = "DioramaInterface_Body/Sector/DioramaMachine/Prefab_NOM_WarpReceiver";
         const string DIORAMA_MACHINE_PATH = "DioramaInterface_Body/Sector/DioramaMachine";
+        const string BOX1_PATH = "DioramaInterface_Body/Sector/Box1";
 
         public ObjectModifier() {
             Jam5PingBox.Instance.StartCoroutine(Initialize());
@@ -36,9 +37,12 @@ namespace Jam5PingBox {
                 }
                 yield return null;
             }
-            foreach(var child in dioramaInterface.GetComponentsInChildren<Transform>()) {
+            foreach(var child in dioramaInterface.GetComponentsInChildren<Transform>(true)) {
                 if (child.name.Contains("EnergyCable")) {
                     child.gameObject.AddComponent<SetEnergyCableMat>().Initialize(originalEnergyCableMaterial);
+                }
+                if(child.name.Contains("CableOff")) {
+                    child.gameObject.AddComponent<SetCableOffMat>();
                 }
                 if (child.name.Contains("Tractor Beam")) {
                     if(child.name.Contains("Reverse")) {
@@ -64,6 +68,9 @@ namespace Jam5PingBox {
                 var dioramaMachineObj = GameObject.Find(DIORAMA_MACHINE_PATH);
                 if (dioramaMachineObj) {
                     dioramaMachine = dioramaMachineObj.AddComponent<DioramaMachine>();
+                    dioramaMachine._box1 = GameObject.Find(BOX1_PATH);
+                    dioramaMachine.Initialize();
+                    break;
                 }
                 yield return null;
             }

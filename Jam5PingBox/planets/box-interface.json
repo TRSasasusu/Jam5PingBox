@@ -29,9 +29,18 @@
   "MapMarker": {
     "enabled": true
   },
+  "Volumes": {
+    "oxygenVolumes": [
+      {
+        "rename": "Oxygen",
+        "radius": 2500,
+      }
+    ]
+  },
   "Props": {
     "warpReceivers": [
       {
+        "parentPath": "Sector/DioramaMachine",
         "frequency": "DioramaInterface_Start",
         "position": {
           "x": 0,

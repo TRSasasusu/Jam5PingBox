@@ -10,6 +10,10 @@ namespace Jam5PingBox
         public static Jam5PingBox Instance;
         public INewHorizons NewHorizons;
 
+        public static void Log(string text, MessageType messageType = MessageType.Message) {
+            Instance.ModHelper.Console.WriteLine(text, messageType);
+        }
+
         public void Awake()
         {
             Instance = this;

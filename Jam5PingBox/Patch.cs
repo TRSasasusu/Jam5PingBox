@@ -16,6 +16,7 @@ namespace Jam5PingBox {
                 return;
             }
 
+            //Jam5PingBox.Log(item.name);
             if(item.name == "Box1Item") {
                 dioramaMachine.Load(DioramaMachine.BoxType.BOX1);
             }

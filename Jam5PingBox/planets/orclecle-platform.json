@@ -35,7 +35,11 @@
           "y": 0,
           "z": 50
         }
-      }
+      },
+      //{
+      //  "assetBundle": "planets/assetbundles/diorama",
+      //  "path": "Assets/MyAssets/Prefabs/hhearthian.prefab",
+      //}
     ]
   }
 }
