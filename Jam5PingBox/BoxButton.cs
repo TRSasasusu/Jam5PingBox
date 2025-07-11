@@ -10,7 +10,8 @@ namespace Jam5PingBox {
         public Action _onAction;
         public Action _offAction;
 
-        bool _on = false;
+        public bool _on = false;
+
         GameObject _onButton;
         GameObject _offButton;
         List<GameObject> _onCables;
@@ -48,7 +49,7 @@ namespace Jam5PingBox {
             }
         }
 
-        void ChangeState() {
+        public void ChangeState() {
             if (_on) {
                 _onButton.SetActive(true);
                 _offButton.SetActive(false);

@@ -13,6 +13,7 @@ namespace Jam5PingBox {
             var zSize = transform.localScale.z;
             _cableOffMaterial = GetComponent<MeshRenderer>().material;
             _cableOffMaterial.mainTextureScale = new Vector2(1, 60 * (zSize / 10));
+            GetComponent<MeshRenderer>().material = _cableOffMaterial;
         }
 
         void OnDestroy() {
