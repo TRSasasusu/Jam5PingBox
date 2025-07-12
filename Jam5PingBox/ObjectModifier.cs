@@ -13,6 +13,8 @@ namespace Jam5PingBox {
         const string DIORAMA_WARP_START_PATH = "DioramaInterface_Body/Sector/DioramaMachine/Prefab_NOM_WarpReceiver";
         const string DIORAMA_MACHINE_PATH = "DioramaInterface_Body/Sector/DioramaMachine";
         const string BOX1_PATH = "DioramaInterface_Body/Sector/Box1";
+        const string BOX2_PATH = "DioramaInterface_Body/Sector/Box2";
+        const string BOX3_PATH = "DioramaInterface_Body/Sector/Box3";
         const string PLATFORM_PATH = "Orclecle_Mod_Platform_Body/Sector";
 
         public ObjectModifier() {
@@ -81,6 +83,8 @@ namespace Jam5PingBox {
                 if (dioramaMachineObj) {
                     dioramaMachine = dioramaMachineObj.AddComponent<DioramaMachine>();
                     dioramaMachine._box1 = GameObject.Find(BOX1_PATH);
+                    dioramaMachine._box2 = GameObject.Find(BOX2_PATH);
+                    dioramaMachine._box3 = GameObject.Find(BOX3_PATH);
                     dioramaMachine.Initialize();
                     break;
                 }

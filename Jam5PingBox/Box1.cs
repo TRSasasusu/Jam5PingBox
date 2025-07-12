@@ -20,8 +20,8 @@ namespace Jam5PingBox {
         bool _isFloorUp = false;
 
         class Data : DioramaMachine.BaseData {
-            public bool _isDoorOpen;
-            public bool _isFloorUp;
+            public bool _isDoorButtonPushed;
+            public bool _isFloorButtonPushed;
         }
         static List<Data> _prevRecords;
         List<Data> _currentRecords;
@@ -64,12 +64,12 @@ namespace Jam5PingBox {
 
             _currentRecords = new List<Data>();
             StartCoroutine(DioramaMachine.Record(transform, _currentRecords, _prevRecords, data => {
-                data._isDoorOpen = _isDoorOpen;
-                data._isFloorUp = _isFloorUp;
+                data._isDoorButtonPushed = _doorButton._pushed;
+                data._isFloorButtonPushed = _floorButton._pushed;
             }, data => {
-                _doorButton._on |= data._isDoorOpen;
+                _doorButton._pushedOnRecord = data._isDoorButtonPushed;
                 _doorButton.ChangeState();
-                _floorButton._on |= data._isFloorUp;
+                _floorButton._pushedOnRecord = data._isFloorButtonPushed;
                 _floorButton.ChangeState();
             }));
         }
@@ -83,38 +83,12 @@ namespace Jam5PingBox {
                 var pos = _isFloorUp ? _floorUp : _floorDown;
                 _floor.transform.localPosition = Vector3.Lerp(_floor.transform.localPosition, pos.localPosition, 0.01f);
             }
-
-            //if(_time >= DioramaMachine.INTERVAL) {
-            //    _time = 0;
-            //    if(_currentRecords == null) {
-            //        _currentRecords = new List<Data>();
-            //    }
-            //    _currentRecords.Add(new Data {
-            //        _pos = DioramaMachine.RecordPlayerPos(transform),
-            //        _rot = DioramaMachine.RecordPlayerRot(transform),
-            //        _isDoorOpen = _isDoorOpen,
-            //        _isFloorUp = _isFloorUp,
-            //    });
-
-            //    if (_records != null) {
-            //        if(!_hhearthian.activeSelf) {
-            //            _hhearthian.SetActive(true);
-            //        }
-            //        var record = _records[_idx++];
-            //        if (_idx >= _records.Count) {
-            //            _idx = _records.Count - 1;
-            //        }
-            //        _hhearthian.transform.localPosition = record._pos;
-            //        _hhearthian.transform.localRotation = record._rot;
-            //        _isDoorOpen |= record._isDoorOpen;
-            //        _isFloorUp |= record._isFloorUp;
-            //    }
-            //}
-            //_time += Time.deltaTime;
         }
 
         void OnDestroy() {
-            _prevRecords = _currentRecords;
+            if (_currentRecords != null) {
+                _prevRecords = _currentRecords;
+            }
         }
     }
 }

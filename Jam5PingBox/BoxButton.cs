@@ -10,7 +10,9 @@ namespace Jam5PingBox {
         public Action _onAction;
         public Action _offAction;
 
-        public bool _on = false;
+        public bool _on { get; private set; }
+        public bool _pushed { get; private set; }
+        public bool _pushedOnRecord;
 
         GameObject _onButton;
         GameObject _offButton;
@@ -37,19 +39,21 @@ namespace Jam5PingBox {
 
         void OnTriggerEnter(Collider other) {
             if(other.gameObject == Locator._playerBody.gameObject) {
-                _on = true;
+                _pushed = true;
                 ChangeState();
             }
         }
 
         void OnTriggerExit(Collider other) {
             if(other.gameObject == Locator._playerBody.gameObject) {
-                _on = false;
+                _pushed = false;
                 ChangeState();
             }
         }
 
         public void ChangeState() {
+            _on = _pushed | _pushedOnRecord;
+
             if (_on) {
                 _onButton.SetActive(true);
                 _offButton.SetActive(false);

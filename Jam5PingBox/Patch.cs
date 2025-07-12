@@ -20,6 +20,9 @@ namespace Jam5PingBox {
             if(item.name == "Box1Item") {
                 dioramaMachine.Load(DioramaMachine.BoxType.BOX1);
             }
+            else if(item.name == "Box2Item") {
+                dioramaMachine.Load(DioramaMachine.BoxType.BOX2);
+            }
         }
     }
 }
