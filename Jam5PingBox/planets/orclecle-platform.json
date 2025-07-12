@@ -36,6 +36,20 @@
           "z": 50
         }
       },
+      {
+        "assetBundle": "planets/assetbundles/diorama",
+        "path": "Assets/MyAssets/Prefabs/Tower.prefab",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 60
+        },
+        "rotation": {
+          "x": 0,
+          "y": 180,
+          "z": 0
+        }
+      }
     ]
   }
 }

@@ -13,6 +13,7 @@ namespace Jam5PingBox {
         const string DIORAMA_WARP_START_PATH = "DioramaInterface_Body/Sector/DioramaMachine/Prefab_NOM_WarpReceiver";
         const string DIORAMA_MACHINE_PATH = "DioramaInterface_Body/Sector/DioramaMachine";
         const string BOX1_PATH = "DioramaInterface_Body/Sector/Box1";
+        const string PLATFORM_PATH = "Orclecle_Mod_Platform_Body/Sector";
 
         public ObjectModifier() {
             Jam5PingBox.Instance.StartCoroutine(Initialize());
@@ -37,19 +38,30 @@ namespace Jam5PingBox {
                 }
                 yield return null;
             }
-            foreach(var child in dioramaInterface.GetComponentsInChildren<Transform>(true)) {
-                if (child.name.Contains("EnergyCable")) {
-                    child.gameObject.AddComponent<SetEnergyCableMat>().Initialize(originalEnergyCableMaterial);
+            GameObject platform = null;
+            while (true) {
+                platform = GameObject.Find(PLATFORM_PATH);
+                if (platform) {
+                    break;
                 }
-                if(child.name.Contains("CableOff")) {
-                    child.gameObject.AddComponent<SetCableOffMat>();
-                }
-                if (child.name.Contains("Tractor Beam")) {
-                    if(child.name.Contains("Reverse")) {
-                        child.GetComponent<TractorBeamController>().SetReversed(true);
+                yield return null;
+            }
+
+            foreach (var sector in new[] { dioramaInterface, platform }) {
+                foreach (var child in sector.GetComponentsInChildren<Transform>(true)) {
+                    if (child.name.Contains("EnergyCable")) {
+                        child.gameObject.AddComponent<SetEnergyCableMat>().Initialize(originalEnergyCableMaterial);
                     }
-                    else {
-                        child.GetComponentInChildren<TractorBeamFluid>().OnValidate();
+                    if (child.name.Contains("CableOff")) {
+                        child.gameObject.AddComponent<SetCableOffMat>();
+                    }
+                    if (child.name.Contains("Tractor Beam")) {
+                        if (child.name.Contains("Reverse")) {
+                            child.GetComponent<TractorBeamController>().SetReversed(true);
+                        }
+                        else {
+                            child.GetComponentInChildren<TractorBeamFluid>().OnValidate();
+                        }
                     }
                 }
             }
