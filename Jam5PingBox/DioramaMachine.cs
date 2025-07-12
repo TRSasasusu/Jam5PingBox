@@ -83,6 +83,7 @@ namespace Jam5PingBox {
 
             _box1.SetActive(false);
             _box2.SetActive(false);
+            _box3.SetActive(false);
         }
 
         public void Load(BoxType boxType) {
@@ -92,10 +93,15 @@ namespace Jam5PingBox {
                 box.SetActive(true);
                 box.AddComponent<Box1>().Initialize();
             }
-            else if(boxType == BoxType.BOX2) {
+            else if (boxType == BoxType.BOX2) {
                 box = _box2;
                 box.SetActive(true);
                 box.AddComponent<Box2>().Initialize();
+            }
+            else if (boxType == BoxType.BOX3) {
+                box = _box3;
+                box.SetActive(true);
+                box.AddComponent<Box3>().Initialize();
             }
             _dioramaMachine.SetActive(false);
 

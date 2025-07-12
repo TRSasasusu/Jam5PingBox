@@ -89,6 +89,10 @@
       },
       {
         "assetBundle": "planets/assetbundles/diorama",
+        "path": "Assets/MyAssets/Prefabs/Box3.prefab"
+      },
+      {
+        "assetBundle": "planets/assetbundles/diorama",
         "path": "Assets/MyAssets/Prefabs/Box2Item.prefab",
         "item": {
           "itemType": "diorama_box",
@@ -103,6 +107,24 @@
           "x": -0.1421,
           "y": 1.2737,
           "z": 11.5
+        }
+      },
+      {
+        "assetBundle": "planets/assetbundles/diorama",
+        "path": "Assets/MyAssets/Prefabs/Box3Item.prefab",
+        "item": {
+          "itemType": "diorama_box",
+          "colliderRadius": 0,
+          "socketOffset": {
+            "x": -0.0481,
+            "y": 2.4169,
+            "z": -0.0086
+          }
+        },
+        "position": {
+          "x": 0.0303,
+          "y": 1.1632,
+          "z": -11.5
         }
       },
     ]
