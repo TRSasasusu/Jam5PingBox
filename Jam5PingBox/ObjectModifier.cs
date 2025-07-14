@@ -16,6 +16,13 @@ namespace Jam5PingBox {
         const string BOX2_PATH = "DioramaInterface_Body/Sector/Box2";
         const string BOX3_PATH = "DioramaInterface_Body/Sector/Box3";
         const string PLATFORM_PATH = "Orclecle_Mod_Platform_Body/Sector";
+        const string BOX_TRISTAR_PATH = "ShadowofSparks_Body/Sector/BoxTriStar";
+        static readonly string[] BOX_TRISTER_OBJ_PATHS = new string[] {
+            "Hope_Body",
+            "Salvation_Body",
+            "Faith_Body",
+            "ShadowofSparks_Body",
+        };
 
         public ObjectModifier() {
             Jam5PingBox.Instance.StartCoroutine(Initialize());
@@ -85,6 +92,10 @@ namespace Jam5PingBox {
                     dioramaMachine._box1 = GameObject.Find(BOX1_PATH);
                     dioramaMachine._box2 = GameObject.Find(BOX2_PATH);
                     dioramaMachine._box3 = GameObject.Find(BOX3_PATH);
+
+                    dioramaMachine._boxTriStar = GameObject.Find(BOX_TRISTAR_PATH);
+                    dioramaMachine._boxTriStarObjs = BOX_TRISTER_OBJ_PATHS.Select(x => GameObject.Find(x)).ToList();
+
                     dioramaMachine.Initialize();
                     break;
                 }

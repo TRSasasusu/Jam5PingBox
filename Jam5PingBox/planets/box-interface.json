@@ -1,6 +1,6 @@
 {
-  "name": "Diorama Interface",
   "$schema": "https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "name": "Diorama Interface",
   "starSystem": "Jam5",
   "Base": {
     //"groundSize": 30,
@@ -94,6 +94,8 @@
       {
         "assetBundle": "planets/assetbundles/diorama",
         "path": "Assets/MyAssets/Prefabs/Box2Item.prefab",
+        "parentPath": "Sector/DioramaMachine",
+        "isRelativeToParent": false,
         "item": {
           "itemType": "diorama_box",
           "colliderRadius": 0,
@@ -112,6 +114,8 @@
       {
         "assetBundle": "planets/assetbundles/diorama",
         "path": "Assets/MyAssets/Prefabs/Box3Item.prefab",
+        "parentPath": "Sector/DioramaMachine",
+        "isRelativeToParent": false,
         "item": {
           "itemType": "diorama_box",
           "colliderRadius": 0,

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "name": "Shadow of Sparks",
+  "starSystem": "Jam5",
+  "Base": {
+    //"groundSize": 200,
+    "surfaceSize": 201,
+    "surfaceGravity": 12,
+    "centerOfSolarSystem": true
+  },
+  "Orbit": {
+    "staticPosition": {
+      "x": 500,
+      "y": 200,
+      "z": 500
+    }
+  },
+  "AmbientLights": [
+    {
+      "outerRadius": 400,
+      "intensity": 1.4,
+    }
+  ],
+  "Atmosphere": {
+    "size": 700,
+    "atmosphereTint": {
+      "r": 141,
+      "g": 121,
+      "b": 101,
+      "a": 0
+    },
+    "fogDensity": 0.2,
+    "useAtmosphereShader": true
+  },
+  "MapMarker": {
+    "enabled": true
+  },
+  "Volumes": {
+    "oxygenVolumes": [
+      {
+        "rename": "Oxygen",
+        "radius": 2500
+      }
+    ]
+  },
+  "Water": {
+    "size": 180,
+    "tint": {
+      "r": 0,
+      "g": 0,
+      "b": 0
+    }
+  },
+  "Props": {
+    "details": [
+      {
+        "assetBundle": "planets/assetbundles/diorama",
+        "path": "Assets/MyAssets/Prefabs/BoxTriStar.prefab"
+      },
+      { // pos: 180.1105 19.6152 -18.5606, rot: 353.8034 95.9473 12.2476
+        "rename": "Vessel",
+        "path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/OtherComponentsGroup/Structure_NOM_Vessel",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 180.1105,
+          "y": 19.6152,
+          "z": -18.5606
+        },
+        "rotation": {
+          "x": 353.8034,
+          "y": 95.9473,
+          "z": 12.2476
+        }
+      },
+      {
+        "path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/BatchedGroup",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true
+        //"parentPath": "Sector/Vessel",
+        //"isRelativeToParent": true,
+        //"position": {
+        //  "x": -180.1105,
+        //  "y": -19.6152,
+        //  "z": 18.5606
+        //},
+        //"rotation": {
+        //  "x": -353.8034,
+        //  "y": -95.9473,
+        //  "z": -12.2476
+        //}
+      },
+      {
+        "path": "DB_VesselDimension_Body/Sector_VesselDimension/Lighting_VesselDimension",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true
+      },
+      //{
+      //  "path": "DB_VesselDimension_Body/Sector_VesselDimension/Vessel_Atmosphere"
+      //},
+      {
+        "path": "DB_VesselDimension_Body/Sector_VesselDimension/Sector_VesselBridge/Lighting_VesselBridge",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true
+      }
+    ]
+  }
+}

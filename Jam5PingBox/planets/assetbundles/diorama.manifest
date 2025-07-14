@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1464384990
+CRC: 3108279255
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3466bdaee9e5985c29761f32ad3c8072
+    Hash: 9e7b98a4a3e42c56a96ebb60303d86c9
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c4c73f098c00456d500afd6dc95761d4
+    Hash: a0ad7e4dcd5088aa93a1e1f3b20b8004
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -30,6 +30,8 @@ ClassTypes:
 - Class: 65
   Script: {instanceID: 0}
 - Class: 82
+  Script: {instanceID: 0}
+- Class: 89
   Script: {instanceID: 0}
 - Class: 108
   Script: {instanceID: 0}
@@ -59,7 +61,9 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/MyAssets/Prefabs/BoxTriStarItem.prefab
 - Assets/MyAssets/Prefabs/Elevator.prefab
+- Assets/MyAssets/Prefabs/BoxTriStar.prefab
 - Assets/MyAssets/Prefabs/hhearthian.prefab
 - Assets/MyAssets/Prefabs/Box3Item.prefab
 - Assets/MyAssets/Prefabs/AroundDioramaMachine.prefab

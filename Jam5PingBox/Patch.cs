@@ -26,6 +26,9 @@ namespace Jam5PingBox {
             else if(item.name == "Box3Item") {
                 dioramaMachine.Load(DioramaMachine.BoxType.BOX3);
             }
+            else if(item.name == "BoxTriStarItem") {
+                dioramaMachine.Load(DioramaMachine.BoxType.BOX_TRISTAR);
+            }
         }
     }
 }

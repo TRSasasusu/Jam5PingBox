@@ -15,6 +15,7 @@ namespace Jam5PingBox {
         public GameObject _box2;
         public GameObject _box3;
         public GameObject _boxTriStar;
+        public List<GameObject> _boxTriStarObjs;
 
         static GameObject _hhearthian;
 
@@ -84,6 +85,10 @@ namespace Jam5PingBox {
             _box1.SetActive(false);
             _box2.SetActive(false);
             _box3.SetActive(false);
+
+            foreach (var obj in _boxTriStarObjs) {
+                obj.SetActive(false);
+            }
         }
 
         public void Load(BoxType boxType) {
@@ -102,6 +107,13 @@ namespace Jam5PingBox {
                 box = _box3;
                 box.SetActive(true);
                 box.AddComponent<Box3>().Initialize();
+            }
+            else if(boxType == BoxType.BOX_TRISTAR) {
+                box = _boxTriStar;
+                foreach(var obj in _boxTriStarObjs) {
+                    obj.SetActive(true);
+                }
+                box.AddComponent<BoxTriStar>().Initialize();
             }
             _dioramaMachine.SetActive(false);
 
