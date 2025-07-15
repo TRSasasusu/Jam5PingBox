@@ -160,7 +160,10 @@
         "path": "DB_VesselDimension_Body/Sector_VesselDimension/Sector_VesselBridge/Lighting_VesselBridge",
         "parentPath": "Sector/BoxTriStar/VesselPos",
         "isRelativeToParent": true
-      }
+      },
+      //{
+      //  "path": "GiantsDeep_Body/Sector_GD/Sector_GDInterior/Effects_GDInterior/Particle_GD_ElectricBarrierArcs",
+      //}
     ]
   }
 }
