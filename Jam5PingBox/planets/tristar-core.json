@@ -41,6 +41,27 @@
         "rename": "Oxygen",
         "radius": 2500
       }
+    ],
+    "hazardVolumes": [
+      {
+        "radius": 180,
+        "damagePerSecond": 15,
+        "firstContactDamage": 15,
+        "type": "riverHeat"
+      }
+    ],
+    //"insulatingVolumes": [
+    //  {
+    //    //"parentPath": "Sector/BoxTriStar/smooth_cylinder (2)",
+    //    //"isRelativeToParent": true,
+    //    //"radius": 1,
+    //    "radius": 2500,
+    //  }
+    //],
+    "mapRestrictionVolumes": [
+      {
+        "radius": 2500,
+      }
     ]
   },
   "Water": {

@@ -17,6 +17,9 @@ namespace Jam5PingBox {
         public GameObject _boxTriStar;
         public List<GameObject> _boxTriStarObjs;
 
+        public static DioramaMachine Instance;
+        public static bool IsMapRestricted { get { return Instance && Instance._boxTriStar.activeSelf; } }
+        public static bool _isMeditating;
         static GameObject _hhearthian;
 
         public enum BoxType {
@@ -43,6 +46,10 @@ namespace Jam5PingBox {
             float time = INTERVAL + 1;
             int idx = -1;
             while (true) {
+                if(_isMeditating) {
+                    break;
+                }
+
                 if(time >= INTERVAL) {
                     time = 0;
                     var newData = new Data { _pos = RecordPlayerPos(box), _rot = RecordPlayerRot(box) };
@@ -77,6 +84,9 @@ namespace Jam5PingBox {
         }
 
         public void Initialize() {
+            Instance = this;
+            _isMeditating = false;
+
             _dioramaMachine = gameObject;
 
             _hhearthian = transform.Find("hhearthian").gameObject;
@@ -85,6 +95,7 @@ namespace Jam5PingBox {
             _box1.SetActive(false);
             _box2.SetActive(false);
             _box3.SetActive(false);
+            _boxTriStar.SetActive(false);
 
             foreach (var obj in _boxTriStarObjs) {
                 obj.SetActive(false);
@@ -110,6 +121,7 @@ namespace Jam5PingBox {
             }
             else if(boxType == BoxType.BOX_TRISTAR) {
                 box = _boxTriStar;
+                box.SetActive(true);
                 foreach(var obj in _boxTriStarObjs) {
                     obj.SetActive(true);
                 }

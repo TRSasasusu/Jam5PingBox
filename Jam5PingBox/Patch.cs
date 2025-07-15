@@ -30,5 +30,24 @@ namespace Jam5PingBox {
                 dioramaMachine.Load(DioramaMachine.BoxType.BOX_TRISTAR);
             }
         }
+
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(MapController), nameof(MapController.MapInoperable))]
+        //public static bool MapController_MapInoperable_Prefix(MapController __instance, ref bool __result) {
+        //    if(DioramaMachine.IsMapRestricted) {
+        //        __instance._playerMapRestricted = true;
+        //        __result = true;
+        //        return false;
+        //    }
+        //    return true;
+        //}
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(DeathManager), nameof(DeathManager.KillPlayer))]
+        public static void DeathManager_KillPlayer_Postfix(DeathType deathType) {
+            if(deathType == DeathType.Meditation) {
+                DioramaMachine._isMeditating = true;
+            }
+        }
     }
 }
