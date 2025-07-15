@@ -122,11 +122,17 @@ namespace Jam5PingBox {
                     var playerRigidbody = Locator.GetPlayerBody();
                     playerRigidbody.WarpToPositionRotation(child.position, child.rotation);
                     playerRigidbody.SetVelocity(PointVelocity(child));
-                    break;
+                }
+                else if(child.name == "SpawnShip") {
+                    var shipRigidbody = Locator.GetShipBody();
+                    shipRigidbody.WarpToPositionRotation(child.position, child.rotation);
+                    shipRigidbody.SetVelocity(PointVelocity(child));
                 }
             }
 
-            Locator.GetPlayerSuit().RemoveSuit(true);
+            if(boxType != BoxType.BOX_TRISTAR) {
+                Locator.GetPlayerSuit().RemoveSuit(true);
+            }
         }
 
         Vector3 PointVelocity(Transform point) {

@@ -52,6 +52,60 @@
     }
   },
   "Props": {
+    "singularities": [
+      {
+        "rename": "BHToVessel",
+        "horizonRadius": 1.5,
+        "uniqueID": "tristar_bh_to_vessel",
+        "pairedSingularity": "tristar_wh_to_vessel",
+        "type": "blackHole",
+        "parentPath": "Sector/BoxTriStar/NomaiWarpToVessel/Region2",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 1.0241
+        }
+      },
+      {
+        "rename": "WHToVessel",
+        "horizonRadius": 1,
+        "uniqueID": "tristar_wh_to_vessel",
+        "pairedSingularity": "tristar_bh_to_vessel",
+        "type": "whiteHole",
+        "position": {
+          "x": 89.2468,
+          "y": 150.4342,
+          "z": -86.6122
+        },
+      },
+      {
+        "rename": "BHFromVessel",
+        "horizonRadius": 1,
+        "uniqueID": "tristar_bh_from_vessel",
+        "pairedSingularity": "tristar_wh_from_vessel",
+        "type": "blackHole",
+        "position": {
+          "x": 117.7277,
+          "y": 130.8773,
+          "z": -52.8643
+        }
+      },
+      {
+        "rename": "WHFromVessel",
+        "horizonRadius": 1.5,
+        "uniqueID": "tristar_wh_from_vessel",
+        "pairedSingularity": "tristar_bh_from_vessel",
+        "type": "whiteHole",
+        "parentPath": "Sector/BoxTriStar/NomaiWarpToVessel/Region2 (1)",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 1.0241
+        }
+      }
+    ],
     "details": [
       {
         "assetBundle": "planets/assetbundles/diorama",
@@ -76,7 +130,11 @@
       {
         "path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/BatchedGroup",
         "parentPath": "Sector/BoxTriStar/VesselPos",
-        "isRelativeToParent": true
+        "isRelativeToParent": true,
+        "removeChildren": [
+          "BatchedMeshColliders_1",
+          "BatchedMeshColliders_2",
+        ]
         //"parentPath": "Sector/Vessel",
         //"isRelativeToParent": true,
         //"position": {
