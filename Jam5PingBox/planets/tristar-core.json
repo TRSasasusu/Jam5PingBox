@@ -70,7 +70,8 @@
       "r": 0,
       "g": 0,
       "b": 0
-    }
+    },
+    "allowShipAutoroll": false,
   },
   "Props": {
     "singularities": [
@@ -94,11 +95,16 @@
         "uniqueID": "tristar_wh_to_vessel",
         "pairedSingularity": "tristar_bh_to_vessel",
         "type": "whiteHole",
+        //"position": {
+        //  "x": 89.2468,
+        //  "y": 150.4342,
+        //  "z": -86.6122
+        //},
         "position": {
-          "x": 89.2468,
-          "y": 150.4342,
-          "z": -86.6122
-        },
+          "x": 13.4457,
+          "y": 129.1015,
+          "z": -136.1232
+        }
       },
       {
         "rename": "BHFromVessel",
@@ -154,7 +160,7 @@
         "isRelativeToParent": true,
         "removeChildren": [
           "BatchedMeshColliders_1",
-          "BatchedMeshColliders_2",
+          "BatchedMeshColliders_2"
         ]
         //"parentPath": "Sector/Vessel",
         //"isRelativeToParent": true,
@@ -185,6 +191,231 @@
       //{
       //  "path": "GiantsDeep_Body/Sector_GD/Sector_GDInterior/Effects_GDInterior/Particle_GD_ElectricBarrierArcs",
       //}
+      //{
+      //  "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true,
+      //  "position": {
+      //    "x": 74.3768,
+      //    "y": 1.4609,
+      //    "z": -1.4744
+      //  },
+      //  "rotation": {
+      //    "x": 296.3173,
+      //    "y": 0,
+      //    "z": 345.5577
+      //  }
+      //},
+      //{
+      //  "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true,
+      //  "position": {
+      //    "x": 77.8888,
+      //    "y": 3.5448,
+      //    "z": -1.5463
+      //  },
+      //  "rotation": {
+      //    "x": 282.5859,
+      //    "y": 0,
+      //    "z": 0
+      //  }
+      //},
+      //{
+      //  "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true,
+      //  "position": {
+      //    "x": 81.1441,
+      //    "y": 6.3351,
+      //    "z": -1.722
+      //  },
+      //  "rotation": {
+      //    "x": 279.1759,
+      //    "y": 180,
+      //    "z": 180
+      //  }
+      //},
+      //{
+      //  "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true,
+      //  "position": {
+      //    "x": 85.7263,
+      //    "y": 9.2177,
+      //    "z": -3.1129
+      //  },
+      //  "rotation": {
+      //    "x": 312.8122,
+      //    "y": 180,
+      //    "z": 180
+      //  }
+      //},
+      //{
+      //  "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true,
+      //  "position": {
+      //    "x": 91.9568,
+      //    "y": 12.5122,
+      //    "z": -8.1182
+      //  },
+      //  "rotation": {
+      //    "x": 7.9082,
+      //    "y": 180,
+      //    "z": 180
+      //  }
+      //},
+      //{
+      //  "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true,
+      //  "position": {
+      //    "x": 95.9635,
+      //    "y": 12.587,
+      //    "z": -15.0902
+      //  },
+      //  "rotation": {
+      //    "x": 35.117,
+      //    "y": 180,
+      //    "z": 168.1012
+      //  }
+      //},
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 104.6102,
+          "y": 8.8114,
+          "z": -18.6581
+        },
+        "rotation": {
+          "x": 89.0105,
+          "y": 0,
+          "z": 345.5577
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 111.9859,
+          "y": 10.8728,
+          "z": -19.2692
+        },
+        "rotation": {
+          "x": 74.9893,
+          "y": 180,
+          "z": 180
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 118.1204,
+          "y": 11.1453,
+          "z": -19.7838
+        },
+        "rotation": {
+          "x": 78.1054,
+          "y": 180,
+          "z": 180
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 123.0054,
+          "y": 11.9963,
+          "z": -18.703
+        },
+        "rotation": {
+          "x": 22.2815,
+          "y": 98.2975,
+          "z": 108.5714
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 124.3348,
+          "y": 13.0253,
+          "z": -18.9138
+        },
+        "rotation": {
+          "x": 74.0636,
+          "y": 180,
+          "z": 180
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 125.3577,
+          "y": 12.3406,
+          "z": -21.6548
+        },
+        "rotation": {
+          "x": 87.252,
+          "y": 59.7532,
+          "z": 336.0677
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 131.0231,
+          "y": 12.5902,
+          "z": -27.0555
+        },
+        "rotation": {
+          "x": 20.2357,
+          "y": 0,
+          "z": 28.6674
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 136.4697,
+          "y": 16.405,
+          "z": -30.1518
+        },
+        "rotation": {
+          "x": 26.7235,
+          "y": 0,
+          "z": 29.1131
+        }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 141.6417,
+          "y": 19.3148,
+          "z": -32.3706
+        },
+        "rotation": {
+          "x": 4.7589,
+          "y": 0,
+          "z": 27.6488
+        }
+      },
     ]
   }
 }
