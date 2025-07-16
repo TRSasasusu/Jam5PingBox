@@ -6,12 +6,20 @@
     "surfaceGravity": 12
   },
   "Orbit": {
-    "isMoon": true,
-    "primaryBody": "Shadow of Sparks",
-    "semiMajorAxis": 400,
-    "siderealPeriod": 22,
-    "trueAnomaly": 120
+    //"isMoon": true,
+    //"primaryBody": "Shadow of Sparks",
+    //"semiMajorAxis": 400,
+    //"siderealPeriod": 22,
+    //"trueAnomaly": 120
+    "staticPosition": {
+      "x": 346.41016151377545,
+      "y": 0,
+      "z": -200
+    }
   },
+  "removeChildren": [
+    "Sector/Star/PlanetDestructionVolume",
+  ],
   "Star": {
     "size": 200,
     "lifespan": 22,
@@ -29,6 +37,12 @@
       "r": 128,
       "g": 128,
       "b": 128
-    }
+    },
+    "curve": [
+      {
+        "time": 22,
+        "value": 1
+      }
+    ]
   }
 }

@@ -49,5 +49,13 @@ namespace Jam5PingBox {
                 DioramaMachine._isMeditating = true;
             }
         }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(DestructionVolume), nameof(DestructionVolume.VanishProbe))]
+        public static bool DestructionVolume_VanishProbe_Prefix(DestructionVolume __instance, OWRigidbody probeBody) {
+            Jam5PingBox.Log(__instance.name);
+            Jam5PingBox.Log(__instance.transform.root.name);
+            return true;
+        }
     }
 }

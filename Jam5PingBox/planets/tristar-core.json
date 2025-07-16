@@ -9,11 +9,11 @@
     "centerOfSolarSystem": true
   },
   "Orbit": {
-    "staticPosition": {
-      "x": 500,
-      "y": 200,
-      "z": 500
-    }
+    //"staticPosition": {
+    //  "x": 500,
+    //  "y": 200,
+    //  "z": 500
+    //}
   },
   "AmbientLights": [
     {
@@ -58,11 +58,11 @@
     //    "radius": 2500,
     //  }
     //],
-    "mapRestrictionVolumes": [
-      {
-        "radius": 2500,
-      }
-    ]
+    //"mapRestrictionVolumes": [
+    //  {
+    //    "radius": 2500,
+    //  }
+    //]
   },
   "Water": {
     "size": 180,

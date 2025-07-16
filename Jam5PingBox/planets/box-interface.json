@@ -9,11 +9,11 @@
     "centerOfSolarSystem": true
   },
   "Orbit": {
-    "staticPosition": {
-      "x": 500,
-      "y": 200,
-      "z": 500
-    }
+    //"staticPosition": {
+    //  "x": 500,
+    //  "y": 200,
+    //  "z": 500
+    //}
   },
   "Atmosphere": {
     "size": 15,
