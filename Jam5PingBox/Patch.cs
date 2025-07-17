@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Jam5PingBox {
     [HarmonyPatch]
@@ -53,9 +54,80 @@ namespace Jam5PingBox {
         [HarmonyPrefix]
         [HarmonyPatch(typeof(DestructionVolume), nameof(DestructionVolume.VanishProbe))]
         public static bool DestructionVolume_VanishProbe_Prefix(DestructionVolume __instance, OWRigidbody probeBody) {
-            Jam5PingBox.Log(__instance.name);
-            Jam5PingBox.Log(__instance.transform.root.name);
+            //Jam5PingBox.Log(__instance.name);
+            //Jam5PingBox.Log(__instance.transform.root.name);
+            if(__instance.transform.root) {
+                var rootName = __instance.transform.root.name;
+                if(rootName == "Salvation_Body" || rootName == "Hope_Body" || rootName == "Faith_Body") {
+                    GameObject.Destroy(probeBody.gameObject);
+                    return false;
+                }
+            }
             return true;
         }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(HazardDetector), nameof(HazardDetector.IsInvulnerable))]
+        public static bool HazardDetector_IsInvulnerable_Prefix(HazardDetector __instance, ref bool __result) {
+            if (__instance._insulatingVolumes != null && __instance._insulatingVolumes.Any(x => x.name == "HeatInsulatingVolume")) {
+                __result = true;
+                return false;
+            }
+            return true;
+        }
+
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(HazardDetector), nameof(HazardDetector.AddInsulatingVolume))]
+        //public static bool HazardDetector_AddInsulatingVolume_Prefix(HazardDetector __instance, InsulatingVolume insulatingVolume) {
+        //    if(insulatingVolume.name != "HeatInsulatingVolume") {
+        //        return true;
+        //    }
+        //    if (!__instance._insulatingVolumes.Contains(insulatingVolume)) {
+        //        __instance._insulatingVolumes.Add(insulatingVolume);
+        //        __instance._hazardMask &= -5;
+        //    }
+        //    return false;
+        //}
+
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(HazardDetector), nameof(HazardDetector.RemoveInsulatingVolume))]
+        //public static bool HazardDetector_RemoveInsulatingVolume_Prefix(HazardDetector __instance, InsulatingVolume insulatingVolume) {
+        //    if(insulatingVolume.name != "HeatInsulatingVolume") {
+        //        return true;
+        //    }
+        //    if(__instance._insulatingVolumes.Contains(insulatingVolume)) {
+        //        __instance._insulatingVolumes.Remove(insulatingVolume);
+        //        for(int i = 0; i < __instance._activeVolumes.Count; ++i) {
+        //            if((__instance._activeVolumes[i] as HazardVolume).GetHazardType() == HazardVolume.HazardType.HEAT) {
+        //                __instance._hazardMask |= 4;
+        //            }
+        //        }
+        //    }
+        //    return false;
+        //}
+
+        //[HarmonyPostfix]
+        //[HarmonyPatch(typeof(HazardDetector), nameof(HazardDetector.OnVolumeRemoved))]
+        //public static void HazardDetector_OnVolumeRemoved_Postfix(HazardDetector __instance) {
+        //    if (__instance._insulatingVolumes != null && __instance._insulatingVolumes.Any(x => x.name == "HeatInsulatingVolume")) {
+        //        __instance._hazardMask &= -5;
+        //    }
+        //    // below codes cannot be called by CS0079, but all OnHazardsUpdated are related to DarkMatter, so it is no problem.
+        //    //if (__instance.OnHazardsUpdated != null) {
+        //    //    __instance.OnHazardsUpdated();
+        //    //}
+        //}
+
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(HazardDetector), nameof(HazardDetector.OnVolumeAdded))]
+        //public static bool HazardDetector_OnVolumeAdded_Prefix(HazardDetector __instance, EffectVolume eVolume) {
+        //    if (__instance._insulatingVolumes != null && __instance._insulatingVolumes.Any(x => x.name == "HeatInsulatingVolume")) {
+        //        HazardVolume hazardVolume = eVolume as HazardVolume;
+        //        if (hazardVolume != null || hazardVolume.GetHazardType() == HazardVolume.HazardType.HEAT) {
+        //            return false;
+        //        }
+        //    }
+        //    return true;
+        //}
     }
 }

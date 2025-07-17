@@ -50,19 +50,26 @@
         "type": "riverHeat"
       }
     ],
-    //"insulatingVolumes": [
-    //  {
-    //    //"parentPath": "Sector/BoxTriStar/smooth_cylinder (2)",
-    //    //"isRelativeToParent": true,
-    //    //"radius": 1,
-    //    "radius": 2500,
-    //  }
-    //],
-    //"mapRestrictionVolumes": [
-    //  {
-    //    "radius": 2500,
-    //  }
-    //]
+    "insulatingVolumes": [
+      {
+        //"parentPath": "Sector/BoxTriStar/smooth_cylinder (2)",
+        //"isRelativeToParent": true,
+        //"radius": 1,
+        "position": {
+          "x": 0,
+          "y": 86.2,
+          "z": 0
+        },
+        //"radius": 2500,
+        "radius": 90,
+        "rename": "HeatInsulatingVolume",
+      }
+    ],
+    "mapRestrictionVolumes": [
+      {
+        "radius": 2500,
+      }
+    ]
   },
   "Water": {
     "size": 180,
