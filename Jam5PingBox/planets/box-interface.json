@@ -81,6 +81,12 @@
       },
       {
         "assetBundle": "planets/assetbundles/diorama",
+        "path": "Assets/MyAssets/Prefabs/hscout.prefab",
+        "keepLoaded": true,
+        "parentPath": "Sector/DioramaMachine",
+      },
+      {
+        "assetBundle": "planets/assetbundles/diorama",
         "path": "Assets/MyAssets/Prefabs/Box1.prefab"
       },
       {

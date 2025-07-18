@@ -22,7 +22,7 @@ namespace Jam5PingBox {
         List<Data> _currentRecords;
 
         public void Initialize() {
-            foreach (Transform child in GetComponentsInChildren<Transform>(true)) {
+            foreach (Transform child in transform.parent.GetComponentsInChildren<Transform>(true)) {
                 if(child.name == "BoxButtonVesselWarp") {
                     _bhwhButton = child.gameObject.AddComponent<BoxButton>();
                 }
@@ -66,7 +66,7 @@ namespace Jam5PingBox {
             }, data => {
                 _bhwhButton._pushedOnRecord = data._isBhwhButtonPushed;
                 _bhwhButton.ChangeState();
-            }));
+            }, true));
         }
 
         void OnDestroy() {

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1603629285
+CRC: 417504976
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f3e2bbb6c8ce30865f0a01644c90f646
+    Hash: c752caa3fee5e65f345e013c56e0242c
   TypeTreeHash:
     serializedVersion: 2
     Hash: faf209235a9c7dc3742b36b29362c0dd
@@ -68,6 +68,7 @@ Assets:
 - Assets/MyAssets/Prefabs/BoxTriStar.prefab
 - Assets/MyAssets/Prefabs/hhearthian.prefab
 - Assets/MyAssets/Prefabs/Box3Item.prefab
+- Assets/MyAssets/Prefabs/hscout.prefab
 - Assets/MyAssets/Prefabs/AroundDioramaMachine.prefab
 - Assets/MyAssets/Prefabs/Box1.prefab
 - Assets/MyAssets/Prefabs/Box1Item.prefab
