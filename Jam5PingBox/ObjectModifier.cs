@@ -16,6 +16,7 @@ namespace Jam5PingBox {
         const string BOX2_PATH = "DioramaInterface_Body/Sector/Box2";
         const string BOX3_PATH = "DioramaInterface_Body/Sector/Box3";
         const string PLATFORM_PATH = "Orclecle_Mod_Platform_Body/Sector";
+        const string SHADOW_OF_SPARKS_PATH = "ShadowofSparks_Body/Sector";
         const string BOX_TRISTAR_PATH = "ShadowofSparks_Body/Sector/BoxTriStar";
         static readonly string[] BOX_TRISTER_OBJ_PATHS = new string[] {
             "Hope_Body",
@@ -55,8 +56,16 @@ namespace Jam5PingBox {
                 }
                 yield return null;
             }
+            GameObject shadowOfSparks = null;
+            while (true) {
+                shadowOfSparks = GameObject.Find(SHADOW_OF_SPARKS_PATH);
+                if (shadowOfSparks) {
+                    break;
+                }
+                yield return null;
+            }
 
-            foreach (var sector in new[] { dioramaInterface, platform }) {
+            foreach (var sector in new[] { dioramaInterface, platform, shadowOfSparks }) {
                 foreach (var child in sector.GetComponentsInChildren<Transform>(true)) {
                     if (child.name.Contains("EnergyCable")) {
                         child.gameObject.AddComponent<SetEnergyCableMat>().Initialize(originalEnergyCableMaterial);
