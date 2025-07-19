@@ -13,10 +13,31 @@ namespace Jam5PingBox {
         GameObject _whFromVessel;
         BoxButton _bhwhButton;
 
+        Transform _door1;
+        Transform _door1Open;
+        Transform _door1Close;
+        BoxButton _door1Button;
+        Transform _door2;
+        Transform _door2Open;
+        Transform _door2Close;
+        BoxButton _door2Button;
+        Transform _door3;
+        Transform _door3Open;
+        Transform _door3Close;
+        BoxButton _door3Button;
+
+
         bool _isBhwhAppear = false;
+        bool _isDoor1Open = false;
+        bool _isDoor2Open = false;
+        bool _isDoor3Open = false;
 
         class Data : DioramaMachine.BaseData {
             public bool _isBhwhButtonPushed;
+
+            public bool _isDoor1ButtonPushed;
+            public bool _isDoor2ButtonPushed;
+            public bool _isDoor3ButtonPushed;
         }
         static List<Data> _prevRecords;
         List<Data> _currentRecords;
@@ -42,6 +63,30 @@ namespace Jam5PingBox {
                     _whFromVessel = child.gameObject;
                     _whFromVessel.SetActive(false);
                 }
+                else if(child.name == "Door1") {
+                    _door1 = child.Find("Door");
+                    _door1Open = child.Find("Open");
+                    _door1Close = child.Find("Close");
+                }
+                else if(child.name == "BoxButtonDoor1") {
+                    _door1Button = child.gameObject.AddComponent<BoxButton>();
+                }
+                else if(child.name == "Door2") {
+                    _door2 = child.Find("Door");
+                    _door2Open = child.Find("Open");
+                    _door2Close = child.Find("Close");
+                }
+                else if(child.name == "BoxButtonDoor2") {
+                    _door2Button = child.gameObject.AddComponent<BoxButton>();
+                }
+                else if(child.name == "Door3") {
+                    _door3 = child.Find("DoorBody");
+                    _door3Open = child.Find("Open");
+                    _door3Close = child.Find("Close");
+                }
+                else if(child.name == "BoxButtonDoor3") {
+                    _door3Button = child.gameObject.AddComponent<BoxButton>();
+                }
             }
 
             _bhwhButton._onAction = () => {
@@ -60,13 +105,59 @@ namespace Jam5PingBox {
             };
             _bhwhButton.Initialize();
 
+            _door1Button._onAction = () => {
+                _isDoor1Open = true;
+            };
+            _door1Button._offAction = () => {
+                _isDoor1Open = false;
+            };
+            _door1Button.Initialize();
+            _door2Button._onAction = () => {
+                _isDoor2Open = true;
+            };
+            _door2Button._offAction = () => {
+                _isDoor2Open = false;
+            };
+            _door2Button.Initialize();
+            _door3Button._onAction = () => {
+                _isDoor3Open = true;
+            };
+            _door3Button._offAction = () => {
+                _isDoor3Open = false;
+            };
+            _door3Button.Initialize();
+
             _currentRecords = new List<Data>();
             StartCoroutine(DioramaMachine.Record(transform, _currentRecords, _prevRecords, data => {
                 data._isBhwhButtonPushed = _bhwhButton._pushed;
+                data._isDoor1ButtonPushed = _door1Button._pushed;
+                data._isDoor2ButtonPushed = _door2Button._pushed;
+                data._isDoor3ButtonPushed = _door3Button._pushed;
             }, data => {
                 _bhwhButton._pushedOnRecord = data._isBhwhButtonPushed;
                 _bhwhButton.ChangeState();
+                _door1Button._pushedOnRecord = data._isDoor1ButtonPushed;
+                _door1Button.ChangeState();
+                _door2Button._pushedOnRecord = data._isDoor2ButtonPushed;
+                _door2Button.ChangeState();
+                _door3Button._pushedOnRecord = data._isDoor3ButtonPushed;
+                _door3Button.ChangeState();
             }, true));
+        }
+
+        void Update() {
+            if(_door1) {
+                var pos = _isDoor1Open ? _door1Open : _door1Close;
+                _door1.transform.localPosition = Vector3.Lerp(_door1.transform.localPosition, pos.localPosition, 0.1f);
+            }
+            if(_door2) {
+                var pos = _isDoor2Open ? _door2Open : _door2Close;
+                _door2.transform.localPosition = Vector3.Lerp(_door2.transform.localPosition, pos.localPosition, 0.1f);
+            }
+            if(_door3) {
+                var pos = _isDoor3Open ? _door3Open : _door3Close;
+                _door3.transform.localPosition = Vector3.Lerp(_door3.transform.localPosition, pos.localPosition, 0.1f);
+            }
         }
 
         void OnDestroy() {

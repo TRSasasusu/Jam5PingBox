@@ -138,7 +138,91 @@
           "y": 0,
           "z": 1.0241
         }
-      }
+      },
+      {
+        "rename": "BHFromTower1",
+        "horizonRadius": 1,
+        "uniqueID": "tristar_bh_from_tower1",
+        "pairedSingularity": "tristar_wh_from_tower1",
+        "type": "blackHole",
+        "parentPath": "Sector/BoxTriStar/AnotherNomaiTower",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 0,
+          "y": 2.0995,
+          "z": 0
+        }
+      },
+      {
+        "rename": "WHFromTower1",
+        "horizonRadius": 1,
+        "uniqueID": "tristar_wh_from_tower1",
+        "pairedSingularity": "tristar_bh_from_tower1",
+        "type": "whiteHole",
+        "parentPath": "Sector/BoxTriStar/AnotherNomaiTower",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 0,
+          "y": 25.733,
+          "z": 11.3113
+        }
+      },
+      {
+        "rename": "BHFromTower2",
+        "horizonRadius": 1,
+        "uniqueID": "tristar_bh_from_tower2",
+        "pairedSingularity": "tristar_wh_from_tower2",
+        "type": "blackHole",
+        "parentPath": "Sector/BoxTriStar/AnotherNomaiTower",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 0,
+          "y": 10.0087,
+          "z": 0
+        }
+      },
+      {
+        "rename": "WHFromTower2",
+        "horizonRadius": 1,
+        "uniqueID": "tristar_wh_from_tower2",
+        "pairedSingularity": "tristar_bh_from_tower2",
+        "type": "whiteHole",
+        "parentPath": "Sector/BoxTriStar/AnotherNomaiTower",
+        "isRelativeToParent": true,
+        "position": {
+          "x": -11.4645,
+          "y": 25.733,
+          "z": -9.9383
+        }
+      },
+      {
+        "rename": "BHFromTower3",
+        "horizonRadius": 1,
+        "uniqueID": "tristar_bh_from_tower3",
+        "pairedSingularity": "tristar_wh_from_tower3",
+        "type": "blackHole",
+        "parentPath": "Sector/BoxTriStar/AnotherNomaiTower",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 0,
+          "y": 19.0065,
+          "z": -9.5452
+        }
+      },
+      {
+        "rename": "WHFromTower3",
+        "horizonRadius": 1,
+        "uniqueID": "tristar_wh_from_tower3",
+        "pairedSingularity": "tristar_bh_from_tower3",
+        "type": "whiteHole",
+        "parentPath": "Sector/BoxTriStar/AnotherNomaiTower",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 11.4645,
+          "y": 25.733,
+          "z": -9.9383
+        }
+      },
     ],
     "details": [
       {
@@ -423,6 +507,16 @@
           "z": 27.6488
         }
       },
+      {
+        "path": "StatueIsland_Body/Sector_StatueIsland/Interactables_StatueIsland/ControlledByProxy_StatueIsland/Props_NOM_DockingTractorBeam (1)",
+        "parentPath": "Sector/BoxTriStar/AnotherNomaiTower",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 0,
+          "y": 24.1286,
+          "z": 0
+        }
+      }
     ]
   }
 }
