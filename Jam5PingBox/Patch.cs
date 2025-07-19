@@ -60,10 +60,22 @@ namespace Jam5PingBox {
                 var rootName = __instance.transform.root.name;
                 if(rootName == "Salvation_Body" || rootName == "Hope_Body" || rootName == "Faith_Body") {
                     GameObject.Destroy(probeBody.gameObject);
+                    DioramaMachine.DestructProbe(rootName);
                     return false;
                 }
             }
             return true;
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(DestructionVolume), nameof(DestructionVolume.VanishPlayer))]
+        public static void DestructionVolume_VanishPlayer_Prefix(DestructionVolume __instance) {
+            if(__instance.transform.root) {
+                var rootName = __instance.transform.root.name;
+                if(rootName == "Salvation_Body" || rootName == "Hope_Body" || rootName == "Faith_Body") {
+                    DioramaMachine.DestructPlayer(rootName);
+                }
+            }
         }
 
         [HarmonyPrefix]

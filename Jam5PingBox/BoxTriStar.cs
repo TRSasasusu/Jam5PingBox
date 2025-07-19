@@ -26,11 +26,22 @@ namespace Jam5PingBox {
         Transform _door3Close;
         BoxButton _door3Button;
 
+        Transform _water;
+        SphereShape _hazardVolume;
 
         bool _isBhwhAppear = false;
         bool _isDoor1Open = false;
         bool _isDoor2Open = false;
         bool _isDoor3Open = false;
+
+        public enum ScoutOrPlayer { // o (Salvation) -> x (Faith) -> v (Hope)
+            EMPTY,
+            SCOUT,
+            PLAYER,
+        }
+        public (ScoutOrPlayer, float) _sunV = (ScoutOrPlayer.EMPTY, 0);
+        public (ScoutOrPlayer, float) _sunO = (ScoutOrPlayer.EMPTY, 0);
+        public (ScoutOrPlayer, float) _sunX = (ScoutOrPlayer.EMPTY, 0);
 
         class Data : DioramaMachine.BaseData {
             public bool _isBhwhButtonPushed;
@@ -87,6 +98,12 @@ namespace Jam5PingBox {
                 else if(child.name == "BoxButtonDoor3") {
                     _door3Button = child.gameObject.AddComponent<BoxButton>();
                 }
+                else if(child.name == "Water") {
+                    _water = child;
+                }
+                else if(child.name == "HazardVolume") {
+                    _hazardVolume = child.GetComponent<SphereShape>();
+                }
             }
 
             _bhwhButton._onAction = () => {
@@ -142,6 +159,16 @@ namespace Jam5PingBox {
                 _door2Button.ChangeState();
                 _door3Button._pushedOnRecord = data._isDoor3ButtonPushed;
                 _door3Button.ChangeState();
+
+                if(data._sunO.Item1 != ScoutOrPlayer.EMPTY && _sunO.Item1 == ScoutOrPlayer.EMPTY) {
+                    _sunO = data._sunO;
+                }
+                if(data._sunV.Item1 != ScoutOrPlayer.EMPTY && _sunV.Item1 == ScoutOrPlayer.EMPTY) {
+                    _sunV = data._sunV;
+                }
+                if(data._sunX.Item1 != ScoutOrPlayer.EMPTY && _sunX.Item1 == ScoutOrPlayer.EMPTY) {
+                    _sunX = data._sunX;
+                }
             }, true));
         }
 
@@ -157,6 +184,11 @@ namespace Jam5PingBox {
             if(_door3) {
                 var pos = _isDoor3Open ? _door3Open : _door3Close;
                 _door3.transform.localPosition = Vector3.Lerp(_door3.transform.localPosition, pos.localPosition, 0.1f);
+            }
+
+            if(_sunO.Item1 == ScoutOrPlayer.SCOUT && _sunX.Item1 == ScoutOrPlayer.SCOUT && _sunV.Item1 == ScoutOrPlayer.PLAYER && _sunO.Item2 < _sunX.Item2 && _sunX.Item2 < _sunV.Item2) {
+                _water.transform.localScale = Vector3.Lerp(_water.transform.localScale, new Vector3(0.01f, 0.01f, 0.01f), 10);
+                _hazardVolume.radius = Mathf.Lerp(_hazardVolume.radius, 0.01f, 10);
             }
         }
 

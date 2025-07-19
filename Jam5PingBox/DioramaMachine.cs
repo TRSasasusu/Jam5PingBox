@@ -16,12 +16,18 @@ namespace Jam5PingBox {
         public GameObject _box3;
         public GameObject _boxTriStar;
         public List<GameObject> _boxTriStarObjs;
+        public BoxTriStar _boxTriStarInstance;
 
         public static DioramaMachine Instance;
         public static bool IsMapRestricted { get { return Instance && Instance._boxTriStar.activeSelf; } }
         public static bool _isMeditating;
         static GameObject _hhearthian;
         static GameObject _hscout;
+        static float _time;
+
+        (BoxTriStar.ScoutOrPlayer, float) _sunV = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
+        (BoxTriStar.ScoutOrPlayer, float) _sunO = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
+        (BoxTriStar.ScoutOrPlayer, float) _sunX = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
 
         public enum BoxType {
             BOX1,
@@ -36,6 +42,9 @@ namespace Jam5PingBox {
             public bool _scoutActive;
             public Vector3 _scoutPos;
             public Quaternion _scoutRot;
+            public (BoxTriStar.ScoutOrPlayer, float) _sunV = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
+            public (BoxTriStar.ScoutOrPlayer, float) _sunO = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
+            public (BoxTriStar.ScoutOrPlayer, float) _sunX = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
         }
 
         public static Vector3 RecordPlayerPos(Transform box) {
@@ -54,7 +63,48 @@ namespace Jam5PingBox {
             return box.InverseTransformRotation(Locator._probe.transform.rotation);
         }
 
+        public static void DestructProbe(string name) {
+            if(!Instance || !Instance._boxTriStarInstance) {
+                return;
+            }
+
+            var val = (BoxTriStar.ScoutOrPlayer.SCOUT, _time);
+            if(name == "Salvation_Body") {
+                Instance._boxTriStarInstance._sunO = val;
+                Instance._sunO = val;
+            }
+            else if(name == "Hope_Body") {
+                Instance._boxTriStarInstance._sunV = val;
+                Instance._sunV = val;
+            }
+            else if(name == "Faith_Body") {
+                Instance._boxTriStarInstance._sunX = val;
+                Instance._sunX = val;
+            }
+        }
+
+        public static void DestructPlayer(string name) {
+            if(!Instance || !Instance._boxTriStarInstance) {
+                return;
+            }
+
+            var val = (BoxTriStar.ScoutOrPlayer.PLAYER, _time);
+            if(name == "Salvation_Body") {
+                Instance._boxTriStarInstance._sunO = val;
+                Instance._sunO = val;
+            }
+            else if(name == "Hope_Body") {
+                Instance._boxTriStarInstance._sunV = val;
+                Instance._sunV = val;
+            }
+            else if(name == "Faith_Body") {
+                Instance._boxTriStarInstance._sunX = val;
+                Instance._sunX = val;
+            }
+        }
+
         public static IEnumerator Record<Data>(Transform box, List<Data> currentRecords, List<Data> prevRecords, Action<Data> onRecord, Action<Data> onLoad, bool recordScout = false) where Data : BaseData, new() {
+            _time = 0;
             float time = INTERVAL + 1;
             int idx = -1;
             while (true) {
@@ -81,6 +131,11 @@ namespace Jam5PingBox {
                         else {
                             newData._scoutActive = false;
                         }
+                    }
+                    if(Instance && Instance._boxTriStar) {
+                        newData._sunO = Instance._sunO;
+                        newData._sunV = Instance._sunV;
+                        newData._sunX = Instance._sunX;
                     }
 
                     onRecord(newData);
@@ -129,6 +184,7 @@ namespace Jam5PingBox {
                     onLoad(prevRecords[idx]);
                 }
                 time += Time.deltaTime;
+                _time += Time.deltaTime;
                 yield return null;
             }
         }
@@ -177,7 +233,8 @@ namespace Jam5PingBox {
                 foreach(var obj in _boxTriStarObjs) {
                     obj.SetActive(true);
                 }
-                box.AddComponent<BoxTriStar>().Initialize();
+                _boxTriStarInstance = box.AddComponent<BoxTriStar>();
+                _boxTriStarInstance.Initialize();
             }
             _dioramaMachine.SetActive(false);
 
