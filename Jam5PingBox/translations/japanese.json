@@ -1,0 +1,14 @@
+{
+	"$schema": "https://raw.githubusercontent.com/outer-wilds-new-horizons/new-horizons/main/NewHorizons/Schemas/translation_schema.json",
+	"UIDictionary": {
+	},
+	"DialogueDictionary": {
+		"BOX1_INTRO": "ここは箱庭、もしくはジオラマ。",
+		"BOX1_END_TEXT_TIMELOOP1": "PING:タイムループを正しく利用できているか確認するために、前回の履歴を可視化してみた。おかげで問題なく動作しているとわかった。",
+		"BOX1_END_TEXT_TIMELOOP2": "PING:まずはこの小さな箱庭で実験的に利用してみたけれど、これなら本格的にジャムとの連動もできそうね。本当に楽しみ。",
+		"BOX1_END_PC": "箱庭1の完了を記録しました。",
+		"BOX2_INTRO": "PING:タイムループのデータの中で興味深いものを見つけた:瞑想。うまく使えば、面白いものを呼び出すまでの無為な時間をスキップできるかもしれない。",
+		"BOX2_END_PC": "箱庭2の完了を記録しました。",
+		"BOX3_END_PC": "箱庭3の完了を記録しました。",
+	}
+}

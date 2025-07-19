@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "name": "Hidden Ping Ship",
+  "starSystem": "Jam5",
+  "Base": {
+    "showMinimap": false,
+    "gravityFallOff": "linear",
+    "surfaceSize": 0,
+    "soiOverride": 200,
+    "surfaceGravity": 0,
+    "centerOfSolarSystem": true
+  },
+  "Volumes": {
+    "mapRestrictionVolumes": [
+      {
+        "radius": 2500,
+      }
+    ]
+  },
+  "removeChildren": [
+    "Sector/Sector/Prefab_NOM_Recorder_Vessel",
+    "Sector/Sector/Prefab_NOM_WarpReceiver",
+    "Sector/Sector/Prefab_NOM_Vessel_Computer",
+    "Sector/Sector/Note",
+  ],
+  "Props": {
+    "details": [
+      {
+        "path": "StarshipCommunity_Body/Sector"
+      }
+    ]
+  }
+}

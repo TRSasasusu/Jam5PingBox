@@ -17,6 +17,7 @@ namespace Jam5PingBox {
         public GameObject _boxTriStar;
         public List<GameObject> _boxTriStarObjs;
         public BoxTriStar _boxTriStarInstance;
+        public GameObject _hiddenPingShip;
 
         public static DioramaMachine Instance;
         public static bool IsMapRestricted { get { return Instance && Instance._boxTriStar.activeSelf; } }
@@ -208,6 +209,8 @@ namespace Jam5PingBox {
             foreach (var obj in _boxTriStarObjs) {
                 obj.SetActive(false);
             }
+
+            _hiddenPingShip.SetActive(false);
         }
 
         public void Load(BoxType boxType) {
