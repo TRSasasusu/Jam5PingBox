@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OWML.ModHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,9 @@ namespace Jam5PingBox {
                     _floor = child.Find("Floor");
                     _floorUp = child.Find("Positions/1");
                     _floorDown = child.Find("Positions/0");
+                }
+                else if(child.name == "text_diorama_box1_end_pc") {
+                    DioramaMachine.ActivateComputer(child.GetComponent<NomaiComputer>());
                 }
             }
 

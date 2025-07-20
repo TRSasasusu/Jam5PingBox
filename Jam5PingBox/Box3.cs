@@ -37,6 +37,9 @@ namespace Jam5PingBox {
                     _inverseGravity = child.gameObject;
                     _inverseGravity.SetActive(false);
                 }
+                else if(child.name == "text_diorama_box3_end_pc") {
+                    DioramaMachine.ActivateComputer(child.GetComponent<NomaiComputer>());
+                }
             }
 
             _inverseGravityButton._onAction = () => {

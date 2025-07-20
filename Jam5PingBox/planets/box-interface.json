@@ -137,6 +137,114 @@
           "z": -11.5
         }
       },
+    ],
+    "translatorText": [
+      {
+        "type": "trailmarker",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_box1_intro.xml",
+        "rename": "text_diorama_box1_intro",
+        "parentPath": "Sector/Box1",
+        "position": {
+          "x": 3.185,
+          "y": 0,
+          "z": 3.2325
+        }
+      },
+      {
+        "type": "wall",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_box1_end_timeloop.xml",
+        "rename": "text_diorama_box1_end_timeloop",
+        "parentPath": "Sector/Box1",
+        "position": {
+          "x": 2.3724,
+          "y": 8.9071,
+          "z": 3.6284
+        },
+        "rotation": {
+          "x": 0,
+          "y": 270,
+          "z": 0
+        }
+      },
+      {
+        "type": "computer",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_box1_end_pc.xml",
+        "rename": "text_diorama_box1_end_pc",
+        "parentPath": "Sector/Box1",
+        "position": {
+          "x": 0.2037,
+          "y": 8.1286,
+          "z": 3.8346
+        }
+      },
+      {
+        "type": "wall",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_box2_intro.xml",
+        "rename": "text_diorama_box2_intro",
+        "parentPath": "Sector/Box2",
+        "position": {
+          "x": -5.7243,
+          "y": 1.1859,
+          "z": 3.0445
+        },
+        "rotation": {
+          "x": 0,
+          "y": 90,
+          "z": 0
+        }
+      },
+      {
+        "type": "wall",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_box2_end_meditation.xml",
+        "rename": "text_diorama_box2_end_meditation",
+        "parentPath": "Sector/Box2",
+        "position": {
+          "x": -2.6839,
+          "y": 9.6995,
+          "z": -1.9933
+        }
+      },
+      {
+        "type": "computer",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_box2_end_pc.xml",
+        "rename": "text_diorama_box2_end_pc",
+        "parentPath": "Sector/Box2",
+        "position": {
+          "x": 0,
+          "y": 8.2682,
+          "z": -0.1582
+        }
+      },
+      {
+        "type": "wall",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_box3_end_diorama.xml",
+        "rename": "text_diorama_box3_end_diorama",
+        "parentPath": "Sector/Box3",
+        "position": {
+          "x": 2.7724,
+          "y": 28.523,
+          "z": 2.0025
+        }
+      },
+      {
+        "type": "computer",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_box3_end_pc.xml",
+        "rename": "text_diorama_box3_end_pc",
+        "parentPath": "Sector/Box3",
+        "position": {
+          "x": 4.5416,
+          "y": 27.798,
+          "z": 3.7394
+        }
+      },
     ]
   }
 }

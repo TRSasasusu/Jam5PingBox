@@ -190,6 +190,15 @@ namespace Jam5PingBox {
             }
         }
 
+        public static void ActivateComputer(NomaiComputer computer) {
+            computer.StartCoroutine(ActivateComputerBody(computer));
+        }
+
+        static IEnumerator ActivateComputerBody(NomaiComputer computer) {
+            yield return null;
+            computer.enabled = true;
+        }
+
         public void Initialize() {
             Instance = this;
             _isMeditating = false;

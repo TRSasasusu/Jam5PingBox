@@ -48,6 +48,9 @@ namespace Jam5PingBox {
                 else if(child.name.Contains("Tractor Beam")) {
                     _beamFluids.Add(child.GetComponentInChildren<TractorBeamFluid>());
                 }
+                else if(child.name == "text_diorama_box2_end_pc") {
+                    DioramaMachine.ActivateComputer(child.GetComponent<NomaiComputer>());
+                }
             }
 
             _doorButton._onAction = () => {
