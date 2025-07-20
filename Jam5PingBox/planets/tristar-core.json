@@ -651,6 +651,33 @@
           "y": 91.4275,
           "z": -20.5481
         }
+      },
+      {
+        "type": "wall",
+        "location": "a",
+        "xmlFile": "planets/texts/diorama_boxt_tower_another.xml",
+        "rename": "text_diorama_boxt_tower_another",
+        "position": {
+          "x": -1.0684,
+          "y": -272.8522,
+          "z": -4.4788
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 318.4005
+        }
+      },
+      {
+        "type": "recorder",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_boxt_tower_now.xml",
+        "rename": "text_diorama_boxt_tower_now",
+        "position": {
+          "x": -0.2428,
+          "y": -274.077,
+          "z": -1.2865
+        }
       }
     ]
   }

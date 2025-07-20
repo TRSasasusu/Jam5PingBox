@@ -64,6 +64,13 @@
         "x": 300,
         "y": -550
       }
+    },
+    {
+      "id": "diorama_boxt_building",
+      "position": {
+        "x": 700,
+        "y": -550
+      }
     }
   ],
   "curiosities": [

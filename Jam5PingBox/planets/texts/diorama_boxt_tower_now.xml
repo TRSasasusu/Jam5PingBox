@@ -1,69 +1,70 @@
 ﻿<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
   <TextBlock>
     <ID>1</ID>
-    <Text>BOXT_VESSEL_1</Text>
+    <Text>BOXT_TOWER_NOW_1</Text>
   </TextBlock>
   <TextBlock>
     <ID>2</ID>
     <ParentID>1</ParentID>
-    <Text>BOXT_VESSEL_2</Text>
+    <Text>BOXT_TOWER_NOW_2</Text>
   </TextBlock>
   <TextBlock>
     <ID>3</ID>
     <ParentID>2</ParentID>
-    <Text>BOXT_VESSEL_3</Text>
+    <Text>BOXT_TOWER_NOW_3</Text>
   </TextBlock>
   <TextBlock>
     <ID>4</ID>
     <ParentID>3</ParentID>
-    <Text>BOXT_VESSEL_4</Text>
+    <Text>BOXT_TOWER_NOW_4</Text>
   </TextBlock>
   <TextBlock>
     <ID>5</ID>
     <ParentID>4</ParentID>
-    <Text>BOXT_VESSEL_5</Text>
+    <Text>BOXT_TOWER_NOW_5</Text>
   </TextBlock>
   <TextBlock>
     <ID>6</ID>
     <ParentID>5</ParentID>
-    <Text>BOXT_VESSEL_6</Text>
+    <Text>BOXT_TOWER_NOW_6</Text>
   </TextBlock>
   <TextBlock>
     <ID>7</ID>
     <ParentID>6</ParentID>
-    <Text>BOXT_VESSEL_7</Text>
+    <Text>BOXT_TOWER_NOW_7</Text>
   </TextBlock>
   <TextBlock>
     <ID>8</ID>
     <ParentID>7</ParentID>
-    <Text>BOXT_VESSEL_8</Text>
+    <Text>BOXT_TOWER_NOW_8</Text>
   </TextBlock>
   <TextBlock>
     <ID>9</ID>
     <ParentID>8</ParentID>
-    <Text>BOXT_VESSEL_9</Text>
+    <Text>BOXT_TOWER_NOW_9</Text>
   </TextBlock>
   <TextBlock>
     <ID>10</ID>
     <ParentID>9</ParentID>
-    <Text>BOXT_VESSEL_10</Text>
+    <Text>BOXT_TOWER_NOW_10</Text>
+  </TextBlock>
+  <TextBlock>
+    <ID>11</ID>
+    <ParentID>10</ParentID>
+    <Text>BOXT_TOWER_NOW_11</Text>
   </TextBlock>
   <ShipLogConditions>
     <RevealFact>
-      <FactID>diorama_boxt_vessel_remove_water</FactID>
-      <Condition>3</Condition>
+      <FactID>diorama_boxt_building_fact_1</FactID>
+      <Condition>1</Condition>
     </RevealFact>
     <RevealFact>
-      <FactID>diorama_boxt_vessel_energy</FactID>
-      <Condition>6</Condition>
+      <FactID>diorama_boxt_building_fact_2</FactID>
+      <Condition>7</Condition>
     </RevealFact>
     <RevealFact>
-      <FactID>diorama_boxt_vessel_order</FactID>
-      <Condition>9</Condition>
-    </RevealFact>
-    <RevealFact>
-      <FactID>diorama_boxt_building_rumor_from_vessel</FactID>
-      <Condition>9</Condition>
+      <FactID>diorama_boxt_symbol_rumor_from_building</FactID>
+      <Condition>10</Condition>
     </RevealFact>
   </ShipLogConditions>
 </NomaiObject>

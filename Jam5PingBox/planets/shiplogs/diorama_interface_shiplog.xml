@@ -134,6 +134,7 @@
     <Curiosity>diorama_ping</Curiosity>
     <RumorFact>
       <ID>diorama_boxt_symbol_rumor_from_building</ID>
+      <SourceID>diorama_boxt_building</SourceID>
       <Text>BOXT_SYMBOL_RUMOR_FROM_BUILDING</Text>
     </RumorFact>
     <ExploreFact>
@@ -147,6 +148,29 @@
   </Entry>
 
   <Entry>
+    <ID>diorama_boxt_building</ID>
+    <Name>BOXT_BUILDING</Name>
+    <Curiosity>diorama_ping</Curiosity>
+    <RumorFact>
+      <ID>diorama_boxt_building_rumor_from_vessel</ID>
+      <SourceID>diorama_boxt_vessel</SourceID>
+      <Text>BOXT_BUILDING_RUMOR_FROM_VESSEL</Text>
+    </RumorFact>
+    <ExploreFact>
+      <ID>diorama_boxt_building_remote</ID>
+      <Text>BOXT_BUILDING_REMOTE</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_boxt_building_fact_1</ID>
+      <Text>BOXT_BUILDING_FACT_1</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_boxt_building_fact_2</ID>
+      <Text>BOXT_BUILDING_FACT_2</Text>
+    </ExploreFact>
+  </Entry>
+
+  <Entry>
     <ID>diorama_ping</ID>
     <Name>DIORAMA_JAM</Name>
     <Curiosity>diorama_ping</Curiosity>
@@ -154,6 +178,22 @@
     <ExploreFact>
       <ID>diorama_ping_1</ID>
       <Text>DIORAMA_JAM_1</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_ping_2</ID>
+      <Text>DIORAMA_JAM_2</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_ping_3</ID>
+      <Text>DIORAMA_JAM_3</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_ping_4</ID>
+      <Text>DIORAMA_JAM_4</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_ping_5</ID>
+      <Text>DIORAMA_JAM_5</Text>
     </ExploreFact>
   </Entry>
 </AstroObjectEntry>
