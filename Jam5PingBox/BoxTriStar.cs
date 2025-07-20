@@ -107,6 +107,9 @@ namespace Jam5PingBox {
                 else if(child.name == "text_diorama_boxt_vessel_remote") {
                     child.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
                 }
+                else if(child.name == "text_diorama_boxt_jam") {
+                    child.transform.localScale = new Vector3(2, 2, 2);
+                }
             }
 
             _bhwhButton._onAction = () => {

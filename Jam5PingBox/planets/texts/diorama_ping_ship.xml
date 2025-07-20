@@ -1,0 +1,20 @@
+﻿﻿<DialogueTree   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+  <NameField>Ping</NameField>
+
+  <DialogueNode>
+    <Name>START</Name>
+    <EntryCondition>DEFAULT</EntryCondition>
+    <Dialogue>
+      <Page>PING_SHIP_1</Page>
+      <Page>PING_SHIP_2</Page>
+      <Page>PING_SHIP_3</Page>
+      <Page>PING_SHIP_4</Page>
+      <Page>PING_SHIP_5</Page>
+    </Dialogue>
+    <RevealFacts>
+      <FactID>diorama_ping_3</FactID>
+      <FactID>diorama_ping_4</FactID>
+      <FactID>diorama_ping_5</FactID>
+    </RevealFacts>
+  </DialogueNode>
+</DialogueTree>

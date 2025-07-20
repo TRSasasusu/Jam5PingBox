@@ -678,6 +678,22 @@
           "y": -274.077,
           "z": -1.2865
         }
+      },
+      {
+        "type": "recorder",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_boxt_jam.xml",
+        "rename": "text_diorama_boxt_jam",
+        "position": {
+          "x": 6.8215,
+          "y": -102.2628,
+          "z": -4.7726
+        },
+        "rotation": {
+          "x": 0,
+          "y": 180,
+          "z": 180
+        }
       }
     ]
   }
