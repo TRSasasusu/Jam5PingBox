@@ -60,7 +60,7 @@
       <Text>BOX2_2</Text>
     </ExploreFact>
     <ExploreFact>
-      <ID>diorama_box2_3</ID>
+      <ID>diorama_box2_complete</ID>
       <Text>BOX2_COMPLETE</Text>
     </ExploreFact>
   </Entry>
@@ -78,8 +78,53 @@
       <Text>BOX3_2</Text>
     </ExploreFact>
     <ExploreFact>
-      <ID>diorama_box3_3</ID>
+      <ID>diorama_box3_complete</ID>
       <Text>BOX3_COMPLETE</Text>
+    </ExploreFact>
+  </Entry>
+
+  <Entry>
+    <ID>diorama_boxt</ID>
+    <Name>BOXT</Name>
+    <Curiosity>diorama_ping</Curiosity>
+    <ExploreFact>
+      <ID>diorama_boxt_1</ID>
+      <Text>BOXT_1</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_boxt_intro</ID>
+      <Text>BOXT_INTRO</Text>
+    </ExploreFact>
+  </Entry>
+
+  <Entry>
+    <ID>diorama_boxt_vessel</ID>
+    <Name>BOXT_VESSEL</Name>
+    <Curiosity>diorama_ping</Curiosity>
+    <RumorFact>
+      <ID>diorama_boxt_vessel_rumor_from_intro</ID>
+      <SourceID>diorama_boxt</SourceID>
+      <Text>BOXT_VESSEL_RUMOR_FROM_INTRO</Text>
+    </RumorFact>
+    <RumorFact>
+      <ID>diorama_boxt_vessel_rumor_1</ID>
+      <Text>BOXT_VESSEL_RUMOR_1</Text>
+    </RumorFact>
+    <ExploreFact>
+      <ID>diorama_boxt_vessel_remove_water</ID>
+      <Text>BOXT_VESSEL_REMOVE_WATER</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_boxt_vessel_energy</ID>
+      <Text>BOXT_VESSEL_ENERGY</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_boxt_vessel_order</ID>
+      <Text>BOXT_VESSEL_ORDER</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_boxt_vessel_remote</ID>
+      <Text>BOXT_VESSEL_REMOTE</Text>
     </ExploreFact>
   </Entry>
 

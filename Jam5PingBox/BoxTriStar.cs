@@ -104,6 +104,9 @@ namespace Jam5PingBox {
                 else if(child.name == "HazardVolume") {
                     _hazardVolume = child.GetComponent<SphereShape>();
                 }
+                else if(child.name == "text_diorama_boxt_vessel_remote") {
+                    child.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                }
             }
 
             _bhwhButton._onAction = () => {

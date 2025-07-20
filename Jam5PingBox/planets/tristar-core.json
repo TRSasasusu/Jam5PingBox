@@ -69,6 +69,17 @@
       {
         "radius": 2500,
       }
+    ],
+    "revealVolumes": [
+      {
+        "revealOn": "enter",
+        "revealFor": "both",
+        "reveals": [
+          "diorama_boxt_1",
+        ],
+        "radius": 2500,
+        "rename": "log_diorama_boxt_1",
+      },
     ]
   },
   "Water": {
@@ -516,6 +527,110 @@
           "y": 24.1286,
           "z": 0
         }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_QuantumFragment/Interactables_QuantumFragment/TowerInterior/Prefab_NOM_Whiteboard (1)",
+        "position": {
+          "x": -1.419,
+          "y": 184.8812,
+          "z": -51.8782
+        },
+        "rotation": {
+          "x": 0,
+          "y": 23.666,
+          "z": 0
+        }
+      }
+    ],
+    "translatorText": [
+      {
+        "type": "scroll",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_boxt_intro.xml",
+        "rename": "text_diorama_boxt_intro",
+        "position": {
+          "x": 0.0373,
+          "y": 185.1003,
+          "z": 1.6643
+        },
+        "rotation": {
+          "x": 58.3734,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "type": "scroll",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_boxt_warp.xml",
+        "rename": "text_diorama_boxt_warp",
+        "position": {
+          "x": 5.14,
+          "y": 186.024,
+          "z": -59.1586
+        },
+        "rotation": {
+          "x": 344.3693,
+          "y": 0,
+          "z": 0
+        },
+        "arcInfo": [
+          {
+            "type": "adult"
+          },
+          {
+            "type": "child",
+          },
+          {
+            "type": "adult"
+          },
+          {
+            "type": "adult"
+          },
+          {
+            "type": "adult"
+          },
+          {
+            "type": "adult"
+          },
+          {
+            "type": "adult"
+          },
+        ],
+        "seed": 3
+      },
+      {
+        "type": "recorder",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_boxt_vessel.xml",
+        "rename": "text_diorama_boxt_vessel",
+        "position": {
+          "x": 114.1252,
+          "y": 128.5756,
+          "z": -65.4828
+        },
+        "rotation": {
+          "x": 335.5933,
+          "y": 0,
+          "z": 0.6487
+        }
+      },
+      {
+        "type": "wall",
+        "location": "a",
+        "xmlFile": "planets/texts/diorama_boxt_vessel_remote.xml",
+        "rename": "text_diorama_boxt_vessel_remote",
+        "position": {
+          "x": 113.4891,
+          "y": 148.0482,
+          "z": -83.0551
+        },
+        "rotation": {
+          "x": 346.9486,
+          "y": 305.1783,
+          "z": 306.7859
+        },
+        "seed": 3,
       }
     ]
   }
