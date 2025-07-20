@@ -34,14 +34,14 @@
       "id": "diorama_box2",
       "position": {
         "x": -700,
-        "y": -700
+        "y": -550
       }
     },
     {
       "id": "diorama_box3",
       "position": {
         "x": -300,
-        "y": -700
+        "y": -550
       }
     },
     {
@@ -57,21 +57,28 @@
         "x": 500,
         "y": -100,
       }
+    },
+    {
+      "id": "diorama_boxt_symbol",
+      "position": {
+        "x": 300,
+        "y": -550
+      }
     }
   ],
   "curiosities": [
     {
       "id": "diorama_ping",
       "color": {
-        "r": 240,
-        "g": 150,
-        "b": 150,
+        "r": 120,
+        "g": 120,
+        "b": 120,
         "a": 255
       },
       "highlightColor": {
-        "r": 240,
-        "g": 180,
-        "b": 180,
+        "r": 200,
+        "g": 200,
+        "b": 200,
         "a": 255
       }
     }

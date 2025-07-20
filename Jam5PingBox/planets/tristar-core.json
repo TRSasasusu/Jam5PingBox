@@ -90,6 +90,7 @@
       "b": 0
     },
     "allowShipAutoroll": false,
+    "buoyancy": 1.01,
   },
   "Props": {
     "singularities": [
@@ -540,7 +541,15 @@
           "y": 23.666,
           "z": 0
         }
-      }
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "position": {
+          "x": -1.871,
+          "y": 90.8998,
+          "z": -20.0715
+        }
+      },
     ],
     "translatorText": [
       {
@@ -631,6 +640,17 @@
           "z": 306.7859
         },
         "seed": 3,
+      },
+      {
+        "type": "recorder",
+        "location": "unspecified",
+        "xmlFile": "planets/texts/diorama_boxt_symbol.xml",
+        "rename": "text_diorama_boxt_symbol",
+        "position": {
+          "x": -0.9832,
+          "y": 91.4275,
+          "z": -20.5481
+        }
       }
     ]
   }

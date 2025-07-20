@@ -129,6 +129,24 @@
   </Entry>
 
   <Entry>
+    <ID>diorama_boxt_symbol</ID>
+    <Name>BOXT_SYMBOL</Name>
+    <Curiosity>diorama_ping</Curiosity>
+    <RumorFact>
+      <ID>diorama_boxt_symbol_rumor_from_building</ID>
+      <Text>BOXT_SYMBOL_RUMOR_FROM_BUILDING</Text>
+    </RumorFact>
+    <ExploreFact>
+      <ID>diorama_boxt_symbol_fact_1</ID>
+      <Text>BOXT_SYMBOL_FACT_1</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_boxt_symbol_fact_2</ID>
+      <Text>BOXT_SYMBOL_FACT_2</Text>
+    </ExploreFact>
+  </Entry>
+
+  <Entry>
     <ID>diorama_ping</ID>
     <Name>DIORAMA_JAM</Name>
     <Curiosity>diorama_ping</Curiosity>
