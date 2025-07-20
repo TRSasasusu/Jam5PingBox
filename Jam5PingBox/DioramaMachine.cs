@@ -22,9 +22,16 @@ namespace Jam5PingBox {
         public static DioramaMachine Instance;
         public static bool IsMapRestricted { get { return Instance && Instance._boxTriStar.activeSelf; } }
         public static bool _isMeditating;
+        public static List<Transform> _clocks;
         static GameObject _hhearthian;
         static GameObject _hscout;
         static float _time;
+
+        const float BOX1_SECONDS = 60 * 8;
+        const float BOX2_SECONDS = 60 * 10;
+        const float BOX3_SECONDS = 60 * 10;
+        const float BOXTRISTAR_SECONDS = 60 * 22;
+        static float _thisSeconds;
 
         (BoxTriStar.ScoutOrPlayer, float) _sunV = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
         (BoxTriStar.ScoutOrPlayer, float) _sunO = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
@@ -186,6 +193,14 @@ namespace Jam5PingBox {
                 }
                 time += Time.deltaTime;
                 _time += Time.deltaTime;
+
+                if (_clocks != null) {
+                    foreach (var clock in _clocks) {
+                        if (clock) {
+                            clock.transform.localEulerAngles = new Vector3(clock.transform.localEulerAngles.x, clock.transform.localEulerAngles.y, _time / (_thisSeconds + 50) * 360);
+                        }
+                    }
+                }
                 yield return null;
             }
         }
@@ -202,6 +217,7 @@ namespace Jam5PingBox {
         public void Initialize() {
             Instance = this;
             _isMeditating = false;
+            _clocks = null;
 
             _dioramaMachine = gameObject;
 
@@ -228,16 +244,19 @@ namespace Jam5PingBox {
                 box = _box1;
                 box.SetActive(true);
                 box.AddComponent<Box1>().Initialize();
+                _thisSeconds = BOX1_SECONDS;
             }
             else if (boxType == BoxType.BOX2) {
                 box = _box2;
                 box.SetActive(true);
                 box.AddComponent<Box2>().Initialize();
+                _thisSeconds = BOX2_SECONDS;
             }
             else if (boxType == BoxType.BOX3) {
                 box = _box3;
                 box.SetActive(true);
                 box.AddComponent<Box3>().Initialize();
+                _thisSeconds = BOX3_SECONDS;
             }
             else if(boxType == BoxType.BOX_TRISTAR) {
                 box = _boxTriStar;
@@ -247,8 +266,10 @@ namespace Jam5PingBox {
                 }
                 _boxTriStarInstance = box.AddComponent<BoxTriStar>();
                 _boxTriStarInstance.Initialize();
+                _thisSeconds = BOXTRISTAR_SECONDS;
             }
             _dioramaMachine.SetActive(false);
+            TimeLoop.SetSecondsRemaining(_thisSeconds);
 
             foreach (Transform child in box.GetComponentsInChildren<Transform>()) {
                 if(child.name == "Spawn") {

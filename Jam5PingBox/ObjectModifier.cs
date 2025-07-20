@@ -25,6 +25,7 @@ namespace Jam5PingBox {
             "Faith_Body",
             "ShadowofSparks_Body",
         };
+        const string TOWER_PATH = "Orclecle_Mod_Platform_Body/Sector/Tower";
 
         public ObjectModifier() {
             Jam5PingBox.Instance.StartCoroutine(Initialize());
@@ -108,6 +109,15 @@ namespace Jam5PingBox {
                     dioramaMachine._boxTriStarObjs = BOX_TRISTER_OBJ_PATHS.Select(x => GameObject.Find(x)).ToList();
 
                     dioramaMachine.Initialize();
+                    break;
+                }
+                yield return null;
+            }
+
+            while (true) {
+                var towerObj = GameObject.Find(TOWER_PATH);
+                if (towerObj) {
+                    towerObj.AddComponent<Tower>().Initialize();
                     break;
                 }
                 yield return null;

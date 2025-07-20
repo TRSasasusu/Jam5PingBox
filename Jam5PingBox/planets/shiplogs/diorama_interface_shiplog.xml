@@ -2,6 +2,20 @@
                xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
   <ID>Diorama Interface</ID>
   <Entry>
+    <ID>diorama_platform</ID>
+    <Name>DIORAMA_PLATFORM</Name>
+    <Curiosity>diorama_ping</Curiosity>
+    <ExploreFact>
+      <ID>diorama_platform_1</ID>
+      <Text>DIORAMA_PLATFORM_1</Text>
+    </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_platform_2</ID>
+      <Text>DIORAMA_PLATFORM_2</Text>
+    </ExploreFact>
+  </Entry>
+  
+  <Entry>
     <ID>diorama_interface</ID>
     <Name>DIORAMA_INTERFACE</Name>
     <Curiosity>diorama_ping</Curiosity>

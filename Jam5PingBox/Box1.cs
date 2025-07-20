@@ -48,6 +48,9 @@ namespace Jam5PingBox {
                 else if(child.name == "text_diorama_box1_end_pc") {
                     DioramaMachine.ActivateComputer(child.GetComponent<NomaiComputer>());
                 }
+                else if(child.name == "Clock") {
+                    DioramaMachine._clocks = new List<Transform> { child };
+                }
             }
 
             _doorButton._onAction = () => {

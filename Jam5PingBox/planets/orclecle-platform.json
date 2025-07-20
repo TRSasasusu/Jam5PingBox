@@ -5,6 +5,21 @@
   "extras": {
     "isPlatform": true
   },
+  "Volumes": {
+    "revealVolumes": [
+      {
+        "revealOn": "enter",
+        "revealFor": "both",
+        "reveals": [
+          "diorama_platform_1",
+        ],
+        "radius": 200,
+        "rename": "log_diorama_interface_1",
+        "parentPath": "Sector/Tower",
+        "isRelativeToParent": true,
+      },
+    ]
+  },
   "Props": {
     "warpTransmitters": [
       {
@@ -60,7 +75,8 @@
             "x": -0.0481,
             "y": 2.4169,
             "z": -0.0086
-          }
+          },
+          "pickupFact": "diorama_platform_2",
         },
         "position": {
           "x": 0,
@@ -71,7 +87,7 @@
           "x": 0,
           "y": 90,
           "z": 0
-        }
+        },
       },
     ]
   }
