@@ -26,6 +26,8 @@ namespace Jam5PingBox {
             "ShadowofSparks_Body",
         };
         const string TOWER_PATH = "Orclecle_Mod_Platform_Body/Sector/Tower";
+        const string PING_PATH = "ExamplePlatform_Body/Sector/Nomai";
+        const string HIDDEN_PING_PATH = "HiddenPingShip_Body/Sector/Nomai";
 
         public ObjectModifier() {
             Jam5PingBox.Instance.StartCoroutine(Initialize());
@@ -121,6 +123,39 @@ namespace Jam5PingBox {
                     break;
                 }
                 yield return null;
+            }
+
+            yield return null;
+            yield return null;
+            yield return null;
+            GameObject ping;
+            while (true) {
+                ping = GameObject.Find(PING_PATH);
+                if (ping) {
+                    break;
+                }
+                yield return null;
+            }
+            GameObject hiddenPing;
+            while (true) {
+                hiddenPing = GameObject.Find(HIDDEN_PING_PATH);
+                if (hiddenPing) {
+                    break;
+                }
+                yield return null;
+            }
+            foreach (var renderer in ping.GetComponentsInChildren<Renderer>()) {
+                Jam5PingBox.Log(renderer.name);
+                foreach (var hiddenRenderer in hiddenPing.GetComponentsInChildren<Renderer>()) {
+                    if (renderer.name == hiddenRenderer.name) {
+                        hiddenRenderer.sharedMaterials = renderer.sharedMaterials;
+                        //for(int i = 0; i < hiddenRenderer.sharedMaterials.Length; ++i) {
+                        //    hiddenRenderer.sharedMaterials[i] = renderer.sharedMaterials[i];
+                        //}
+                        //hiddenRenderer.material = renderer.sharedMaterial;
+                        break;
+                    }
+                }
             }
         }
     }

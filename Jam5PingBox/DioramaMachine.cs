@@ -214,6 +214,19 @@ namespace Jam5PingBox {
             computer.enabled = true;
         }
 
+        public void EnterJam() {
+            _boxTriStar.SetActive(false);
+            foreach(var obj in _boxTriStarObjs) {
+                obj.SetActive(false);
+            }
+            _hiddenPingShip.SetActive(true);
+            TimeLoop.SetSecondsRemaining(60*22);
+
+            var playerRigidbody = Locator.GetPlayerBody();
+            playerRigidbody.WarpToPositionRotation(_hiddenPingShip.transform.position, _hiddenPingShip.transform.rotation);
+            playerRigidbody.SetVelocity(PointVelocity(_hiddenPingShip.transform));
+        }
+
         public void Initialize() {
             Instance = this;
             _isMeditating = false;

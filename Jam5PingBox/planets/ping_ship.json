@@ -15,7 +15,7 @@
       {
         "radius": 2500,
       }
-    ]
+    ],
   },
   "removeChildren": [
     "Sector/Sector/Prefab_NOM_Recorder_Vessel",
@@ -24,9 +24,54 @@
     "Sector/Sector/Note",
   ],
   "Props": {
+    "singularities": [
+      {
+        "rename": "end_bh",
+        "uniqueID": "diorama_ping_ship_end",
+        "horizonRadius": 2,
+        "type": "blackHole",
+        "position": {
+          "x": 0,
+          "y": -12.2903,
+          "z": 9.0361
+        }
+      }
+    ],
     "details": [
       {
         "path": "StarshipCommunity_Body/Sector"
+      },
+      {
+        //"path": "ExamplePlatform_Body/Sector/Nomai",
+        "path": "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
+        "rename": "Nomai",
+        "position": {
+          "x": 0,
+          "y": -8.4818,
+          "z": 6.0033
+        },
+        "rotation": {
+          "x": 270,
+          "y": 180,
+          "z": 0
+        }
+        //"removeChildren": [
+        //  "ConversationZone"
+        //]
+      },
+    ],
+    "dialogue": [
+      {
+        "xmlFile": "planets/texts/diorama_ping_ship.xml",
+        //"parentPath": "Sector/Nomai",
+        "isRelativeToParent": true,
+        "pathToAnimController": "Sector/Nomai",
+        "lookAtRadius": 10,
+        "position": {
+          "y": 1.6
+        },
+        "radius": 1.5,
+        "range": 4
       }
     ]
   }

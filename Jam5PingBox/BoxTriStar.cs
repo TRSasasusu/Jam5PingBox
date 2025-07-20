@@ -110,6 +110,9 @@ namespace Jam5PingBox {
                 else if(child.name == "text_diorama_boxt_jam") {
                     child.transform.localScale = new Vector3(2, 2, 2);
                 }
+                else if(child.name == "InsideJam") {
+                    child.gameObject.AddComponent<JamTrigger>();
+                }
             }
 
             _bhwhButton._onAction = () => {
