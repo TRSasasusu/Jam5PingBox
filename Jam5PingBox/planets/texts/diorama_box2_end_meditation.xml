@@ -8,4 +8,10 @@
     <ParentID>1</ParentID>
     <Text>BOX2_END_TEXT_MEDITATION2</Text>
   </TextBlock>
+  <ShipLogConditions>
+    <RevealFact>
+      <FactID>diorama_box2_2</FactID>
+      <Condition>1</Condition>
+    </RevealFact>
+  </ShipLogConditions>
 </NomaiObject>

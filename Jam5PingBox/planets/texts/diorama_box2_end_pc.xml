@@ -3,4 +3,10 @@
     <ID>1</ID>
     <Text>BOX2_END_PC</Text>
   </TextBlock>
+  <ShipLogConditions>
+    <RevealFact>
+      <FactID>diorama_box2_complete</FactID>
+      <Condition>1</Condition>
+    </RevealFact>
+  </ShipLogConditions>
 </NomaiObject>
