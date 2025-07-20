@@ -18,7 +18,7 @@
   "AmbientLights": [
     {
       "outerRadius": 400,
-      "intensity": 1.4,
+      "intensity": 1.4
     }
   ],
   "Atmosphere": {
@@ -62,12 +62,12 @@
         },
         //"radius": 2500,
         "radius": 90,
-        "rename": "HeatInsulatingVolume",
+        "rename": "HeatInsulatingVolume"
       }
     ],
     "mapRestrictionVolumes": [
       {
-        "radius": 2500,
+        "radius": 2500
       }
     ],
     "revealVolumes": [
@@ -75,11 +75,11 @@
         "revealOn": "enter",
         "revealFor": "both",
         "reveals": [
-          "diorama_boxt_1",
+          "diorama_boxt_1"
         ],
         "radius": 2500,
-        "rename": "log_diorama_boxt_1",
-      },
+        "rename": "log_diorama_boxt_1"
+      }
     ]
   },
   "Water": {
@@ -90,7 +90,7 @@
       "b": 0
     },
     "allowShipAutoroll": false,
-    "buoyancy": 1.01,
+    "buoyancy": 1.01
   },
   "Props": {
     "singularities": [
@@ -234,7 +234,7 @@
           "y": 25.733,
           "z": -9.9383
         }
-      },
+      }
     ],
     "details": [
       {
@@ -549,7 +549,7 @@
           "y": 90.8998,
           "z": -20.0715
         }
-      },
+      }
     ],
     "translatorText": [
       {
@@ -588,7 +588,7 @@
             "type": "adult"
           },
           {
-            "type": "child",
+            "type": "child"
           },
           {
             "type": "adult"
@@ -604,7 +604,7 @@
           },
           {
             "type": "adult"
-          },
+          }
         ],
         "seed": 3
       },
@@ -639,7 +639,7 @@
           "y": 305.1783,
           "z": 306.7859
         },
-        "seed": 3,
+        "seed": 3
       },
       {
         "type": "recorder",
@@ -696,5 +696,10 @@
         }
       }
     ]
+  },
+  "ShipLog": {
+    "mapMode": {
+      "remove": true
+    }
   }
 }

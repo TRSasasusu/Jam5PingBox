@@ -13,15 +13,15 @@
   "Volumes": {
     "mapRestrictionVolumes": [
       {
-        "radius": 2500,
+        "radius": 2500
       }
-    ],
+    ]
   },
   "removeChildren": [
     "Sector/Sector/Prefab_NOM_Recorder_Vessel",
     "Sector/Sector/Prefab_NOM_WarpReceiver",
     "Sector/Sector/Prefab_NOM_Vessel_Computer",
-    "Sector/Sector/Note",
+    "Sector/Sector/Note"
   ],
   "Props": {
     "singularities": [
@@ -58,7 +58,7 @@
         //"removeChildren": [
         //  "ConversationZone"
         //]
-      },
+      }
     ],
     "dialogue": [
       {
@@ -74,5 +74,10 @@
         "range": 4
       }
     ]
+  },
+  "ShipLog": {
+    "mapMode": {
+      "remove": true
+    }
   }
 }

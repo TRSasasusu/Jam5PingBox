@@ -294,6 +294,9 @@
     ]
   },
   "ShipLog": {
+    "mapMode": {
+      "revealedSprite": "planets/shiplogs/sprites/diorama-interface-icon.png",
+    },
     "spriteFolder": "planets/shiplogs/sprites",
     "xmlFile": "planets/shiplogs/diorama_interface_shiplog.xml"
   }
