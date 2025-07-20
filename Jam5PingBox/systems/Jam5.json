@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/star_system_schema.json",
+  "name": "Jam5",
+  "entryPositions": [
+    {
+      "id": "diorama_ping",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "diorama_interface",
+      "position": {
+        "x": -500,
+        "y": -300
+      }
+    },
+    {
+      "id": "diorama_box1",
+      "position": {
+        "x": -500,
+        "y": 0
+      }
+    },
+    {
+      "id": "diorama_box2",
+      "position": {
+        "x": -700,
+        "y": -700
+      }
+    },
+    {
+      "id": "diorama_box3",
+      "position": {
+        "x": -300,
+        "y": -700
+      }
+    }
+  ],
+  "curiosities": [
+    {
+      "id": "diorama_ping",
+      "color": {
+        "r": 240,
+        "g": 150,
+        "b": 150,
+        "a": 255
+      },
+      "highlightColor": {
+        "r": 240,
+        "g": 180,
+        "b": 180,
+        "a": 255
+      }
+    }
+  ]
+}

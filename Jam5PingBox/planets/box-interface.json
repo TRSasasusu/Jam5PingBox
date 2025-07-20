@@ -35,6 +35,47 @@
         "rename": "Oxygen",
         "radius": 2500,
       }
+    ],
+    "revealVolumes": [
+      {
+        "revealOn": "enter",
+        "revealFor": "both",
+        "reveals": [
+          "diorama_interface_1",
+        ],
+        "radius": 100,
+        "rename": "log_diorama_interface_1",
+      },
+      {
+        "revealOn": "enter",
+        "revealFor": "both",
+        "reveals": [
+          "diorama_box1_1",
+        ],
+        "radius": 100,
+        "rename": "log_diorama_box1_1",
+        "parentPath": "Sector/Box1",
+      },
+      {
+        "revealOn": "enter",
+        "revealFor": "both",
+        "reveals": [
+          "diorama_box2_1",
+        ],
+        "radius": 100,
+        "rename": "log_diorama_box2_1",
+        "parentPath": "Sector/Box2",
+      },
+      {
+        "revealOn": "enter",
+        "revealFor": "both",
+        "reveals": [
+          "diorama_box3_1",
+        ],
+        "radius": 100,
+        "rename": "log_diorama_box3_1",
+        "parentPath": "Sector/Box3",
+      },
     ]
   },
   "Props": {
@@ -246,5 +287,9 @@
         }
       },
     ]
+  },
+  "ShipLog": {
+    "spriteFolder": "planets/shiplogs/sprites",
+    "xmlFile": "planets/shiplogs/diorama_interface_shiplog.xml"
   }
 }
