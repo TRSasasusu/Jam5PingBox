@@ -27,9 +27,9 @@ namespace Jam5PingBox {
         static GameObject _hscout;
         static float _time;
 
-        const float BOX1_SECONDS = 60 * 8;
-        const float BOX2_SECONDS = 60 * 10;
-        const float BOX3_SECONDS = 60 * 10;
+        const float BOX1_SECONDS = 60 * 5;
+        const float BOX2_SECONDS = 60 * 6;
+        const float BOX3_SECONDS = 60 * 6;
         const float BOXTRISTAR_SECONDS = 60 * 22;
         static float _thisSeconds;
 
