@@ -14,10 +14,11 @@
 		"BOX2_END_PC": "Miniature 2 completion recorded.",
 		"BOX3_END_TEXT_DIORAMA1": "PING: With the Jam, I can manipulate both time and space (within limits). This miniature world was created using that ability. However, that's not the Jam's true essence—these are merely secondary effects.",
 		"BOX3_END_TEXT_DIORAMA2": "PING: I should create a diorama looking back at those scenes from long ago. I want to remember that I was indeed Nomai. Besides... there are limits to the puzzles I can create with imagination alone.",
+		"BOX3_END_TEXT_DIORAMA3": "PING: In that diorama, I plan to make spacesuits reproducible as well... but I wonder how much I can actually record. Perhaps even the camera device that separates from the spacesuit can be preserved in the history.",
 		"BOX3_END_PC": "Miniature 3 completion recorded.",
 
 		"BOXT_INTRO_1": "NEEM: What a <![CDATA[<Color=orange>]]>miniature<![CDATA[</Color>]]> star system! I never expected the gaps between suns to be this small. While I barely avoided warping directly into a sun, this is still a crash landing.",
-		"BOXT_INTRO_2": "NEEM: I intended to stop for supplies before meeting up with Canna, but visiting this <![CDATA[<Color=orange>]]>Bright Spark star system<![CDATA[</Color>]]> was a mistake.",
+		"BOXT_INTRO_2": "NEEM: I intended to stop for supplies before meeting up with Canna, but visiting this <![CDATA[<Color=orange>]]>Bright Spark System<![CDATA[</Color>]]> was a mistake.",
 		"BOXT_INTRO_3": "MELIA: The toxic liquid flooding into our ship was also unexpected. However, all crew members evacuated safely, we salvaged useful tools, and the warp core survived intact! It's not all bad news.",
 		"BOXT_INTRO_4": "PING: I hastily grabbed some plants too, but it seems this white tree is somehow providing oxygen for the entire system. What a powerful tree!",
 		"BOXT_INTRO_5": "NEEM: Addendum: The sky is covered with sparks, but they don't seem to cause electrical damage when touched. However, they form a solid membrane—fly too high and you'll hit your head. To escape, we'll need to fix the <![CDATA[<Color=lightblue>]]>ship<![CDATA[</Color>]]> somehow.",
@@ -37,7 +38,7 @@
 		"BOXT_SYMBOL_5": "PING: ...Still, to think there are places left to explore in this dying universe. I've heard my ancestors' exciting exploration records since childhood, but in this era, there were only dead stars and meaningless debris of broken asteroids. ...Ah, this is truly delightful.",
 		"BOXT_SYMBOL_6": "PING: Wait, the detoxification function is failing! Good thing I can repair it here... Oh, this space seems to have lower toxicity, that's why I survived... Maybe it's related to the tree directly above.",
 
-		"BOXT_TOWER_ANOTHER_1": "NEEM: We plan to meet up with Canna. She'll send an official message soon for everyone to gather at the Dark Rock System. We're making a detour to the <![CDATA[<Color=orange>]]>Glittering Spark System<![CDATA[</Color>]]> for supplies beforehand. What are your plans?",
+		"BOXT_TOWER_ANOTHER_1": "NEEM: We plan to meet up with Canna. She'll send an official message soon for everyone to gather at the Dark Rock System. We're making a detour to the <![CDATA[<Color=orange>]]>Bright Spark System<![CDATA[</Color>]]> for supplies beforehand. What are your plans?",
 		"BOXT_TOWER_ANOTHER_2": "MIACEAE: Hmm... We plan to remain in our current system a while longer. We're actually conducting experiments to extend our sun's lifespan, centered around Cedrus. We're not sure if it'll work, but we've <![CDATA[<Color=orange>]]>built a clock tower<![CDATA[</Color>]]> and are conducting final tests, so please wait a bit longer.",
 		"BOXT_TOWER_ANOTHER_3": "NEEM: How fascinating! I have no intention of rushing you, so please don't worry about that. The Nomai were originally nomadic, so I never expected all clans to agree to this gathering anyway.",
 		"BOXT_TOWER_ANOTHER_4": "MIACEAE: That's helpful. Regardless of the results, I plan to bring our findings to the future <![CDATA[<Color=orange>]]>festival<![CDATA[</Color>]]>. I think we'll at least meet there in person, Neem.",
@@ -95,8 +96,8 @@
 		"PING_SHIP_1": "These are my memories. They might be from another universe, or creations, or perhaps not even real anymore—I can't tell.",
 		"PING_SHIP_2": "That is the <![CDATA[<Color=lightblue>]]>Ash Twin Project<![CDATA[</Color>]]>. <![CDATA[<Color=orange>]]>Jam<![CDATA[</Color>]]> alone cannot escape a universe destined to die. But with this, within infinite loops, I can summon new parallel universes each time the sun dies.",
 		"PING_SHIP_3": "Among those, I noticed your existence. Unlike me, who became one with <![CDATA[<Color=orange>]]>Jam<![CDATA[</Color>]]>, you must move your own feet to learn. Despite that, you possess curiosity that rivals mine. Too vast to be contained within that dying star system. I was delighted to find a kindred spirit.",
-		"PING_SHIP_4": "That's why I called you. I gathered many explorable worlds—<![CDATA[<Color=orange>]]>mods<![CDATA[</Color>]]>—summoned infinitely from parallel universes, wanting to invite you there.",
-		"PING_SHIP_5": "Come, let us explore the infinitely expanding <![CDATA[<Color=orange>]]>mod Jam<![CDATA[</Color>]]> forever in this Outer Wilds world...!",
+		"PING_SHIP_4": "That's why I called you. I gathered many explorable worlds—<![CDATA[<Color=orange>]]>MODs<![CDATA[</Color>]]>—summoned infinitely from parallel universes, wanting to invite you there.",
+		"PING_SHIP_5": "Come, let us explore the infinitely expanding <![CDATA[<Color=orange>]]>MOD Jam<![CDATA[</Color>]]> forever in this Outer Wilds world...!",
 	},
 	"ShipLogDictionary": {
 		"DIORAMA_PLATFORM": "Diorama Platform",
@@ -120,6 +121,7 @@
 		"BOX3": "Miniature 3",
 		"BOX3_1": "The world that appeared when Miniature 3 was set in the Diorama Interface.",
 		"BOX3_2": "With something called Jam, limited spacetime manipulation is possible.",
+		"BOX3_3": "It was suggested that the scout might also be preserved in the history.",
 		"BOX3_COMPLETE": "Miniature 3 completion was recorded.",
 
 		"BOXT": "Bright Spark System",
@@ -129,11 +131,13 @@
 		"BOXT_VESSEL": "Flooded Ship",
 		"BOXT_VESSEL_RUMOR_FROM_INTRO": "The ship of Neem's Nomai clan is flooded with harmful liquid.",
 		"BOXT_VESSEL_RUMOR_1": "The panel to activate warp to the ship's interior has fallen into the harmful water. The Nomai tried to activate it wearing a neutralizing suit, but my suit lacks such functionality.",
-		"BOXT_VESSEL_FACT_1": "The panel to activate warp to the ship's interior has fallen into the harmful water. I took damage but swam down to activate it, then entered the ship interior in the next loop.",
+		"BOXT_VESSEL_FACT_1": "The panel to activate warp to the ship's interior has fallen into the harmful water. I took damage but swam down to activate it, then entered the ship interior in the next loop. In other words, even the historical version of me can activate the panel.",
 		"BOXT_VESSEL_REMOVE_WATER": "According to Nomai analysis, stabilizing the suns' energy can eliminate the harmful liquid.",
 		"BOXT_VESSEL_ENERGY": "Two suns need small lantern-sized objects, and the remaining one needs an organic lifeform. Which sun requires the organic lifeform wasn't detailed here.",
 		"BOXT_VESSEL_ORDER": "The order for sending objects into the three suns matches exactly the order of pressing panels to enter the Nomai structure behind.",
 		"BOXT_VESSEL_REMOTE": "A Nomai named Ping was communicating with another clan. Based on the keyword 'clock tower,' some possibility was suggested to be correct.",
+
+		"BOXT_ORGANIC": "The panels used by this clan can only be activated by organic lifeforms.",
 
 		"BOXT_SYMBOL": "Underwater Symbol",
 		"BOXT_SYMBOL_RUMOR_FROM_BUILDING": "There's supposedly a place accessible through gaps in the underwater rocks.",
@@ -147,10 +151,10 @@
 		"BOXT_BUILDING_FACT_2": "Such phenomena are caused by this system's devices, possibly calling things from parallel universes.",
 
 		"DIORAMA_JAM": "Jam",
-		"DIORAMA_JAM_1": "Exists at the center of the Glittering Spark System. Gathers energy from surroundings and can summon objects from parallel universes.",
+		"DIORAMA_JAM_1": "Exists at the center of the Bright Spark System. Gathers energy from surroundings and can summon objects from parallel universes.",
 		"DIORAMA_JAM_2": "A Nomai named Ping decided to stay with the Jam, separating from the clan. To escape supernova destruction, Ping chose to become one with the Jam.",
 		"DIORAMA_JAM_3": "To gain infinite time, Ping connected with the Ash Twin Project, eternally summoning new exploration sites through Jam within time loops.",
-		"DIORAMA_JAM_4": "I, who also endlessly seeks exploration, was recognized by Ping as a kindred spirit, and thus continue enjoying new mods obtained through Jam together with Ping.",
-		"DIORAMA_JAM_5": "This mod about Ping's memories ends here. Now, which mod shall we explore next?",
+		"DIORAMA_JAM_4": "I, who also endlessly seeks exploration, was recognized by Ping as a kindred spirit, and thus continue enjoying new MODs obtained through Jam together with Ping.",
+		"DIORAMA_JAM_5": "This MOD about Ping's memories ends here. Now, which MOD shall we explore next?",
 	}
 }
