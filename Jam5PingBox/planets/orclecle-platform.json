@@ -43,7 +43,8 @@
             "x": -0.0481,
             "y": 2.4169,
             "z": -0.0086
-          }
+          },
+          "name": "Miniature 1",
         },
         "position": {
           "x": 0,
@@ -77,6 +78,7 @@
             "z": -0.0086
           },
           "pickupFact": "diorama_platform_2",
+          "name": "Miniature-TriStars",
         },
         "position": {
           "x": 0,
