@@ -44,5 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="planets\assetbundles\" />
+    <Folder Include="planets\assets\" />
   </ItemGroup>
 </Project>

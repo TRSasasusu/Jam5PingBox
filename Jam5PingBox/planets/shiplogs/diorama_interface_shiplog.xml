@@ -78,6 +78,10 @@
       <Text>BOX3_2</Text>
     </ExploreFact>
     <ExploreFact>
+      <ID>diorama_box3_3</ID>
+      <Text>BOX3_3</Text>
+    </ExploreFact>
+    <ExploreFact>
       <ID>diorama_box3_complete</ID>
       <Text>BOX3_COMPLETE</Text>
     </ExploreFact>
@@ -95,6 +99,10 @@
       <ID>diorama_boxt_intro</ID>
       <Text>BOXT_INTRO</Text>
     </ExploreFact>
+    <ExploreFact>
+      <ID>diorama_boxt_organic</ID>
+      <Text>BOXT_ORGANIC</Text>
+    </ExploreFact>
   </Entry>
 
   <Entry>
@@ -110,6 +118,10 @@
       <ID>diorama_boxt_vessel_rumor_1</ID>
       <Text>BOXT_VESSEL_RUMOR_1</Text>
     </RumorFact>
+    <ExploreFact>
+      <ID>diorama_boxt_vessel_fact_1</ID>
+      <Text>BOXT_VESSEL_FACT_1</Text>
+    </ExploreFact>
     <ExploreFact>
       <ID>diorama_boxt_vessel_remove_water</ID>
       <Text>BOXT_VESSEL_REMOVE_WATER</Text>

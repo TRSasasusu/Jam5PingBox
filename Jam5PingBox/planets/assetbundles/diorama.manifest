@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 299629140
+CRC: 2496697929
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8eb4d164d6894639dc3bee05f9ddef83
+    Hash: d41eb77e85b1a44034b9814e417cfdc4
   TypeTreeHash:
     serializedVersion: 2
     Hash: faf209235a9c7dc3742b36b29362c0dd
@@ -63,6 +63,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/MyAssets/Prefabs/PingShip.prefab
 - Assets/MyAssets/Prefabs/BoxTriStarItem.prefab
 - Assets/MyAssets/Prefabs/Elevator.prefab
 - Assets/MyAssets/Prefabs/BoxTriStar.prefab

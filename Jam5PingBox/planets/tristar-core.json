@@ -79,6 +79,68 @@
         ],
         "radius": 2500,
         "rename": "log_diorama_boxt_1"
+      },
+      {
+        "revealOn": "enter",
+        "revealFor": "both",
+        "reveals": [
+          "diorama_boxt_vessel_fact_1"
+        ],
+        "radius": 20,
+        "rename": "log_diorama_boxt_vessel_fact_1",
+        "position": {
+          "x": 91.028,
+          "y": 131.3996,
+          "z": -93.3875
+        }
+      },
+    ],
+    "audioVolumes": [
+      {
+        "audio": "planets/assets/brightspark.wav",
+        "track": "music",
+        "radius": 2500,
+        "volume": 0.2,
+        "priority": 0
+      },
+      {
+        "audio": "planets/assets/floodedvessel.wav",
+        "track": "music",
+        "radius": 50,
+        "priority": 1,
+        "rename": "audio_floodedvessel",
+        "volume": 0.3,
+        "position": {
+          "x": 102.8807,
+          "y": 114.3055,
+          "z": -70.3018
+        }
+      },
+      {
+        "audio": "planets/assets/miniature.wav",
+        "track": "music",
+        "radius": 50,
+        "priority": 1,
+        "rename": "audio_miniature",
+        "volume": 0.3,
+        "position": {
+          "x": -0.0317,
+          "y": -285.9041,
+          "z": 1.7502
+        }
+      },
+      {
+        "audio": "planets/assets/jam.wav",
+        "track": "music",
+        "radius": 75,
+        "priority": 1,
+        "rename": "audio_jam",
+        "volume": 0.3,
+        "position": {
+          "x": 0,
+          "y": -100.7472,
+          "z": 0
+        }
       }
     ]
   },

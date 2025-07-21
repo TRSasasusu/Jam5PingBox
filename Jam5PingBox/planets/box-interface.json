@@ -76,6 +76,16 @@
         "rename": "log_diorama_box3_1",
         "parentPath": "Sector/Box3",
       },
+    ],
+    "audioVolumes": [
+      {
+        "audio": "planets/assets/miniature.wav",
+        "track": "music",
+        "radius": 2500,
+        "priority": 0,
+        "rename": "audio_miniature",
+        "volume": 0.2,
+      }
     ]
   },
   "Props": {

@@ -19,6 +19,8 @@ namespace Jam5PingBox {
         public BoxTriStar _boxTriStarInstance;
         public GameObject _hiddenPingShip;
 
+        GameObject _audioMiniature;
+
         public static DioramaMachine Instance;
         public static bool IsMapRestricted { get { return Instance && Instance._boxTriStar.activeSelf; } }
         public static bool _isMeditating;
@@ -222,9 +224,25 @@ namespace Jam5PingBox {
             _hiddenPingShip.SetActive(true);
             TimeLoop.SetSecondsRemaining(60*22);
 
-            var playerRigidbody = Locator.GetPlayerBody();
-            playerRigidbody.WarpToPositionRotation(_hiddenPingShip.transform.position, _hiddenPingShip.transform.rotation);
-            playerRigidbody.SetVelocity(PointVelocity(_hiddenPingShip.transform));
+            foreach (Transform child in _hiddenPingShip.GetComponentsInChildren<Transform>(true)) {
+                if(child.name == "Spawn") {
+                    var playerRigidbody = Locator.GetPlayerBody();
+                    playerRigidbody.WarpToPositionRotation(child.position, child.rotation);
+                    playerRigidbody.SetVelocity(PointVelocity(child));
+                }
+                else if(child.name == "background") {
+                    StartCoroutine(PingShipBackground(child));
+                }
+            }
+        }
+
+        IEnumerator PingShipBackground(Transform background) {
+            Vector3 rot = background.localEulerAngles;
+            float root3 = Mathf.Sqrt(3);
+            while(true) {
+                yield return null;
+                rot += new Vector3(1, root3, 0) * Time.deltaTime * 5;
+            }
         }
 
         public void Initialize() {
@@ -249,6 +267,9 @@ namespace Jam5PingBox {
             }
 
             _hiddenPingShip.SetActive(false);
+
+            _audioMiniature = transform.parent.Find("audio_miniature").gameObject;
+            _audioMiniature.SetActive(false);
         }
 
         public void Load(BoxType boxType) {
@@ -258,18 +279,21 @@ namespace Jam5PingBox {
                 box.SetActive(true);
                 box.AddComponent<Box1>().Initialize();
                 _thisSeconds = BOX1_SECONDS;
+                _audioMiniature.SetActive(true);
             }
             else if (boxType == BoxType.BOX2) {
                 box = _box2;
                 box.SetActive(true);
                 box.AddComponent<Box2>().Initialize();
                 _thisSeconds = BOX2_SECONDS;
+                _audioMiniature.SetActive(true);
             }
             else if (boxType == BoxType.BOX3) {
                 box = _box3;
                 box.SetActive(true);
                 box.AddComponent<Box3>().Initialize();
                 _thisSeconds = BOX3_SECONDS;
+                _audioMiniature.SetActive(true);
             }
             else if(boxType == BoxType.BOX_TRISTAR) {
                 box = _boxTriStar;

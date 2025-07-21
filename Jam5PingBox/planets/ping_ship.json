@@ -58,6 +58,10 @@
         //"removeChildren": [
         //  "ConversationZone"
         //]
+      },
+      {
+        "assetBundle": "planets/assetbundles/diorama",
+        "path": "Assets/MyAssets/Prefabs/PingShip.prefab"
       }
     ],
     "dialogue": [
