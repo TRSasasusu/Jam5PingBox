@@ -2,10 +2,6 @@
 
 # Diorama
 
-Lore of a Nomai named Ping.
+Lore of a Nomai named Ping. Explore why there are modding jams in the Outer Wilds universe.
 
 An entry for Outer Wilds modding Jam 5.
-
-## Note
-
-Currently, it is an open beta version, so there is NO MUSIC sadly...
