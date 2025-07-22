@@ -6,6 +6,7 @@
 		"BOX1_INTRO": "This is a <![CDATA[<Color=orange>]]>miniature<![CDATA[</Color>]]>, or perhaps a diorama.",
 		"BOX1_END_TEXT_TIMELOOP1": "PING: To verify that the <![CDATA[<Color=lightblue>]]>time loop<![CDATA[</Color>]]> is functioning correctly, I tried visualizing the history from the previous loop. I'm pleased to confirm it's working perfectly.",
 		"BOX1_END_TEXT_TIMELOOP2": "PING: I first experimented with this small miniature, but now I believe I can properly integrate it with the <![CDATA[<Color=orange>]]>Jam<![CDATA[</Color>]]>. I'm truly excited about the possibilities.",
+		"BOX1_END_TEXT_TIMELOOP3": "PING: Addendum: The clock is also working. The ability to manually turn it back to the initial time is convenient, but for example, when it gets to about one minute before the end time, the main time loop system activates and it becomes difficult to rewind properly. It's not omnipotent.",
 		"BOX1_END_PC": "Miniature 1 completion recorded.",
 		"BOX2_INTRO_1": "PING: I found something interesting in the time loop data: meditation. If used properly, it might allow us to skip the idle time while waiting for interesting phenomena to occur.",
 		"BOX2_INTRO_2": "PING: Update: I tried it and it's quite useful! If I ever meet a traveler who doesn't know about meditation, perhaps I should teach them?",
@@ -55,7 +56,8 @@
 		"BOXT_TOWER_NOW_8": "PING: Such a thing is possible?! If so, we could explore endlessly!",
 		"BOXT_TOWER_NOW_9": "NEEM: I only mentioned it as a possibility, so don't get your hopes up. Besides, even if true, there would be a price. For instance, it might sacrifice this system's three suns. Indeed, they appear to be absorbing something from the suns.",
 		"BOXT_TOWER_NOW_10": "PING: Ah, what's being collected is the <![CDATA[<Color=orange>]]>Jam<![CDATA[</Color>]]>... What I saw in that gap near the Vessel's panels—is that what this means...?",
-		"BOXT_TOWER_NOW_11": "MELIA: In any case, let's return to the Vessel. SAPIN and the others want to explain their analysis results. Plus, as Ping mentioned, we can check with Miaceae using the Vessel's communication device.",
+		"BOXT_TOWER_NOW_11": "NEEM: As a bit of escapism, let me reflect—that gap was supposedly safe despite our measurement devices indicating danger. What a mysterious star system...",
+		"BOXT_TOWER_NOW_12": "MELIA: In any case, let's return to the Vessel. Sapin and the others want to explain their analysis results. Plus, as Ping mentioned, we can check with Miaceae using the Vessel's communication device.",
 
 		"BOXT_VESSEL_1": "SAPIN: I'll share the Vessel computer's analysis results. Focusing on the geology here, it appears the toxic liquid spread quite recently. Something abnormal is happening in this system.",
 		"BOXT_VESSEL_2": "TURR: So we focused on the suns. Some device is drawing energy from them, but since these suns have short lifespans, the energy balance seems disrupted.",
@@ -97,7 +99,7 @@
 		"PING_SHIP_2": "That is the <![CDATA[<Color=lightblue>]]>Ash Twin Project<![CDATA[</Color>]]>. <![CDATA[<Color=orange>]]>Jam<![CDATA[</Color>]]> alone cannot escape a universe destined to die. But with this, within infinite loops, I can summon new parallel universes each time the sun dies.",
 		"PING_SHIP_3": "Among those, I noticed your existence. Unlike me, who became one with <![CDATA[<Color=orange>]]>Jam<![CDATA[</Color>]]>, you must move your own feet to learn. Despite that, you possess curiosity that rivals mine. Too vast to be contained within that dying star system. I was delighted to find a kindred spirit.",
 		"PING_SHIP_4": "That's why I called you. I gathered many explorable worlds—<![CDATA[<Color=orange>]]>MODs<![CDATA[</Color>]]>—summoned infinitely from parallel universes, wanting to invite you there.",
-		"PING_SHIP_5": "Come, let us explore the infinitely expanding <![CDATA[<Color=orange>]]>MOD Jam<![CDATA[</Color>]]> forever in this Outer Wilds world...!",
+		"PING_SHIP_5": "Come, let us explore the infinitely expanding <![CDATA[<Color=orange>]]>MOD Jam<![CDATA[</Color>]]> forever in this Outer Wilds world...!"
 	},
 	"ShipLogDictionary": {
 		"DIORAMA_PLATFORM": "Diorama Platform",
@@ -111,6 +113,7 @@
 		"BOX1_1": "The world that appeared when Miniature 1 was set in the Diorama Interface.",
 		"BOX1_2": "A world created by a Nomai named Ping using time loop applications. The previous loop is visualized.",
 		"BOX1_3": "Integration with something called Jam was suggested.",
+		"BOX1_4": "It was mentioned that while time can be rewound by manually turning the clock, it's not omnipotent.",
 		"BOX1_COMPLETE": "Miniature 1 completion was recorded.",
 
 		"BOX2": "Miniature 2",
@@ -140,7 +143,7 @@
 		"BOXT_ORGANIC": "The panels used by this clan can only be activated by organic lifeforms.",
 
 		"BOXT_SYMBOL": "Underwater Symbol",
-		"BOXT_SYMBOL_RUMOR_FROM_BUILDING": "There's supposedly a place accessible through gaps in the underwater rocks.",
+		"BOXT_SYMBOL_RUMOR_FROM_BUILDING": "There's supposedly a place accessible through gaps in the underwater rocks. The interior is said to be safe even if measurement devices indicate danger.",
 		"BOXT_SYMBOL_FACT_1": "A symbol discovered by a Nomai named Ping. At the center is something resembling Jam, connected to three symbols.",
 		"BOXT_SYMBOL_FACT_2": "Among the three surrounding symbols, only the triangular one was emphasized. Ping speculated these symbols represent suns.",
 
@@ -155,6 +158,6 @@
 		"DIORAMA_JAM_2": "A Nomai named Ping decided to stay with the Jam, separating from the clan. To escape supernova destruction, Ping chose to become one with the Jam.",
 		"DIORAMA_JAM_3": "To gain infinite time, Ping connected with the Ash Twin Project, eternally summoning new exploration sites through Jam within time loops.",
 		"DIORAMA_JAM_4": "I, who also endlessly seeks exploration, was recognized by Ping as a kindred spirit, and thus continue enjoying new MODs obtained through Jam together with Ping.",
-		"DIORAMA_JAM_5": "This MOD about Ping's memories ends here. Now, which MOD shall we explore next?",
+		"DIORAMA_JAM_5": "This MOD about Ping's memories ends here. Now, which MOD shall we explore next?"
 	}
 }

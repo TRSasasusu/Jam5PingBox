@@ -42,6 +42,10 @@
       <Text>BOX1_3</Text>
     </ExploreFact>
     <ExploreFact>
+      <ID>diorama_box1_4</ID>
+      <Text>BOX1_4</Text>
+    </ExploreFact>
+    <ExploreFact>
       <ID>diorama_box1_complete</ID>
       <Text>BOX1_COMPLETE</Text>
     </ExploreFact>

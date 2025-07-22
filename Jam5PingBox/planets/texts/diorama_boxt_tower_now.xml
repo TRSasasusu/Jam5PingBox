@@ -53,6 +53,11 @@
     <ParentID>10</ParentID>
     <Text>BOXT_TOWER_NOW_11</Text>
   </TextBlock>
+  <TextBlock>
+    <ID>12</ID>
+    <ParentID>11</ParentID>
+    <Text>BOXT_TOWER_NOW_12</Text>
+  </TextBlock>
   <ShipLogConditions>
     <RevealFact>
       <FactID>diorama_boxt_building_fact_1</FactID>
@@ -64,7 +69,7 @@
     </RevealFact>
     <RevealFact>
       <FactID>diorama_boxt_symbol_rumor_from_building</FactID>
-      <Condition>10</Condition>
+      <Condition>11</Condition>
     </RevealFact>
   </ShipLogConditions>
 </NomaiObject>

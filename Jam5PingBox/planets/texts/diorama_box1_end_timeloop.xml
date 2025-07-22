@@ -8,6 +8,11 @@
     <ParentID>1</ParentID>
     <Text>BOX1_END_TEXT_TIMELOOP2</Text>
   </TextBlock>
+  <TextBlock>
+    <ID>3</ID>
+    <ParentID>2</ParentID>
+    <Text>BOX1_END_TEXT_TIMELOOP3</Text>
+  </TextBlock>
   <ShipLogConditions>
     <RevealFact>
       <FactID>diorama_box1_2</FactID>
@@ -15,7 +20,11 @@
     </RevealFact>
     <RevealFact>
       <FactID>diorama_box1_3</FactID>
-      <Condition>1</Condition>
+      <Condition>2</Condition>
+    </RevealFact>
+    <RevealFact>
+      <FactID>diorama_box1_4</FactID>
+      <Condition>3</Condition>
     </RevealFact>
   </ShipLogConditions>
 </NomaiObject>
