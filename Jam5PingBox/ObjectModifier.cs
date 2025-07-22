@@ -97,6 +97,42 @@ namespace Jam5PingBox {
                 yield return null;
             }
 
+            yield return null;
+            GameObject ping;
+            while (true) {
+                ping = GameObject.Find(PING_PATH);
+                if (ping) {
+                    break;
+                }
+                yield return null;
+            }
+            GameObject hiddenPing;
+            while (true) {
+                hiddenPing = GameObject.Find(HIDDEN_PING_PATH);
+                if (hiddenPing) {
+                    break;
+                }
+                yield return null;
+            }
+
+            try {
+                foreach (var renderer in ping.GetComponentsInChildren<Renderer>()) {
+                    foreach (var hiddenRenderer in hiddenPing.GetComponentsInChildren<Renderer>()) {
+                        if (renderer.name == hiddenRenderer.name) {
+                            hiddenRenderer.sharedMaterials = renderer.sharedMaterials;
+                            //for(int i = 0; i < hiddenRenderer.sharedMaterials.Length; ++i) {
+                            //    hiddenRenderer.sharedMaterials[i] = renderer.sharedMaterials[i];
+                            //}
+                            //hiddenRenderer.material = renderer.sharedMaterial;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception e) {
+                Jam5PingBox.Log(e.Message);
+            }
+
             DioramaMachine dioramaMachine = null;
             while (true) {
                 var dioramaMachineObj = GameObject.Find(DIORAMA_MACHINE_PATH);
@@ -123,39 +159,6 @@ namespace Jam5PingBox {
                     break;
                 }
                 yield return null;
-            }
-
-            yield return null;
-            yield return null;
-            yield return null;
-            GameObject ping;
-            while (true) {
-                ping = GameObject.Find(PING_PATH);
-                if (ping) {
-                    break;
-                }
-                yield return null;
-            }
-            GameObject hiddenPing;
-            while (true) {
-                hiddenPing = GameObject.Find(HIDDEN_PING_PATH);
-                if (hiddenPing) {
-                    break;
-                }
-                yield return null;
-            }
-            foreach (var renderer in ping.GetComponentsInChildren<Renderer>()) {
-                Jam5PingBox.Log(renderer.name);
-                foreach (var hiddenRenderer in hiddenPing.GetComponentsInChildren<Renderer>()) {
-                    if (renderer.name == hiddenRenderer.name) {
-                        hiddenRenderer.sharedMaterials = renderer.sharedMaterials;
-                        //for(int i = 0; i < hiddenRenderer.sharedMaterials.Length; ++i) {
-                        //    hiddenRenderer.sharedMaterials[i] = renderer.sharedMaterials[i];
-                        //}
-                        //hiddenRenderer.material = renderer.sharedMaterial;
-                        break;
-                    }
-                }
             }
         }
     }
