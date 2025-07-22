@@ -28,6 +28,8 @@ namespace Jam5PingBox {
         static GameObject _hhearthian;
         static GameObject _hscout;
         static float _time;
+        static Transform _spawn;
+        static Transform _shipSpawn;
 
         const float BOX1_SECONDS = 60 * 5;
         const float BOX2_SECONDS = 60 * 6;
@@ -117,6 +119,9 @@ namespace Jam5PingBox {
             _time = 0;
             float time = INTERVAL + 1;
             int idx = -1;
+            Spawn();
+            TimeLoop.SetSecondsRemaining(_thisSeconds);
+
             while (true) {
                 if(_isMeditating) {
                     break;
@@ -207,6 +212,22 @@ namespace Jam5PingBox {
             }
         }
 
+        static void Spawn() {
+            if(_spawn) {
+                var playerRigidbody = Locator.GetPlayerBody();
+                playerRigidbody.WarpToPositionRotation(_spawn.position, _spawn.rotation);
+                playerRigidbody.SetVelocity(PointVelocity(_spawn));
+            }
+            if(_shipSpawn) {
+                try {
+                    var shipRigidbody = Locator.GetShipBody();
+                    shipRigidbody.WarpToPositionRotation(_shipSpawn.position, _shipSpawn.rotation);
+                    shipRigidbody.SetVelocity(PointVelocity(_shipSpawn));
+                }
+                catch { }
+            }
+        }
+
         public static void ActivateComputer(NomaiComputer computer) {
             computer.StartCoroutine(ActivateComputerBody(computer));
         }
@@ -276,57 +297,58 @@ namespace Jam5PingBox {
             GameObject box = null;
             if (boxType == BoxType.BOX1) {
                 box = _box1;
+                FindSpawn(box);
                 box.SetActive(true);
-                box.AddComponent<Box1>().Initialize();
                 _thisSeconds = BOX1_SECONDS;
                 _audioMiniature.SetActive(true);
+                box.AddComponent<Box1>().Initialize();
             }
             else if (boxType == BoxType.BOX2) {
                 box = _box2;
+                FindSpawn(box);
                 box.SetActive(true);
-                box.AddComponent<Box2>().Initialize();
                 _thisSeconds = BOX2_SECONDS;
                 _audioMiniature.SetActive(true);
+                box.AddComponent<Box2>().Initialize();
             }
             else if (boxType == BoxType.BOX3) {
                 box = _box3;
+                FindSpawn(box);
                 box.SetActive(true);
-                box.AddComponent<Box3>().Initialize();
                 _thisSeconds = BOX3_SECONDS;
                 _audioMiniature.SetActive(true);
+                box.AddComponent<Box3>().Initialize();
             }
             else if(boxType == BoxType.BOX_TRISTAR) {
                 box = _boxTriStar;
+                FindSpawn(box);
                 box.SetActive(true);
                 foreach(var obj in _boxTriStarObjs) {
                     obj.SetActive(true);
                 }
                 _boxTriStarInstance = box.AddComponent<BoxTriStar>();
-                _boxTriStarInstance.Initialize();
                 _thisSeconds = BOXTRISTAR_SECONDS;
+                _boxTriStarInstance.Initialize();
             }
             _dioramaMachine.SetActive(false);
-            TimeLoop.SetSecondsRemaining(_thisSeconds);
-
-            foreach (Transform child in box.GetComponentsInChildren<Transform>()) {
-                if(child.name == "Spawn") {
-                    var playerRigidbody = Locator.GetPlayerBody();
-                    playerRigidbody.WarpToPositionRotation(child.position, child.rotation);
-                    playerRigidbody.SetVelocity(PointVelocity(child));
-                }
-                else if(child.name == "SpawnShip") {
-                    var shipRigidbody = Locator.GetShipBody();
-                    shipRigidbody.WarpToPositionRotation(child.position, child.rotation);
-                    shipRigidbody.SetVelocity(PointVelocity(child));
-                }
-            }
 
             if(boxType != BoxType.BOX_TRISTAR) {
                 Locator.GetPlayerSuit().RemoveSuit(true);
             }
         }
 
-        Vector3 PointVelocity(Transform point) {
+        void FindSpawn(GameObject box) {
+            foreach (Transform child in box.GetComponentsInChildren<Transform>(true)) {
+                if(child.name == "Spawn") {
+                    _spawn = child;
+                }
+                else if(child.name == "SpawnShip") {
+                    _shipSpawn = child;
+                }
+            }
+        }
+
+        static Vector3 PointVelocity(Transform point) {
             var parentOWRigidbody = point.GetComponentInParent<OWRigidbody>();
             return parentOWRigidbody.GetVelocity() + parentOWRigidbody.GetPointTangentialVelocity(point.position);
         }

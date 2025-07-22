@@ -116,7 +116,8 @@
         "itemSocket": {
           "rename": "diorama_box_socket",
           "itemType": "diorama_box",
-          "colliderRadius": 1
+          "colliderRadius": 2,
+          "interactRange": 3,
         },
         "position": {
           "x": 0,
@@ -155,7 +156,8 @@
         "isRelativeToParent": false,
         "item": {
           "itemType": "diorama_box",
-          "colliderRadius": 0,
+          "colliderRadius": 2,
+          "interactRange": 3,
           "socketOffset": {
             "x": -0.0481,
             "y": 2.4169,
@@ -176,7 +178,8 @@
         "isRelativeToParent": false,
         "item": {
           "itemType": "diorama_box",
-          "colliderRadius": 0,
+          "colliderRadius": 2,
+          "interactRange": 3,
           "socketOffset": {
             "x": -0.0481,
             "y": 2.4169,

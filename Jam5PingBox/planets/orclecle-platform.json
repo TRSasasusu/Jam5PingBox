@@ -38,7 +38,8 @@
         "path": "Assets/MyAssets/Prefabs/Box1Item.prefab",
         "item": {
           "itemType": "diorama_box",
-          "colliderRadius": 0,
+          "colliderRadius": 2,
+          "interactRange": 3,
           "socketOffset": {
             "x": -0.0481,
             "y": 2.4169,
@@ -47,8 +48,8 @@
           "name": "Miniature 1",
         },
         "position": {
-          "x": 0,
-          "y": 0,
+          "x": -0.0818,
+          "y": 0.323,
           "z": 50
         }
       },
@@ -71,7 +72,8 @@
         "path": "Assets/MyAssets/Prefabs/BoxTriStarItem.prefab",
         "item": {
           "itemType": "diorama_box",
-          "colliderRadius": 0,
+          "colliderRadius": 2,
+          "interactRange": 3,
           "socketOffset": {
             "x": -0.0481,
             "y": 2.4169,
