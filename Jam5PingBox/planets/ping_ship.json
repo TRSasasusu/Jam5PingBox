@@ -17,6 +17,12 @@
       }
     ]
   },
+  "AmbientLights": [
+    {
+      "outerRadius": 1000,
+      "intensity": 1.4,
+    }
+  ],
   "removeChildren": [
     "Sector/Sector/Prefab_NOM_Recorder_Vessel",
     "Sector/Sector/Prefab_NOM_WarpReceiver",
@@ -62,6 +68,14 @@
       {
         "assetBundle": "planets/assetbundles/diorama",
         "path": "Assets/MyAssets/Prefabs/PingShip.prefab"
+      },
+      {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_SouthHemisphere/Sector_SouthPole/Sector_Observatory/Interactables_Observatory/HologramProjector/HologramDisplayPoint/Hologram_SolarSystem/SolarSystemRoot/HourglassTwins/HourglassCenter",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 7.5108
+        }
       }
     ],
     "dialogue": [

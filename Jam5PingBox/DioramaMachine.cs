@@ -266,17 +266,8 @@ namespace Jam5PingBox {
                     playerRigidbody.SetVelocity(PointVelocity(child));
                 }
                 else if(child.name == "background") {
-                    StartCoroutine(PingShipBackground(child));
+                    child.gameObject.AddComponent<PingShipBackground>();
                 }
-            }
-        }
-
-        IEnumerator PingShipBackground(Transform background) {
-            Vector3 rot = background.localEulerAngles;
-            float root3 = Mathf.Sqrt(3);
-            while(true) {
-                yield return null;
-                rot += new Vector3(1, root3, 0) * Time.deltaTime * 5;
             }
         }
 
