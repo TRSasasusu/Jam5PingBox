@@ -21,6 +21,7 @@ namespace Jam5PingBox {
         }
         static List<Data> _prevRecords;
         List<Data> _currentRecords;
+        Coroutine _record;
 
         public void Initialize() {
             foreach (Transform child in GetComponentsInChildren<Transform>(true)) {
@@ -45,6 +46,7 @@ namespace Jam5PingBox {
                         DioramaMachine._clocks = new List<Transform>();
                     }
                     DioramaMachine._clocks.Add(child);
+                    child.GetComponent<InteractReceiver>().OnPressInteract += Restart;
                 }
             }
 
@@ -79,8 +81,19 @@ namespace Jam5PingBox {
             };
             _noGravityButton.Initialize();
 
+            Restart();
+        }
+
+        void Restart() {
+            if(_record != null) {
+                StopCoroutine(_record);
+            }
+            if (_currentRecords != null) {
+                _prevRecords = _currentRecords;
+            }
+
             _currentRecords = new List<Data>();
-            StartCoroutine(DioramaMachine.Record(transform, _currentRecords, _prevRecords, data => {
+            _record = StartCoroutine(DioramaMachine.Record(transform, _currentRecords, _prevRecords, data => {
                 data._isInverseGravityButtonPushed = _inverseGravityButton._pushed;
                 data._isNoGravityButtonPushed = _noGravityButton._pushed;
             }, data => {

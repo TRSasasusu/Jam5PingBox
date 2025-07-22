@@ -52,6 +52,7 @@ namespace Jam5PingBox {
         }
         static List<Data> _prevRecords;
         List<Data> _currentRecords;
+        Coroutine _record;
 
         public void Initialize() {
             foreach (Transform child in transform.parent.GetComponentsInChildren<Transform>(true)) {
@@ -113,6 +114,13 @@ namespace Jam5PingBox {
                 else if(child.name == "InsideJam") {
                     child.gameObject.AddComponent<JamTrigger>();
                 }
+                else if(child.name == "Clock") {
+                    if(DioramaMachine._clocks == null) {
+                        DioramaMachine._clocks = new List<Transform>();
+                    }
+                    DioramaMachine._clocks.Add(child);
+                    child.GetComponent<InteractReceiver>().OnPressInteract += Restart;
+                }
             }
 
             _bhwhButton._onAction = () => {
@@ -153,8 +161,22 @@ namespace Jam5PingBox {
             };
             _door3Button.Initialize();
 
+            Restart();
+        }
+
+        void Restart() {
+            if(_record != null) {
+                StopCoroutine(_record);
+            }
+            if (_currentRecords != null) {
+                _prevRecords = _currentRecords;
+            }
+            _sunV = (ScoutOrPlayer.EMPTY, 0);
+            _sunO = (ScoutOrPlayer.EMPTY, 0);
+            _sunX = (ScoutOrPlayer.EMPTY, 0);
+
             _currentRecords = new List<Data>();
-            StartCoroutine(DioramaMachine.Record(transform, _currentRecords, _prevRecords, data => {
+            _record = StartCoroutine(DioramaMachine.Record(transform, _currentRecords, _prevRecords, data => {
                 data._isBhwhButtonPushed = _bhwhButton._pushed;
                 data._isDoor1ButtonPushed = _door1Button._pushed;
                 data._isDoor2ButtonPushed = _door2Button._pushed;

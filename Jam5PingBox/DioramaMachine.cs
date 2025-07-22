@@ -40,6 +40,7 @@ namespace Jam5PingBox {
         (BoxTriStar.ScoutOrPlayer, float) _sunV = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
         (BoxTriStar.ScoutOrPlayer, float) _sunO = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
         (BoxTriStar.ScoutOrPlayer, float) _sunX = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
+        //SurveyorProbe _probe;
 
         public enum BoxType {
             BOX1,
@@ -79,6 +80,10 @@ namespace Jam5PingBox {
             if(!Instance || !Instance._boxTriStarInstance) {
                 return;
             }
+            //if(Instance._probe) {
+            //    Locator._probe = null; // it is needed to make unable getting
+            //    Instance._probe.gameObject.SetActive(false);
+            //}
 
             var val = (BoxTriStar.ScoutOrPlayer.SCOUT, _time);
             if(name == "Salvation_Body") {
@@ -121,6 +126,15 @@ namespace Jam5PingBox {
             int idx = -1;
             Spawn();
             TimeLoop.SetSecondsRemaining(_thisSeconds);
+            if(Instance) {
+                Instance._sunV = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
+                Instance._sunO = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
+                Instance._sunX = (BoxTriStar.ScoutOrPlayer.EMPTY, 0);
+
+                //if(Instance._probe) {
+                //    Locator._probe = Instance._probe;
+                //}
+            }
 
             while (true) {
                 if(_isMeditating) {
@@ -291,6 +305,8 @@ namespace Jam5PingBox {
 
             _audioMiniature = transform.parent.Find("audio_miniature").gameObject;
             _audioMiniature.SetActive(false);
+
+            //_probe = Locator._probe;
         }
 
         public void Load(BoxType boxType) {
