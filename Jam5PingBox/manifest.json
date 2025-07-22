@@ -4,7 +4,7 @@
   "author": "orclecle",
   "name": "Diorama",
   "uniqueName": "orclecle.Jam5PingBox",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "owmlVersion": "2.14.0",
   "dependencies": [ "xen.NewHorizons", "xen-42.ModJam5" ]
 }

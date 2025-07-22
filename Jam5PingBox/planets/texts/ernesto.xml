@@ -1,0 +1,17 @@
+﻿<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+  <NameField>Ernesto</NameField>
+
+  <DialogueNode>
+    <Name>START</Name>
+    <EntryCondition>DEFAULT</EntryCondition>
+    <Dialogue>
+      <Page>BOXT_ERNESTO_1</Page>
+      <Page>BOXT_ERNESTO_2</Page>
+      <Page>BOXT_ERNESTO_3</Page>
+      <Page>BOXT_ERNESTO_4</Page>
+      <Page>BOXT_ERNESTO_5</Page>
+      <Page>BOXT_ERNESTO_6</Page>
+      <Page>BOXT_ERNESTO_7</Page>
+    </Dialogue>
+  </DialogueNode>
+</DialogueTree>

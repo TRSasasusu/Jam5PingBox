@@ -99,7 +99,15 @@
 		"PING_SHIP_2": "That is the <![CDATA[<Color=lightblue>]]>Ash Twin Project<![CDATA[</Color>]]>. <![CDATA[<Color=orange>]]>Jam<![CDATA[</Color>]]> alone cannot escape a universe destined to die. But with this, within infinite loops, I can summon new parallel universes each time the sun dies.",
 		"PING_SHIP_3": "Among those, I noticed your existence. Unlike me, who became one with <![CDATA[<Color=orange>]]>Jam<![CDATA[</Color>]]>, you must move your own feet to learn. Despite that, you possess curiosity that rivals mine. Too vast to be contained within that dying star system. I was delighted to find a kindred spirit.",
 		"PING_SHIP_4": "That's why I called you. I gathered many explorable worlds—<![CDATA[<Color=orange>]]>MODs<![CDATA[</Color>]]>—summoned infinitely from parallel universes, wanting to invite you there.",
-		"PING_SHIP_5": "Come, let us explore the infinitely expanding <![CDATA[<Color=orange>]]>MOD Jam<![CDATA[</Color>]]> forever in this Outer Wilds world...!"
+		"PING_SHIP_5": "Come, let us explore the infinitely expanding <![CDATA[<Color=orange>]]>MOD Jam<![CDATA[</Color>]]> forever in this Outer Wilds world...!",
+
+		"BOXT_ERNESTO_1": "It's your usual chatty anglerfish Ernesto, who swam here from a parallel universe. Now the reason why Ernesto exists in the Outer Wilds universe is finally clear!",
+		"BOXT_ERNESTO_2": "......",
+		"BOXT_ERNESTO_3": "The creator of this mod has been pondering for so long why such star systems exist in Mod Jam 3. And also, who exactly is Ping?",
+		"BOXT_ERNESTO_4": "Then came Mod Jam 5. Originally they planned to create something completely different, but they realized now was the time to tell Ping's story.",
+		"BOXT_ERNESTO_5": "Everything in the Outer Wilds universe exists for a reason. MOD creations are no exception. They wanted to give universal blessing to even those outcasts of the universe.",
+		"BOXT_ERNESTO_6": "Oh, by the way, the time tower story is of course derived from Evacuation. The thumbnail image for Mod Jam 5's page was Evacuation, so this is a tribute.",
+		"BOXT_ERNESTO_7": "That's all I wanted to say. Thank you for playing this far!"
 	},
 	"ShipLogDictionary": {
 		"DIORAMA_PLATFORM": "Diorama Platform",

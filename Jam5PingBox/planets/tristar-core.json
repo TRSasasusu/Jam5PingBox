@@ -611,6 +611,16 @@
           "y": 90.8998,
           "z": -20.0715
         }
+      },
+      {
+        "rename": "Ernesto",
+        "path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish",
+        "scale": 0.025,
+        "position": {
+          "x": 90.8583,
+          "y": 117.3634,
+          "z": -75.5795
+        }
       }
     ],
     "translatorText": [
@@ -756,6 +766,16 @@
           "y": 180,
           "z": 180
         }
+      }
+    ],
+    "dialogue": [
+      {
+        "parentPath": "Sector/Ernesto",
+        "isRelativeToParent": true,
+        "pathToAnimController": "Sector/Ernesto",
+        "radius": 3,
+        "range": 7,
+        "xmlFile": "planets/texts/ernesto.xml"
       }
     ]
   },
