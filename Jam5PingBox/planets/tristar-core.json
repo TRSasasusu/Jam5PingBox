@@ -303,56 +303,56 @@
         "assetBundle": "planets/assetbundles/diorama",
         "path": "Assets/MyAssets/Prefabs/BoxTriStar.prefab"
       },
-      { // pos: 180.1105 19.6152 -18.5606, rot: 353.8034 95.9473 12.2476
-        "rename": "Vessel",
-        "path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/OtherComponentsGroup/Structure_NOM_Vessel",
-        "parentPath": "Sector/BoxTriStar/VesselPos",
-        "isRelativeToParent": true,
-        "position": {
-          "x": 180.1105,
-          "y": 19.6152,
-          "z": -18.5606
-        },
-        "rotation": {
-          "x": 353.8034,
-          "y": 95.9473,
-          "z": 12.2476
-        }
-      },
-      {
-        "path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/BatchedGroup",
-        "parentPath": "Sector/BoxTriStar/VesselPos",
-        "isRelativeToParent": true,
-        "removeChildren": [
-          "BatchedMeshColliders_1",
-          "BatchedMeshColliders_2"
-        ]
-        //"parentPath": "Sector/Vessel",
-        //"isRelativeToParent": true,
-        //"position": {
-        //  "x": -180.1105,
-        //  "y": -19.6152,
-        //  "z": 18.5606
-        //},
-        //"rotation": {
-        //  "x": -353.8034,
-        //  "y": -95.9473,
-        //  "z": -12.2476
-        //}
-      },
-      {
-        "path": "DB_VesselDimension_Body/Sector_VesselDimension/Lighting_VesselDimension",
-        "parentPath": "Sector/BoxTriStar/VesselPos",
-        "isRelativeToParent": true
-      },
-      //{
-      //  "path": "DB_VesselDimension_Body/Sector_VesselDimension/Vessel_Atmosphere"
+      //{ // pos: 180.1105 19.6152 -18.5606, rot: 353.8034 95.9473 12.2476
+      //  "rename": "Vessel",
+      //  "path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/OtherComponentsGroup/Structure_NOM_Vessel",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true,
+      //  "position": {
+      //    "x": 180.1105,
+      //    "y": 19.6152,
+      //    "z": -18.5606
+      //  },
+      //  "rotation": {
+      //    "x": 353.8034,
+      //    "y": 95.9473,
+      //    "z": 12.2476
+      //  }
       //},
-      {
-        "path": "DB_VesselDimension_Body/Sector_VesselDimension/Sector_VesselBridge/Lighting_VesselBridge",
-        "parentPath": "Sector/BoxTriStar/VesselPos",
-        "isRelativeToParent": true
-      },
+      //{
+      //  "path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/BatchedGroup",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true,
+      //  "removeChildren": [
+      //    "BatchedMeshColliders_1",
+      //    "BatchedMeshColliders_2"
+      //  ]
+      //  //"parentPath": "Sector/Vessel",
+      //  //"isRelativeToParent": true,
+      //  //"position": {
+      //  //  "x": -180.1105,
+      //  //  "y": -19.6152,
+      //  //  "z": 18.5606
+      //  //},
+      //  //"rotation": {
+      //  //  "x": -353.8034,
+      //  //  "y": -95.9473,
+      //  //  "z": -12.2476
+      //  //}
+      //},
+      //{
+      //  "path": "DB_VesselDimension_Body/Sector_VesselDimension/Lighting_VesselDimension",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true
+      //},
+      ////{
+      ////  "path": "DB_VesselDimension_Body/Sector_VesselDimension/Vessel_Atmosphere"
+      ////},
+      //{
+      //  "path": "DB_VesselDimension_Body/Sector_VesselDimension/Sector_VesselBridge/Lighting_VesselBridge",
+      //  "parentPath": "Sector/BoxTriStar/VesselPos",
+      //  "isRelativeToParent": true
+      //},
       //{
       //  "path": "GiantsDeep_Body/Sector_GD/Sector_GDInterior/Effects_GDInterior/Particle_GD_ElectricBarrierArcs",
       //}
@@ -482,8 +482,8 @@
         "isRelativeToParent": true,
         "position": {
           "x": 118.1204,
-          "y": 11.1453,
-          "z": -19.7838
+          "y": 11.2282,
+          "z": -20.1772
         },
         "rotation": {
           "x": 78.1054,
@@ -496,9 +496,9 @@
         "parentPath": "Sector/BoxTriStar/VesselPos",
         "isRelativeToParent": true,
         "position": {
-          "x": 123.0054,
-          "y": 11.9963,
-          "z": -18.703
+          "x": 123.0023,
+          "y": 12.0482,
+          "z": -18.8712
         },
         "rotation": {
           "x": 22.2815,
@@ -512,8 +512,8 @@
         "isRelativeToParent": true,
         "position": {
           "x": 124.3348,
-          "y": 13.0253,
-          "z": -18.9138
+          "y": 13.0589,
+          "z": -19.0315
         },
         "rotation": {
           "x": 74.0636,
@@ -541,9 +541,9 @@
         "parentPath": "Sector/BoxTriStar/VesselPos",
         "isRelativeToParent": true,
         "position": {
-          "x": 131.0231,
-          "y": 12.5902,
-          "z": -27.0555
+          "x": 130.826,
+          "y": 12.9285,
+          "z": -26.9308
         },
         "rotation": {
           "x": 20.2357,
@@ -571,9 +571,9 @@
         "parentPath": "Sector/BoxTriStar/VesselPos",
         "isRelativeToParent": true,
         "position": {
-          "x": 141.6417,
-          "y": 19.3148,
-          "z": -32.3706
+          "x": 141.4831,
+          "y": 19.6165,
+          "z": -32.3455
         },
         "rotation": {
           "x": 4.7589,
@@ -676,9 +676,9 @@
         "xmlFile": "planets/texts/diorama_boxt_vessel.xml",
         "rename": "text_diorama_boxt_vessel",
         "position": {
-          "x": 114.1252,
-          "y": 128.5756,
-          "z": -65.4828
+          "x": 114.1227,
+          "y": 128.7757,
+          "z": -65.5736
         },
         "rotation": {
           "x": 335.5933,
@@ -692,9 +692,9 @@
         "xmlFile": "planets/texts/diorama_boxt_vessel_remote.xml",
         "rename": "text_diorama_boxt_vessel_remote",
         "position": {
-          "x": 113.4891,
-          "y": 148.0482,
-          "z": -83.0551
+          "x": 113.9232,
+          "y": 148.1903,
+          "z": -83.0126
         },
         "rotation": {
           "x": 346.9486,
