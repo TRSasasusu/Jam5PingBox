@@ -27,6 +27,7 @@ namespace Jam5PingBox {
         };
         const string TOWER_PATH = "Orclecle_Mod_Platform_Body/Sector/Tower";
         const string PING_PATH = "ExamplePlatform_Body/Sector/Nomai";
+        const string PING_PATH_v105 = "CentralStation_Body/Sector/Nomai";
         const string HIDDEN_PING_PATH = "HiddenPingShip_Body/Sector/Nomai";
 
         public ObjectModifier() {
@@ -101,6 +102,10 @@ namespace Jam5PingBox {
             GameObject ping;
             while (true) {
                 ping = GameObject.Find(PING_PATH);
+                if (ping) {
+                    break;
+                }
+                ping = GameObject.Find(PING_PATH_v105);
                 if (ping) {
                     break;
                 }
