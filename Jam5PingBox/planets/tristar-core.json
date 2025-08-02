@@ -613,6 +613,21 @@
         }
       },
       {
+        "path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_EscapePodCrashSite/GravityCrystals/Prefab_NOM_GravityCrystal (1)",
+        "parentPath": "Sector/BoxTriStar/VesselPos",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 167.4306,
+          "y": 13.1321,
+          "z": -24.4842
+        },
+        "rotation": {
+          "x": 18.5078,
+          "y": 0,
+          "z": 1.4231
+        }
+      },
+      {
         "rename": "Ernesto",
         "path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish",
         "scale": 0.025,
@@ -702,13 +717,13 @@
         "xmlFile": "planets/texts/diorama_boxt_vessel_remote.xml",
         "rename": "text_diorama_boxt_vessel_remote",
         "position": {
-          "x": 113.9232,
-          "y": 148.1903,
-          "z": -83.0126
+          "x": 95.0673,
+          "y": 154.2439,
+          "z": -64.8426
         },
         "rotation": {
-          "x": 346.9486,
-          "y": 305.1783,
+          "x": 12.2003,
+          "y": 145.0063,
           "z": 306.7859
         },
         "seed": 3

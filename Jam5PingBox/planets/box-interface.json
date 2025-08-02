@@ -89,6 +89,44 @@
     ]
   },
   "Props": {
+    "singularities": [
+      {
+        "rename": "end_bh",
+        "uniqueID": "diorama_box1_end",
+        "horizonRadius": 1,
+        "type": "blackHole",
+        "position": {
+          "x": 0,
+          "y": 10.078,
+          "z": 7.9
+        },
+        "parentPath": "Sector/Box1",
+      },
+      {
+        "rename": "end_bh",
+        "uniqueID": "diorama_box2_end",
+        "horizonRadius": 1,
+        "type": "blackHole",
+        "position": {
+          "x": 0.5072,
+          "y": 10.2951,
+          "z": 0
+        },
+        "parentPath": "Sector/Box2",
+      },
+      {
+        "rename": "end_bh",
+        "uniqueID": "diorama_box3_end",
+        "horizonRadius": 1,
+        "type": "blackHole",
+        "position": {
+          "x": 5.2231,
+          "y": 29.6072,
+          "z": 3.6628
+        },
+        "parentPath": "Sector/Box3",
+      },
+    ],
     "warpReceivers": [
       {
         "parentPath": "Sector/DioramaMachine",
@@ -278,7 +316,7 @@
         "rename": "text_diorama_box2_end_pc",
         "parentPath": "Sector/Box2",
         "position": {
-          "x": 0,
+          "x": -2.3387,
           "y": 8.2682,
           "z": -0.1582
         }
@@ -302,7 +340,7 @@
         "rename": "text_diorama_box3_end_pc",
         "parentPath": "Sector/Box3",
         "position": {
-          "x": 4.5416,
+          "x": 3.3511,
           "y": 27.798,
           "z": 3.7394
         }

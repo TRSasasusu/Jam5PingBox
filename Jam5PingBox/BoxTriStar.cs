@@ -9,8 +9,8 @@ namespace Jam5PingBox {
     public class BoxTriStar : MonoBehaviour {
         GameObject _bhToVessel;
         GameObject _whToVessel;
-        GameObject _bhFromVessel;
-        GameObject _whFromVessel;
+        //GameObject _bhFromVessel;
+        //GameObject _whFromVessel;
         BoxButton _bhwhButton;
 
         Transform _door1;
@@ -67,14 +67,14 @@ namespace Jam5PingBox {
                     _whToVessel = child.gameObject;
                     _whToVessel.SetActive(false);
                 }
-                else if(child.name == "BHFromVessel") {
-                    _bhFromVessel = child.gameObject;
-                    _bhFromVessel.SetActive(false);
-                }
-                else if(child.name == "WHFromVessel") {
-                    _whFromVessel = child.gameObject;
-                    _whFromVessel.SetActive(false);
-                }
+                //else if(child.name == "BHFromVessel") {
+                //    _bhFromVessel = child.gameObject;
+                //    _bhFromVessel.SetActive(false);
+                //}
+                //else if(child.name == "WHFromVessel") {
+                //    _whFromVessel = child.gameObject;
+                //    _whFromVessel.SetActive(false);
+                //}
                 else if(child.name == "Door1") {
                     _door1 = child.Find("Door");
                     _door1Open = child.Find("Open");
@@ -127,15 +127,15 @@ namespace Jam5PingBox {
                 _isBhwhAppear = true;
                 _bhToVessel.SetActive(true);
                 _whToVessel.SetActive(true);
-                _bhFromVessel.SetActive(true);
-                _whFromVessel.SetActive(true);
+                //_bhFromVessel.SetActive(true);
+                //_whFromVessel.SetActive(true);
             };
             _bhwhButton._offAction = () => {
                 _isBhwhAppear = false;
                 _bhToVessel.SetActive(false);
                 _whToVessel.SetActive(false);
-                _bhFromVessel.SetActive(false);
-                _whFromVessel.SetActive(false);
+                //_bhFromVessel.SetActive(false);
+                //_whFromVessel.SetActive(false);
             };
             _bhwhButton.Initialize();
 
