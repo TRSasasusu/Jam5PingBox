@@ -15,6 +15,9 @@ namespace Jam5PingBox {
         BoxButton _beamButton;
         BoxButton _beamButton2;
 
+        GameObject _endBh;
+        GameObject _endBhEffect;
+
         bool _isDoorOpen = false;
         bool _isBeamReversed = false;
         bool _isBeamReversed1 = false;
@@ -59,6 +62,17 @@ namespace Jam5PingBox {
                     DioramaMachine._clocks.Add(child);
                     child.GetComponent<InteractReceiver>().OnPressInteract += Restart;
                 }
+                else if(child.name == "end_bh") {
+                    _endBh = child.gameObject;
+                }
+                else if(child.name == "BHEffect") {
+                    _endBhEffect = child.gameObject;
+                }
+            }
+
+            if(!Tower.Box2Done()) {
+                _endBh.SetActive(false);
+                _endBhEffect.SetActive(false);
             }
 
             _doorButton._onAction = () => {
@@ -125,6 +139,11 @@ namespace Jam5PingBox {
             }
             if (_beamFluids != null) {
                 ReverseBeam();
+            }
+
+            if(!_endBh.activeSelf && Tower.Box2Done()) {
+                _endBh.SetActive(true);
+                _endBhEffect.SetActive(true);
             }
         }
 

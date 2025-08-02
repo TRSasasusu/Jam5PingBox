@@ -17,6 +17,9 @@ namespace Jam5PingBox {
         Transform _floorDown;
         BoxButton _floorButton;
 
+        GameObject _endBh;
+        GameObject _endBhEffect;
+
         bool _isDoorOpen = false;
         bool _isFloorUp = false;
 
@@ -50,9 +53,23 @@ namespace Jam5PingBox {
                     DioramaMachine.ActivateComputer(child.GetComponent<NomaiComputer>());
                 }
                 else if(child.name == "Clock") {
-                    DioramaMachine._clocks = new List<Transform> { child };
+                    if(DioramaMachine._clocks == null) {
+                        DioramaMachine._clocks = new List<Transform>();
+                    }
+                    DioramaMachine._clocks.Add(child);
                     child.GetComponent<InteractReceiver>().OnPressInteract += Restart;
                 }
+                else if(child.name == "end_bh") {
+                    _endBh = child.gameObject;
+                }
+                else if(child.name == "BHEffect") {
+                    _endBhEffect = child.gameObject;
+                }
+            }
+
+            if(!Tower.Box1Done()) {
+                _endBh.SetActive(false);
+                _endBhEffect.SetActive(false);
             }
 
             _doorButton._onAction = () => {
@@ -102,6 +119,11 @@ namespace Jam5PingBox {
             if (_floor) {
                 var pos = _isFloorUp ? _floorUp : _floorDown;
                 _floor.transform.localPosition = Vector3.Lerp(_floor.transform.localPosition, pos.localPosition, 0.01f);
+            }
+
+            if(!_endBh.activeSelf && Tower.Box1Done()) {
+                _endBh.SetActive(true);
+                _endBhEffect.SetActive(true);
             }
         }
 

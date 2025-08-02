@@ -7,10 +7,22 @@ using UnityEngine;
 
 namespace Jam5PingBox {
     public class Tower : MonoBehaviour {
+        public static bool Box1Done() {
+            return PlayerData._currentGameSave.shipLogFactSaves.ContainsKey("diorama_box1_complete") && PlayerData._currentGameSave.shipLogFactSaves["diorama_box1_complete"].revealOrder > -1;
+        }
+
+        public static bool Box2Done() {
+            return PlayerData._currentGameSave.shipLogFactSaves.ContainsKey("diorama_box2_complete") && PlayerData._currentGameSave.shipLogFactSaves["diorama_box2_complete"].revealOrder > -1;
+        }
+
+        public static bool Box3Done() {
+            return PlayerData._currentGameSave.shipLogFactSaves.ContainsKey("diorama_box3_complete") && PlayerData._currentGameSave.shipLogFactSaves["diorama_box3_complete"].revealOrder > -1;
+        }
+
         public void Initialize() {
-            var box1Done = PlayerData._currentGameSave.shipLogFactSaves.ContainsKey("diorama_box1_complete") && PlayerData._currentGameSave.shipLogFactSaves["diorama_box1_complete"].revealOrder > -1;
-            var box2Done = PlayerData._currentGameSave.shipLogFactSaves.ContainsKey("diorama_box2_complete") && PlayerData._currentGameSave.shipLogFactSaves["diorama_box2_complete"].revealOrder > -1;
-            var box3Done = PlayerData._currentGameSave.shipLogFactSaves.ContainsKey("diorama_box3_complete") && PlayerData._currentGameSave.shipLogFactSaves["diorama_box3_complete"].revealOrder > -1;
+            var box1Done = Box1Done();
+            var box2Done = Box2Done();
+            var box3Done = Box3Done();
             foreach (Transform child in GetComponentsInChildren<Transform>(true)) {
                 if(child.name == "ShortColumn (7)") {
                     Disable(child, box1Done);

@@ -12,6 +12,9 @@ namespace Jam5PingBox {
         BoxButton _inverseGravityButton;
         BoxButton _noGravityButton;
 
+        GameObject _endBh;
+        GameObject _endBhEffect;
+
         bool _isInverseGravity;
         bool _isNoGravity;
 
@@ -48,6 +51,17 @@ namespace Jam5PingBox {
                     DioramaMachine._clocks.Add(child);
                     child.GetComponent<InteractReceiver>().OnPressInteract += Restart;
                 }
+                else if(child.name == "end_bh") {
+                    _endBh = child.gameObject;
+                }
+                else if(child.name == "BHEffect") {
+                    _endBhEffect = child.gameObject;
+                }
+            }
+
+            if(!Tower.Box3Done()) {
+                _endBh.SetActive(false);
+                _endBhEffect.SetActive(false);
             }
 
             _inverseGravityButton._onAction = () => {
@@ -102,6 +116,13 @@ namespace Jam5PingBox {
                 _noGravityButton._pushedOnRecord = data._isNoGravityButtonPushed;
                 _noGravityButton.ChangeState();
             }));
+        }
+
+        void Update() {
+            if(!_endBh.activeSelf && Tower.Box3Done()) {
+                _endBh.SetActive(true);
+                _endBhEffect.SetActive(true);
+            }
         }
 
         void OnDestroy() {
