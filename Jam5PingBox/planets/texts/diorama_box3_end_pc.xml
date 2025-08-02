@@ -3,6 +3,11 @@
     <ID>1</ID>
     <Text>BOX3_END_PC</Text>
   </TextBlock>
+  <TextBlock>
+    <ID>2</ID>
+    <ParentID>1</ParentID>
+    <Text>BOX_END_BH</Text>
+  </TextBlock>
   <ShipLogConditions>
     <RevealFact>
       <FactID>diorama_box3_complete</FactID>
