@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 521957533
+CRC: 2117246182
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1259170601bf0de33a723948658352ed
+    Hash: c20d2dbfd2ef45fff0a6982dab135448
   TypeTreeHash:
     serializedVersion: 2
     Hash: bdc7c442030abd5a8dacd491f4e54210
@@ -72,6 +72,7 @@ Assets:
 - Assets/MyAssets/Prefabs/hhearthian.prefab
 - Assets/MyAssets/Prefabs/Box3Item.prefab
 - Assets/MyAssets/Prefabs/hscout.prefab
+- Assets/MyAssets/Prefabs/PingEffect.prefab
 - Assets/MyAssets/Prefabs/AroundDioramaMachine.prefab
 - Assets/MyAssets/Prefabs/Box1.prefab
 - Assets/MyAssets/Prefabs/Box1Item.prefab

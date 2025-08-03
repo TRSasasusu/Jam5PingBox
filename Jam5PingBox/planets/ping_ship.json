@@ -76,7 +76,19 @@
           "y": 0,
           "z": 7.5108
         }
-      }
+      },
+      {
+        "assetBundle": "planets/assetbundles/diorama",
+        "path": "Assets/MyAssets/Prefabs/PingEffect.prefab",
+        "parentPath": "Sector/Nomai/Nomai_Rig_v01:TrajectorySHJnt/Nomai_Rig_v01:ROOTSHJnt/Nomai_Rig_v01:Spine_01SHJnt/Nomai_Rig_v01:Spine_02SHJnt/Nomai_Rig_v01:Spine_TopSHJnt/Nomai_Rig_v01:Neck_01SHJnt/Nomai_Rig_v01:Neck_TopSHJnt/Nomai_Rig_v01:Head_TopSHJnt/Nomai_Rig_v01:Camera_01SHJnt",
+        "isRelativeToParent": true,
+        "rotation": {
+          "x": 0,
+          "y": 270,
+          "z": 0
+        },
+        "scale": 0.3
+      },
     ],
     "dialogue": [
       {
