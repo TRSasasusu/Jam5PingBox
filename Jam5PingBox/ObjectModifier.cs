@@ -103,16 +103,17 @@ namespace Jam5PingBox {
             yield return null;
             GameObject ping;
             while (true) {
-                ping = SearchUtilities.Find(PING_PATH);
+                ping = GameObject.Find(PING_PATH_v105);
                 if (ping) {
                     break;
                 }
-                ping = SearchUtilities.Find(PING_PATH_v105);
+                ping = GameObject.Find(PING_PATH);
                 if (ping) {
                     break;
                 }
                 yield return null;
             }
+            Jam5PingBox.Log("Ping is found!");
             GameObject hiddenPing;
             while (true) {
                 hiddenPing = SearchUtilities.Find(HIDDEN_PING_PATH);
