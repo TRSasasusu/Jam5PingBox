@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using NewHorizons;
+using NewHorizons.Utility;
 using IEnumerator = System.Collections.IEnumerator;
 
 namespace Jam5PingBox {
@@ -37,7 +39,7 @@ namespace Jam5PingBox {
         IEnumerator Initialize() {
             Material originalEnergyCableMaterial = null;
             while (true) {
-                var energyCableObj = GameObject.Find(ENERGY_CABLE_PATH);
+                var energyCableObj = SearchUtilities.Find(ENERGY_CABLE_PATH);
                 if (energyCableObj) {
                     originalEnergyCableMaterial = energyCableObj.GetComponent<Renderer>().sharedMaterial;
                     break;
@@ -47,7 +49,7 @@ namespace Jam5PingBox {
 
             GameObject dioramaInterface = null;
             while(true) {
-                dioramaInterface = GameObject.Find(DIORAMA_INTERFACE_PATH);
+                dioramaInterface = SearchUtilities.Find(DIORAMA_INTERFACE_PATH);
                 if (dioramaInterface) {
                     break;
                 }
@@ -55,7 +57,7 @@ namespace Jam5PingBox {
             }
             GameObject platform = null;
             while (true) {
-                platform = GameObject.Find(PLATFORM_PATH);
+                platform = SearchUtilities.Find(PLATFORM_PATH);
                 if (platform) {
                     break;
                 }
@@ -63,7 +65,7 @@ namespace Jam5PingBox {
             }
             GameObject shadowOfSparks = null;
             while (true) {
-                shadowOfSparks = GameObject.Find(SHADOW_OF_SPARKS_PATH);
+                shadowOfSparks = SearchUtilities.Find(SHADOW_OF_SPARKS_PATH);
                 if (shadowOfSparks) {
                     break;
                 }
@@ -90,7 +92,7 @@ namespace Jam5PingBox {
             }
 
             while (true) {
-                var warp = GameObject.Find(DIORAMA_WARP_START_PATH);
+                var warp = SearchUtilities.Find(DIORAMA_WARP_START_PATH);
                 if (warp) {
                     warp.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                     break;
@@ -101,11 +103,11 @@ namespace Jam5PingBox {
             yield return null;
             GameObject ping;
             while (true) {
-                ping = GameObject.Find(PING_PATH);
+                ping = SearchUtilities.Find(PING_PATH);
                 if (ping) {
                     break;
                 }
-                ping = GameObject.Find(PING_PATH_v105);
+                ping = SearchUtilities.Find(PING_PATH_v105);
                 if (ping) {
                     break;
                 }
@@ -113,7 +115,7 @@ namespace Jam5PingBox {
             }
             GameObject hiddenPing;
             while (true) {
-                hiddenPing = GameObject.Find(HIDDEN_PING_PATH);
+                hiddenPing = SearchUtilities.Find(HIDDEN_PING_PATH);
                 if (hiddenPing) {
                     break;
                 }
@@ -140,16 +142,16 @@ namespace Jam5PingBox {
 
             DioramaMachine dioramaMachine = null;
             while (true) {
-                var dioramaMachineObj = GameObject.Find(DIORAMA_MACHINE_PATH);
+                var dioramaMachineObj = SearchUtilities.Find(DIORAMA_MACHINE_PATH);
                 if (dioramaMachineObj) {
                     dioramaMachine = dioramaMachineObj.AddComponent<DioramaMachine>();
-                    dioramaMachine._box1 = GameObject.Find(BOX1_PATH);
-                    dioramaMachine._box2 = GameObject.Find(BOX2_PATH);
-                    dioramaMachine._box3 = GameObject.Find(BOX3_PATH);
-                    dioramaMachine._hiddenPingShip = GameObject.Find(HIDDEN_PING_SHIP_PATH);
+                    dioramaMachine._box1 = SearchUtilities.Find(BOX1_PATH);
+                    dioramaMachine._box2 = SearchUtilities.Find(BOX2_PATH);
+                    dioramaMachine._box3 = SearchUtilities.Find(BOX3_PATH);
+                    dioramaMachine._hiddenPingShip = SearchUtilities.Find(HIDDEN_PING_SHIP_PATH);
 
-                    dioramaMachine._boxTriStar = GameObject.Find(BOX_TRISTAR_PATH);
-                    dioramaMachine._boxTriStarObjs = BOX_TRISTER_OBJ_PATHS.Select(x => GameObject.Find(x)).ToList();
+                    dioramaMachine._boxTriStar = SearchUtilities.Find(BOX_TRISTAR_PATH);
+                    dioramaMachine._boxTriStarObjs = BOX_TRISTER_OBJ_PATHS.Select(x => SearchUtilities.Find(x)).ToList();
 
                     dioramaMachine.Initialize();
                     break;
@@ -158,7 +160,7 @@ namespace Jam5PingBox {
             }
 
             while (true) {
-                var towerObj = GameObject.Find(TOWER_PATH);
+                var towerObj = SearchUtilities.Find(TOWER_PATH);
                 if (towerObj) {
                     towerObj.AddComponent<Tower>().Initialize();
                     break;

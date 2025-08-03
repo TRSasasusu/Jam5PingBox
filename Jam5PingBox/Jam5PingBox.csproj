@@ -46,4 +46,9 @@
     <Folder Include="planets\assetbundles\" />
     <Folder Include="planets\assets\" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="NewHorizons">
+      <HintPath>..\..\..\..\AppData\Roaming\OuterWildsModManager\OWML\Mods\xen.NewHorizons\NewHorizons.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
