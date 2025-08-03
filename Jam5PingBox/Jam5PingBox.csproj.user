@@ -2,4 +2,7 @@
   <PropertyGroup>
     <OutputPath>$(AppData)/OuterWildsModManager/OWML/Mods/orclecle.Jam5PingBox</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Label="UserMacros">
+		<OuterWildsModDirectory>C:\Users\manyo\AppData\Roaming\OuterWildsModManager\OWML\Mods\</OuterWildsModDirectory>
+  </PropertyGroup>
 </Project>
