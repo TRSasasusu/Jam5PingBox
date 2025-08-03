@@ -43,14 +43,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Libs\xen.NewHorizons\" />
     <Folder Include="planets\assetbundles\" />
     <Folder Include="planets\assets\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="NewHorizons">
-        <HintPath Condition="Exists('$(OuterWildsModDirectory)xen.NewHorizons\NewHorizons.dll')">$(OuterWildsModDirectory)xen.NewHorizons\NewHorizons.dll</HintPath>
-        <HintPath Condition="Exists('$(OuterWildsModDirectory)xen.NewHorizons.Debug\NewHorizons.dll')">$(OuterWildsModDirectory)xen.NewHorizons.Debug\NewHorizons.dll</HintPath>
-        <Private>False</Private>
+      <HintPath>Libs\xen.NewHorizons\NewHorizons.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
 </Project>
