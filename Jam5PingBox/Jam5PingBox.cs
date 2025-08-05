@@ -14,6 +14,12 @@ namespace Jam5PingBox
             Instance.ModHelper.Console.WriteLine(text, messageType);
         }
 
+        public override void Configure(IModConfig config) {
+            Log("configure is called!");
+            IsSuperBrightMode = Instance.ModHelper.Config.GetSettingsValue<bool>("BRIGHT_MODE");
+        }
+        public bool IsSuperBrightMode { get; private set; }
+
         public void Awake()
         {
             Instance = this;

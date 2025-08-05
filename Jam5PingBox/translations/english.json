@@ -1,6 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/outer-wilds-new-horizons/new-horizons/main/NewHorizons/Schemas/translation_schema.json",
 	"UIDictionary": {
+		"BRIGHT_MODE": "Super Bright Mode (CAUTION: breaks your eyes!!)",
 	},
 	"DialogueDictionary": {
 		"BOX1_INTRO": "This is a <![CDATA[<Color=orange>]]>miniature<![CDATA[</Color>]]>, or perhaps a diorama.",

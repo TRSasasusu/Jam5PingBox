@@ -1,9 +1,13 @@
-﻿using System;
+﻿using NewHorizons;
+using NewHorizons.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using IEnumerator = System.Collections.IEnumerator;
 
 namespace Jam5PingBox {
     public class BoxTriStar : MonoBehaviour {
@@ -28,6 +32,17 @@ namespace Jam5PingBox {
 
         Transform _water;
         SphereShape _hazardVolume;
+
+        // for only bright settings
+        GameObject _superBrightSky;
+        GameObject _notBrightSky;
+        Light _ambientLight;
+        List<Light> _starLights;
+        List<Material> _sunSurfaceMaterials;
+        //List<Material> _startSurfaceMaterials;
+        //List<Material> _endSurfaceMaterials;
+        //Color _initialStartSurfaceMaterialColor;
+        //Color _initialEndSurfaceMaterialColor;
 
         bool _isBhwhAppear = false;
         bool _isDoor1Open = false;
@@ -121,6 +136,15 @@ namespace Jam5PingBox {
                     DioramaMachine._clocks.Add(child);
                     child.GetComponent<InteractReceiver>().OnPressInteract += Restart;
                 }
+                else if(child.name == "Particle System Super Bright") {
+                    _superBrightSky = child.gameObject;
+                }
+                else if(child.name == "Particle System Not Bright") {
+                    _notBrightSky = child.gameObject;
+                }
+                else if(child.name == "AmbientLight") {
+                    _ambientLight = child.GetComponent<Light>();
+                }
             }
 
             _bhwhButton._onAction = () => {
@@ -162,6 +186,45 @@ namespace Jam5PingBox {
             _door3Button.Initialize();
 
             Restart();
+
+            _starLights = new List<Light> {
+                SearchUtilities.Find("Hope_Body/Sector/Star/StarLight").GetComponent<Light>(),
+                SearchUtilities.Find("Faith_Body/Sector/Star/StarLight").GetComponent<Light>(),
+                SearchUtilities.Find("Salvation_Body/Sector/Star/StarLight").GetComponent<Light>(),
+            };
+            //_startSurfaceMaterials = new List<Material>();
+            //_endSurfaceMaterials = new List<Material>();
+            //var sunList = new List<NewHorizons.Components.SizeControllers.StarEvolutionController> {
+            //    SearchUtilities.Find("Hope_Body/Sector/Star").GetComponent<NewHorizons.Components.SizeControllers.StarEvolutionController>(),
+            //    SearchUtilities.Find("Faith_Body/Sector/Star").GetComponent<NewHorizons.Components.SizeControllers.StarEvolutionController>(),
+            //    SearchUtilities.Find("Salvation_Body/Sector/Star").GetComponent<NewHorizons.Components.SizeControllers.StarEvolutionController>(),
+            //};
+            //for (int i = 0; i < sunList.Count; i++) {
+            //    var sun = sunList[i];
+            //    Type type = sun.GetType();
+            //    FieldInfo field = type.GetField("_startSurfaceMaterial", BindingFlags.InvokeMethod | BindingFlags.NonPublic | BindingFlags.Instance);
+            //    Material startSurfaceMaterial = (Material)(field.GetValue(sun));
+            //    if (startSurfaceMaterial != null) {
+            //        _startSurfaceMaterials.Add(startSurfaceMaterial);
+            //        if(i == 0) {
+            //            _initialStartSurfaceMaterialColor = startSurfaceMaterial.color;
+            //        }
+            //    }
+            //    FieldInfo field1 = type.GetField("_endSurfaceMaterial", BindingFlags.InvokeMethod | BindingFlags.NonPublic | BindingFlags.Instance);
+            //    Material endSurfaceMaterial = (Material)(field1.GetValue(sun));
+            //    if (endSurfaceMaterial != null) {
+            //        _endSurfaceMaterials.Add(endSurfaceMaterial);
+            //        if(i == 0) {
+            //            _initialEndSurfaceMaterialColor = endSurfaceMaterial.color;
+            //        }
+            //    }
+            //}
+            _sunSurfaceMaterials = new List<Material> {
+                SearchUtilities.Find("Hope_Body/Sector/Star/Surface").GetComponent<TessellatedSphereRenderer>()._materials[0],
+                SearchUtilities.Find("Faith_Body/Sector/Star/Surface").GetComponent<TessellatedSphereRenderer>()._materials[0],
+                SearchUtilities.Find("Salvation_Body/Sector/Star/Surface").GetComponent<TessellatedSphereRenderer>()._materials[0],
+            };
+            StartCoroutine(ChangeSunSurfaceColorForNotBright());
         }
 
         void Restart() {
@@ -220,6 +283,54 @@ namespace Jam5PingBox {
             if(_sunO.Item1 == ScoutOrPlayer.SCOUT && _sunX.Item1 == ScoutOrPlayer.SCOUT && _sunV.Item1 == ScoutOrPlayer.PLAYER && _sunO.Item2 < _sunX.Item2 && _sunX.Item2 < _sunV.Item2) {
                 _water.transform.localScale = Vector3.Lerp(_water.transform.localScale, new Vector3(0.01f, 0.01f, 0.01f), 10);
                 _hazardVolume.radius = Mathf.Lerp(_hazardVolume.radius, 0.01f, 10);
+            }
+
+            if (Jam5PingBox.Instance.IsSuperBrightMode) {
+                if (!_superBrightSky.activeSelf) {
+                    _superBrightSky.SetActive(true);
+                }
+                if (_notBrightSky.activeSelf) {
+                    _notBrightSky.SetActive(false);
+                }
+                _ambientLight.intensity = 1.4f;
+                if (_starLights != null) {
+                    foreach (var light in _starLights) {
+                        if(light) {
+                            light.range = 10000;
+                        }
+                    }
+                }
+            }
+            else {
+                if (_superBrightSky.activeSelf) {
+                    _superBrightSky.SetActive(false);
+                }
+                if (!_notBrightSky.activeSelf) {
+                    _notBrightSky.SetActive(true);
+                }
+                _ambientLight.intensity = 1f;
+                if (_starLights != null) {
+                    foreach (var light in _starLights) {
+                        if(light) {
+                            light.range = 1000;
+                        }
+                    }
+                }
+            }
+        }
+
+        IEnumerator ChangeSunSurfaceColorForNotBright() {
+            while (true) {
+                yield return new WaitForFixedUpdate();
+                if(!Jam5PingBox.Instance.IsSuperBrightMode) {
+                    if (_sunSurfaceMaterials != null) {
+                        foreach (var material in _sunSurfaceMaterials) {
+                            if(material) {
+                                material.color = new Color(0.5f, 0.5f, 0.5f, 0);
+                            }
+                        }
+                    }
+                }
             }
         }
 
