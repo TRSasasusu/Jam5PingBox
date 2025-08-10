@@ -3,6 +3,12 @@
 	"UIDictionary": {
 		//"BRIGHT_MODE": "Super Bright Mode (CAUTION: breaks your eyes!!)",
 		"BRIGHTNESS": "Brightness (in a specific place)",
+		"Miniature 1": "Miniature 1",
+		"Miniature 2": "Miniature 2",
+		"Miniature 3": "Miniature 3",
+		"Miniature-TriStars": "Miniature-TriStars",
+		"Shadow of Sparks": "Shadow of Sparks",
+		"Diorama Interface": "Diorama Interface",
 	},
 	"DialogueDictionary": {
 		"BOX1_INTRO": "This is a <![CDATA[<Color=orange>]]>miniature<![CDATA[</Color>]]>, or perhaps a diorama.",
