@@ -2,6 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/config_schema.json",
   "enabled": true,
   "settings": {
-    "BRIGHT_MODE": false,
+    //"BRIGHT_MODE": false,
+    "BRIGHTNESS": {
+      "type": "slider",
+      "min": 0,
+      "max": 2,
+      "value": 1,
+    }
   }
 }

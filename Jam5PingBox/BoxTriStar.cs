@@ -35,6 +35,7 @@ namespace Jam5PingBox {
 
         // for only bright settings
         GameObject _superBrightSky;
+        GameObject _midBrightSky;
         GameObject _notBrightSky;
         Light _ambientLight;
         List<Light> _starLights;
@@ -138,6 +139,9 @@ namespace Jam5PingBox {
                 }
                 else if(child.name == "Particle System Super Bright") {
                     _superBrightSky = child.gameObject;
+                }
+                else if(child.name == "Particle System Mid Bright") {
+                    _midBrightSky = child.gameObject;
                 }
                 else if(child.name == "Particle System Not Bright") {
                     _notBrightSky = child.gameObject;
@@ -285,9 +289,13 @@ namespace Jam5PingBox {
                 _hazardVolume.radius = Mathf.Lerp(_hazardVolume.radius, 0.01f, 10);
             }
 
-            if (Jam5PingBox.Instance.IsSuperBrightMode) {
+            //if (Jam5PingBox.Instance.IsSuperBrightMode) {
+            if(Jam5PingBox.Instance.Brightness == 2) {
                 if (!_superBrightSky.activeSelf) {
                     _superBrightSky.SetActive(true);
+                }
+                if (_midBrightSky.activeSelf) {
+                    _midBrightSky.SetActive(false);
                 }
                 if (_notBrightSky.activeSelf) {
                     _notBrightSky.SetActive(false);
@@ -301,9 +309,32 @@ namespace Jam5PingBox {
                     }
                 }
             }
+            else if(Jam5PingBox.Instance.Brightness == 1) {
+                if (_superBrightSky.activeSelf) {
+                    _superBrightSky.SetActive(false);
+                }
+                if (!_midBrightSky.activeSelf) {
+                    _midBrightSky.SetActive(true);
+                }
+                if (_notBrightSky.activeSelf) {
+                    _notBrightSky.SetActive(false);
+                }
+                _ambientLight.intensity = 1.1f;
+                if (_starLights != null) {
+                    foreach (var light in _starLights) {
+                        if (light) {
+                            light.range = 2000;
+                        }
+                    }
+                }
+
+            }
             else {
                 if (_superBrightSky.activeSelf) {
                     _superBrightSky.SetActive(false);
+                }
+                if (_midBrightSky.activeSelf) {
+                    _midBrightSky.SetActive(false);
                 }
                 if (!_notBrightSky.activeSelf) {
                     _notBrightSky.SetActive(true);
@@ -311,7 +342,7 @@ namespace Jam5PingBox {
                 _ambientLight.intensity = 1f;
                 if (_starLights != null) {
                     foreach (var light in _starLights) {
-                        if(light) {
+                        if (light) {
                             light.range = 1000;
                         }
                     }
@@ -322,11 +353,21 @@ namespace Jam5PingBox {
         IEnumerator ChangeSunSurfaceColorForNotBright() {
             while (true) {
                 yield return new WaitForFixedUpdate();
-                if(!Jam5PingBox.Instance.IsSuperBrightMode) {
+                //if(!Jam5PingBox.Instance.IsSuperBrightMode) {
+                if(Jam5PingBox.Instance.Brightness == 0) {
                     if (_sunSurfaceMaterials != null) {
                         foreach (var material in _sunSurfaceMaterials) {
                             if(material) {
                                 material.color = new Color(0.5f, 0.5f, 0.5f, 0);
+                            }
+                        }
+                    }
+                }
+                else if(Jam5PingBox.Instance.Brightness == 1) {
+                    if (_sunSurfaceMaterials != null) {
+                        foreach (var material in _sunSurfaceMaterials) {
+                            if(material) {
+                                material.color = new Color(0.9f, 0.9f, 0.9f, 0);
                             }
                         }
                     }
