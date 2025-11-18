@@ -16,12 +16,9 @@ There seem to be two issues. I have never encountered them, but these are random
 (This is caused by the initialization which tries to find a specific base game object by `GameObject.Find`, but NH disables that object randomly before the initialization, so the initilization cannot finish forever. This is fixed by using `SearchUtilities.Find` from v0.5.1.)
 2. Randomly broken size of the hatchling: Only Wyrm has seen it when they used the first warp pad from the central station to the diorama interface. I suspect the small warp pad might cause such a phenomenon. It could be fixed by the meditation.
 
-## Photosensitivity setting
+## Brightness setting
 
-From v0.5.2, there is the photosensitivity setting.
-A specific place was too bright, so this is now very darker.
-However, due to some voices that misses the original brightness, I have left the option "Super Bright Mode" in the mod settings.
-If you have great confidents in the photosensitivity, you can make it on.
+From v0.5.3, there is the brightness setting for the specific place.
 
 ## Credits
 
