@@ -741,6 +741,29 @@
       },
       {
         "type": "wall",
+        "xmlFile": "planets/texts/diorama_boxt_tower_hint.xml",
+        "rename": "text_diorama_boxt_tower_hint",
+        "arcInfo": [
+          {
+            "type": "child"
+          },
+          {
+            "type": "adult"
+          }
+        ],
+        "position": {
+          "x": 15.602,
+          "y": -273.9539,
+          "z": -11.5884
+        },
+        "rotation": {
+          "x": 270,
+          "y": 251.2765,
+          "z": 0
+        }
+      },
+      {
+        "type": "wall",
         "location": "a",
         "xmlFile": "planets/texts/diorama_boxt_tower_another.xml",
         "rename": "text_diorama_boxt_tower_another",

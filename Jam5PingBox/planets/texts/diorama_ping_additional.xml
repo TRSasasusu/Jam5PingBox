@@ -1,0 +1,21 @@
+﻿<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+  <DialogueNode>
+    <Name>Menu</Name>
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>PING_ADDITIONAL_OPTION</Text>
+        <DialogueTarget>DioramaPingText</DialogueTarget>
+        <RequiredLogCondition>diorama_ping_5</RequiredLogCondition>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+  <DialogueNode>
+    <Name>DioramaPingText</Name>
+    <Dialogue>
+      <Page>PING_ADDITIONAL_1</Page>
+      <Page>PING_ADDITIONAL_2</Page>
+      <Page>PING_ADDITIONAL_3</Page>
+    </Dialogue>
+    <DialogueTarget>Menu</DialogueTarget>
+  </DialogueNode>
+</DialogueTree>

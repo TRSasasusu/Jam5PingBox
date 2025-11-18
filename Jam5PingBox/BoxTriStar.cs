@@ -274,10 +274,12 @@ namespace Jam5PingBox {
             if(_door1) {
                 var pos = _isDoor1Open ? _door1Open : _door1Close;
                 _door1.transform.localPosition = Vector3.Lerp(_door1.transform.localPosition, pos.localPosition, 0.1f);
+                _door1.transform.localEulerAngles = Vector3.Lerp(_door1.transform.localEulerAngles, pos.localEulerAngles, 0.1f);
             }
             if(_door2) {
                 var pos = _isDoor2Open ? _door2Open : _door2Close;
                 _door2.transform.localPosition = Vector3.Lerp(_door2.transform.localPosition, pos.localPosition, 0.1f);
+                _door2.transform.localEulerAngles = Vector3.Lerp(_door2.transform.localEulerAngles, pos.localEulerAngles, 0.1f);
             }
             if(_door3) {
                 var pos = _isDoor3Open ? _door3Open : _door3Close;

@@ -191,6 +191,11 @@
     <Name>DIORAMA_JAM</Name>
     <Curiosity>diorama_ping</Curiosity>
     <IsCuriosity/>
+    <RumorFact>
+      <ID>diorama_boxt_ping_rumor</ID>
+      <SourceID>diorama_boxt_symbol</SourceID>
+      <Text>DIORAMA_JAM_MENTION</Text>
+    </RumorFact>
     <ExploreFact>
       <ID>diorama_ping_1</ID>
       <Text>DIORAMA_JAM_1</Text>

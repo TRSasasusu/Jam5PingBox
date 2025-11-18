@@ -48,6 +48,9 @@
 		"BOXT_SYMBOL_5": "PING: ...Still, to think there are places left to explore in this dying universe. I've heard my ancestors' exciting exploration records since childhood, but in this era, there were only dead stars and meaningless debris of broken asteroids. ...Ah, this is truly delightful.",
 		"BOXT_SYMBOL_6": "PING: Wait, the detoxification function is failing! Good thing I can repair it here... Oh, this space seems to have lower toxicity, that's why I survived... Maybe it's related to the tree directly above.",
 
+		"BOXT_TOWER_HINT_1": "DIDY: There's something inside! But I can't enter through this gap...",
+		"BOXT_TOWER_HINT_2": "PING: Hmm, maybe stepping on one of the panels will create an entrance? I'll try throwing the camera in to observe.",
+
 		"BOXT_TOWER_ANOTHER_1": "NEEM: We plan to meet up with Canna. She'll send an official message soon for everyone to gather at the Blackrock System. We're making a detour to the <![CDATA[<Color=orange>]]>Bright Spark System<![CDATA[</Color>]]> for supplies beforehand. What are your plans?",
 		"BOXT_TOWER_ANOTHER_2": "MIACEAE: Hmm... We plan to remain in our current system a while longer. We're actually conducting experiments to extend our sun's lifespan, centered around Cedrus. We're not sure if it'll work, but we've <![CDATA[<Color=orange>]]>built a clock tower<![CDATA[</Color>]]> and are conducting final tests, so please wait a bit longer.",
 		"BOXT_TOWER_ANOTHER_3": "NEEM: How fascinating! I have no intention of rushing you, so please don't worry about that. The Nomai were originally nomadic, so I never expected all clans to agree to this gathering anyway.",
@@ -110,6 +113,11 @@
 		"PING_SHIP_4": "That's why I called you. I gathered many explorable worlds—<![CDATA[<Color=orange>]]>MODs<![CDATA[</Color>]]>—summoned infinitely from parallel universes, wanting to invite you there.",
 		"PING_SHIP_5": "Come, let us explore the infinitely expanding <![CDATA[<Color=orange>]]>MOD Jam<![CDATA[</Color>]]> forever in this Outer Wilds world...!",
 
+		"PING_ADDITIONAL_OPTION": "About the Jam...",
+		"PING_ADDITIONAL_1": "...Ah.",
+		"PING_ADDITIONAL_2": "I'm merely a <![CDATA[<i>]]>terminal<![CDATA[</i>]]> for information gathering. The Ping you've been speaking with is closer to the main body. Since information flows primarily one direction, this <![CDATA[<i>]]>version of me<![CDATA[</i>]]> knows very little about the Jam.",
+		"PING_ADDITIONAL_3": "But that's not really important. Because compared to the infinite exploration spreading out before us, such things fade away! Now, what shall we see next?",
+
 		"BOXT_ERNESTO_1": "It's your usual chatty anglerfish Ernesto, who swam here from a parallel universe. Now the reason why Ernesto exists in the Outer Wilds universe is finally clear!",
 		"BOXT_ERNESTO_2": "......",
 		"BOXT_ERNESTO_3": "The creator of this mod has been pondering for so long why such star systems exist in Mod Jam 3. And also, who exactly is Ping?",
@@ -171,6 +179,7 @@
 		"BOXT_BUILDING_FACT_2": "Such phenomena are caused by this system's devices, possibly calling things from parallel universes.",
 
 		"DIORAMA_JAM": "Jam",
+		"DIORAMA_JAM_MENTION": "At the center of the Bright Spark System, something appears to be gathering energy from the three suns.",
 		"DIORAMA_JAM_1": "Exists at the center of the Bright Spark System. Gathers energy from surroundings and can summon objects from parallel universes.",
 		"DIORAMA_JAM_2": "A Nomai named Ping decided to stay with the Jam, separating from the clan. To escape supernova destruction, Ping chose to become one with the Jam.",
 		"DIORAMA_JAM_3": "To gain infinite time, Ping connected with the Ash Twin Project, eternally summoning new exploration sites through Jam within time loops.",

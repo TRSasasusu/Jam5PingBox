@@ -37,5 +37,9 @@
       <FactID>diorama_boxt_symbol_fact_2</FactID>
       <Condition>4</Condition>
     </RevealFact>
+    <RevealFact>
+      <FactID>diorama_boxt_ping_rumor</FactID>
+      <Condition>4</Condition>
+    </RevealFact>
   </ShipLogConditions>
 </NomaiObject>
