@@ -29,6 +29,7 @@ namespace Jam5PingBox {
         Transform _door3Open;
         Transform _door3Close;
         BoxButton _door3Button;
+        GameObject _removeWaterSound;
 
         Transform _water;
         SphereShape _hazardVolume;
@@ -148,6 +149,9 @@ namespace Jam5PingBox {
                 }
                 else if(child.name == "AmbientLight") {
                     _ambientLight = child.GetComponent<Light>();
+                }
+                else if(child.name == "RemoveWaterSound") {
+                    _removeWaterSound = child.gameObject;
                 }
             }
 
@@ -287,8 +291,13 @@ namespace Jam5PingBox {
             }
 
             if(_sunO.Item1 == ScoutOrPlayer.SCOUT && _sunX.Item1 == ScoutOrPlayer.SCOUT && _sunV.Item1 == ScoutOrPlayer.PLAYER && _sunO.Item2 < _sunX.Item2 && _sunX.Item2 < _sunV.Item2) {
-                _water.transform.localScale = Vector3.Lerp(_water.transform.localScale, new Vector3(0.01f, 0.01f, 0.01f), 10);
-                _hazardVolume.radius = Mathf.Lerp(_hazardVolume.radius, 0.01f, 10);
+                //var invScale = new Vector3(0.01f, 0.01f, 0.01f);
+                //invScale = Vector3.Lerp(invScale, new Vector3(180, 180, 180), 0.1f);
+                _water.transform.localScale = Vector3.Lerp(_water.transform.localScale, new Vector3(0.01f, 0.01f, 0.01f), 0.001f);
+                _hazardVolume.radius = Mathf.Lerp(_hazardVolume.radius, 0.01f, 0.001f);
+                if(_removeWaterSound && !_removeWaterSound.activeSelf) {
+                    _removeWaterSound.SetActive(true);
+                }
             }
 
             //if (Jam5PingBox.Instance.IsSuperBrightMode) {
