@@ -31,9 +31,18 @@ namespace Jam5PingBox {
         const string PING_PATH = "ExamplePlatform_Body/Sector/Nomai";
         const string PING_PATH_v105 = "CentralStation_Body/Sector/Nomai";
         const string HIDDEN_PING_PATH = "HiddenPingShip_Body/Sector/Nomai";
+        const string ADDITIONALPING_EFFECT_PATH = "CentralStation_Body/Sector/Nomai/Nomai_Rig_v01:TrajectorySHJnt/Nomai_Rig_v01:ROOTSHJnt/Nomai_Rig_v01:Spine_01SHJnt/Nomai_Rig_v01:Spine_02SHJnt/Nomai_Rig_v01:Spine_TopSHJnt/Nomai_Rig_v01:Neck_01SHJnt/Nomai_Rig_v01:Neck_TopSHJnt/Nomai_Rig_v01:Head_TopSHJnt/Nomai_Rig_v01:Camera_01SHJnt/ping_effect";
+
+        Coroutine _initialize;
 
         public ObjectModifier() {
-            Jam5PingBox.Instance.StartCoroutine(Initialize());
+            _initialize = Jam5PingBox.Instance.StartCoroutine(Initialize());
+        }
+
+        public void Destroy() {
+            if(_initialize != null) {
+                Jam5PingBox.Instance.StopCoroutine(_initialize);
+            }
         }
 
         IEnumerator Initialize() {
@@ -160,10 +169,13 @@ namespace Jam5PingBox {
                 yield return null;
             }
 
+            var pingEffect = SearchUtilities.Find(ADDITIONALPING_EFFECT_PATH);
             while (true) {
                 var towerObj = SearchUtilities.Find(TOWER_PATH);
                 if (towerObj) {
-                    towerObj.AddComponent<Tower>().Initialize();
+                    var tower = towerObj.AddComponent<Tower>();
+                    tower._pingEffect = pingEffect;
+                    tower.Initialize();
                     break;
                 }
                 yield return null;

@@ -44,9 +44,13 @@ namespace Jam5PingBox
             // Example of accessing game code.
             //OnCompleteSceneLoad(OWScene.TitleScreen, OWScene.TitleScreen); // We start on title screen
             //LoadManager.OnCompleteSceneLoad += OnCompleteSceneLoad;
+            ObjectModifier objectModifier = null;
             NewHorizons.GetStarSystemLoadedEvent().AddListener(loadScene => {
                 ModHelper.Console.WriteLine($"Loaded into {loadScene}!", MessageType.Success);
-                var objectModifier = new ObjectModifier();
+                if (objectModifier != null) {
+                    objectModifier.Destroy();
+                }
+                objectModifier = new ObjectModifier();
             });
         }
     }

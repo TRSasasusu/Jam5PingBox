@@ -7,6 +7,8 @@ using UnityEngine;
 
 namespace Jam5PingBox {
     public class Tower : MonoBehaviour {
+        public GameObject _pingEffect;
+
         public static bool Box1Done() {
             return PlayerData._currentGameSave.shipLogFactSaves.ContainsKey("diorama_box1_complete") && PlayerData._currentGameSave.shipLogFactSaves["diorama_box1_complete"].revealOrder > -1;
         }
@@ -38,6 +40,10 @@ namespace Jam5PingBox {
             if (!box1Done || !box2Done || !box3Done) {
                 transform.parent.Find("BoxTriStarItem").gameObject.SetActive(false);
             }
+
+            if(_pingEffect) {
+                _pingEffect.SetActive(false);
+            }
         }
 
         void Disable(Transform child, bool disableOff) {
@@ -53,6 +59,14 @@ namespace Jam5PingBox {
                         childchild.gameObject.SetActive(false);
                         break;
                     }
+                }
+            }
+        }
+
+        void Update() {
+            if (_pingEffect && !_pingEffect.activeSelf) {
+                if(DialogueConditionManager.SharedInstance.GetConditionState("diorama_ping_additional_option")) {
+                    _pingEffect.SetActive(true);
                 }
             }
         }

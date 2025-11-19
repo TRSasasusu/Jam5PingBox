@@ -6,6 +6,7 @@
         <Text>PING_ADDITIONAL_OPTION</Text>
         <DialogueTarget>DioramaPingText</DialogueTarget>
         <RequiredLogCondition>diorama_ping_5</RequiredLogCondition>
+        <ConditionToSet>diorama_ping_additional_option</ConditionToSet>
       </DialogueOption>
     </DialogueOptionsList>
   </DialogueNode>
