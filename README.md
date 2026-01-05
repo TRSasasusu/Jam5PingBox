@@ -2,7 +2,7 @@
 
 # Diorama
 
-![](diorama.webp?raw=true) **2025 Outer Wilds Mod Best Puzzles Award Winner** ([this video](https://youtu.be/zR5LUCGiVqo?si=hWd3KFsyBWCEK36b&t=185))
+[<img width=65 src="diorama.webp?raw=true"> **2025 Outer Wilds Mod Best Puzzles Award Winner!!**](https://youtu.be/zR5LUCGiVqo?si=hWd3KFsyBWCEK36b&t=185)
 
 Lore of a Nomai named Ping. Explore why there are modding jams in the Outer Wilds universe.
 
@@ -15,6 +15,11 @@ From v0.5.3, there is the brightness setting for the specific place.
 ## Credits
 
 * orclecle: the author
+
+Translations
+
+* orclecle: Japanese (original)
+* Claude Sonnet 4: English
 
 Playtesters (in time order)
 
