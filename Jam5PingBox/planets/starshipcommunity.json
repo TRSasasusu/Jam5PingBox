@@ -1,0 +1,98 @@
+{
+  "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "name": "Starship Community",
+  "starSystem": "Jam5",
+  "Props": {
+    "details": [
+      {
+        "assetBundle": "planets/assetbundles/diorama",
+        "path": "Assets/MyAssets/Prefabs/halfamantrophy.prefab",
+        "position": {
+          "x": 13.0402,
+          "y": 17.0993,
+          "z": -0.0489
+        },
+        "rotation": {
+          "x": 41.7636,
+          "y": 271.8228,
+          "z": 271.1141
+        },
+        "scale": 0.5,
+      }
+    ],
+    "translatorText": [
+      {
+        "type": "scroll",
+        "xmlFile": "planets/texts/halfaman_trophy_bestscares.xml",
+        "parentPath": "Sector/halfamantrophy",
+        "isRelativeToParent": true,
+        "seed": 14,
+        "rename": "halfaman_trophy_bestscares",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": -0.5519
+        },
+        "rotation": {
+          "x": 77.1164,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "type": "scroll",
+        "xmlFile": "planets/texts/halfaman_trophy_bestpuzzles.xml",
+        "parentPath": "Sector/halfamantrophy",
+        "isRelativeToParent": true,
+        "seed": 15,
+        "rename": "halfaman_trophy_bestpuzzles",
+        "position": {
+          "x": -0.4433,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 72.4155,
+          "y": 71.9225,
+          "z": 341.0152
+        }
+      },
+      {
+        "type": "scroll",
+        "xmlFile": "planets/texts/halfaman_trophy_bestmodderdebut.xml",
+        "parentPath": "Sector/halfamantrophy",
+        "isRelativeToParent": true,
+        "seed": 16,
+        "rename": "halfaman_trophy_bestmodderdebut",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0.5229
+        },
+        "rotation": {
+          "x": 81.881,
+          "y": 180,
+          "z": 180
+        }
+      },
+      {
+        "type": "scroll",
+        "xmlFile": "planets/texts/halfaman_trophy_bestfoundation.xml",
+        "parentPath": "Sector/halfamantrophy",
+        "isRelativeToParent": true,
+        "seed": 17,
+        "rename": "halfaman_trophy_bestfoundation",
+        "position": {
+          "x": 0.6878,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 83.2008,
+          "y": 282.9753,
+          "z": 76.4888
+        }
+      },
+    ]
+  }
+}
