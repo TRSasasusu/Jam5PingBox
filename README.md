@@ -20,6 +20,7 @@ Translations
 
 * orclecle: Japanese (original)
 * Claude Sonnet 4: English
+* [SanBaiMing](https://github.com/SanBaiMing): Chinese ([#1](https://github.com/TRSasasusu/Jam5PingBox/pull/1))
 
 Playtesters (in time order)
 
